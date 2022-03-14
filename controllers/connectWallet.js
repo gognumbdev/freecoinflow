@@ -1,5 +1,6 @@
 import { ethers } from "ethers";
 import { logIn } from "../redux/actions/userAction";
+const config = require("../next.config")
 
 const connectWallet = async () => {
     let requestMessage = "Please sign to get sign in to our Decentralized P2P Exchange platform"
@@ -50,7 +51,7 @@ const connectAndDispatch = (dispatch) => {
         }
 
         //* if !permission === false -> You get permission from user to sign them in your web application , let's continue
-        const res = await fetch(`http://localhost:3000/api/user/${userAddress}`)
+        const res = await fetch(`${config.domainName}/api/user/${userAddress}`)
         const userData = await res.json()
         
         dispatch(logIn(

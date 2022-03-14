@@ -74,7 +74,7 @@ export default function ConnectWallet({logUserIn}) {
                 <div className="w-full shadow-xl bg-white mt-5 p-2 transform transition duration-150 ease-in rounded-xl
                   cursor-pointer active:scale-90 border-2 hover:-translate-y-1 hover:border-amber-500" >
                   <button className="flex space-x-5 rounded justify-start items-center"
-                      onClick={() => {logUserIn();close()}}>
+                      onClick={() => {logUserIn();closeModal()}}>
                       <Image 
                           height={60}
                           width={60}
@@ -88,30 +88,6 @@ export default function ConnectWallet({logUserIn}) {
                       </p>
                   </button>
                 </div>
-                  
-                  {/* <div className="shadow-xl w-full rounded-xl bg-white mt-5 py-6 px-2 transform transition duration-150 ease-in
-                          hover:scale-105 hover:shadow-xl cursor-pointer active:scale-90 ">
-                      <div className="flex space-x-5 rounded justify-start items-center"
-                          onClick={logUserIn}>
-                          <p className="text-xl font-bold">
-                              <span className='text-blue-600'>Free</span>
-                              <span className='text-amber-500'>Coin</span>
-                              <span className='text-blue-600'>Flow</span>
-                              <span className="ml-2">Wallet</span>
-                              <span className="text-base ml-12 text-red-500">Coming soon !</span>
-                          </p>
-                      </div>
-                  </div> */}
-{/* 
-                  <button
-                    type="button"
-                    className="mt-4 inline-flex justify-center px-4 py-2 text-sm font-medium text-blue-900 bg-blue-100 border border-transparent rounded-md
-                     hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
-                    onClick={closeModal}
-                  >
-                    Create new wallet
-                  </button> */}
-                
               </div>
             </Transition.Child>
           </div>
