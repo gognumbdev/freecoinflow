@@ -1,65 +1,111 @@
 "use strict";
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 (() => {
 var exports = {};
-exports.id = "pages/api/user/[publicAddress]";
-exports.ids = ["pages/api/user/[publicAddress]"];
+exports.id = 490;
+exports.ids = [490];
 exports.modules = {
 
-/***/ "mongoose":
-/*!***************************!*\
-  !*** external "mongoose" ***!
-  \***************************/
+/***/ 2663:
 /***/ ((module) => {
 
 module.exports = require("mongoose");
 
 /***/ }),
 
-/***/ "(api)/./database/dbConnect.js":
-/*!*******************************!*\
-  !*** ./database/dbConnect.js ***!
-  \*******************************/
+/***/ 9970:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("\nconst mongoose = __webpack_require__(/*! mongoose */ \"mongoose\");\nconst config = __webpack_require__(/*! ../next.config */ \"(api)/./next.config.js\");\nconst dbConnect = async ()=>{\n    let connection = mongoose.connection.readyState;\n    if (connection === 0) {\n        await mongoose.connect(config.env.mongoDB_uri).then(()=>console.log('MongoDB Connected Successfully')\n        ).catch((err)=>console.error('Not Connected')\n        );\n    } else if (connection === 1) {\n        console.log(\"MongoDB already connected\");\n    }\n};\nmodule.exports = dbConnect;\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9kYXRhYmFzZS9kYkNvbm5lY3QuanMuanMiLCJtYXBwaW5ncyI6IjtBQUFBLEtBQUssQ0FBQ0EsUUFBUSxHQUFHQyxtQkFBTyxDQUFDLDBCQUFVO0FBQ25DLEtBQUssQ0FBQ0MsTUFBTSxHQUFHRCxtQkFBTyxDQUFDLDhDQUFnQjtBQUV2QyxLQUFLLENBQUNFLFNBQVMsYUFBZSxDQUFDO0lBQzNCLEdBQUcsQ0FBQ0MsVUFBVSxHQUFHSixRQUFRLENBQUNJLFVBQVUsQ0FBQ0MsVUFBVTtJQUUvQyxFQUFFLEVBQUVELFVBQVUsS0FBSyxDQUFDLEVBQUMsQ0FBQztRQUNsQixLQUFLLENBQUNKLFFBQVEsQ0FBQ00sT0FBTyxDQUFDSixNQUFNLENBQUNLLEdBQUcsQ0FBQ0MsV0FBVyxFQUM1Q0MsSUFBSSxLQUFPQyxPQUFPLENBQUNDLEdBQUcsQ0FBQyxDQUFnQztVQUN2REMsS0FBSyxFQUFFQyxHQUFHLEdBQUtILE9BQU8sQ0FBQ0ksS0FBSyxDQUFDLENBQWU7O0lBQ2pELENBQUMsTUFBSyxFQUFFLEVBQUVWLFVBQVUsS0FBRyxDQUFDLEVBQUMsQ0FBQztRQUN0Qk0sT0FBTyxDQUFDQyxHQUFHLENBQUMsQ0FBMkI7SUFDM0MsQ0FBQztBQUVMLENBQUM7QUFFREksTUFBTSxDQUFDQyxPQUFPLEdBQUdiLFNBQVMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9uZnQtbWFya2V0cGxhY2UtbXZwLy4vZGF0YWJhc2UvZGJDb25uZWN0LmpzP2M4ZDkiXSwic291cmNlc0NvbnRlbnQiOlsiY29uc3QgbW9uZ29vc2UgPSByZXF1aXJlKFwibW9uZ29vc2VcIik7XG5jb25zdCBjb25maWcgPSByZXF1aXJlKFwiLi4vbmV4dC5jb25maWdcIilcblxuY29uc3QgZGJDb25uZWN0ID0gYXN5bmMgKCkgPT4ge1xuICAgIGxldCBjb25uZWN0aW9uID0gbW9uZ29vc2UuY29ubmVjdGlvbi5yZWFkeVN0YXRlO1xuICAgIFxuICAgIGlmIChjb25uZWN0aW9uID09PSAwKXtcbiAgICAgICAgYXdhaXQgbW9uZ29vc2UuY29ubmVjdChjb25maWcuZW52Lm1vbmdvREJfdXJpKSBcbiAgICAgICAgLnRoZW4oKCkgPT4gY29uc29sZS5sb2coJ01vbmdvREIgQ29ubmVjdGVkIFN1Y2Nlc3NmdWxseScpKVxuICAgICAgICAuY2F0Y2goKGVycikgPT4gY29uc29sZS5lcnJvcignTm90IENvbm5lY3RlZCcpKTtcbiAgICB9ZWxzZSBpZiAoY29ubmVjdGlvbj09PTEpe1xuICAgICAgICBjb25zb2xlLmxvZyhcIk1vbmdvREIgYWxyZWFkeSBjb25uZWN0ZWRcIilcbiAgICB9XG4gICAgXG59XG5cbm1vZHVsZS5leHBvcnRzID0gZGJDb25uZWN0XG4iXSwibmFtZXMiOlsibW9uZ29vc2UiLCJyZXF1aXJlIiwiY29uZmlnIiwiZGJDb25uZWN0IiwiY29ubmVjdGlvbiIsInJlYWR5U3RhdGUiLCJjb25uZWN0IiwiZW52IiwibW9uZ29EQl91cmkiLCJ0aGVuIiwiY29uc29sZSIsImxvZyIsImNhdGNoIiwiZXJyIiwiZXJyb3IiLCJtb2R1bGUiLCJleHBvcnRzIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(api)/./database/dbConnect.js\n");
+
+const mongoose = __webpack_require__(2663);
+const networkSchema = new mongoose.Schema({
+    chainId: Number,
+    ensAddress: String,
+    name: String
+});
+//P2P exchange edition
+const UserSchema = new mongoose.Schema({
+    username: String,
+    publicAddress: String,
+    promptpayID: String,
+    image: String,
+    description: String,
+    bankName: String,
+    bankAccount: String
+});
+let UserModel = mongoose.models && mongoose.models.User ? mongoose.models.User : mongoose.model('User', UserSchema);
+module.exports = {
+    UserModel
+};
+
 
 /***/ }),
 
-/***/ "(api)/./database/dbModel/User.js":
-/*!**********************************!*\
-  !*** ./database/dbModel/User.js ***!
-  \**********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("\nconst mongoose = __webpack_require__(/*! mongoose */ \"mongoose\");\nconst networkSchema = new mongoose.Schema({\n    chainId: Number,\n    ensAddress: String,\n    name: String\n});\n//P2P exchange edition\nconst UserSchema = new mongoose.Schema({\n    username: String,\n    publicAddress: String,\n    promptpayID: String,\n    image: String,\n    description: String,\n    bankName: String,\n    bankAccount: String\n});\nlet UserModel = mongoose.models && mongoose.models.User ? mongoose.models.User : mongoose.model('User', UserSchema);\nmodule.exports = {\n    UserModel\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9kYXRhYmFzZS9kYk1vZGVsL1VzZXIuanMuanMiLCJtYXBwaW5ncyI6IjtBQUFBLEtBQUssQ0FBQ0EsUUFBUSxHQUFHQyxtQkFBTyxDQUFDLDBCQUFVO0FBRW5DLEtBQUssQ0FBQ0MsYUFBYSxHQUFHLEdBQUcsQ0FBQ0YsUUFBUSxDQUFDRyxNQUFNLENBQUMsQ0FBQztJQUN2Q0MsT0FBTyxFQUFDQyxNQUFNO0lBQ2RDLFVBQVUsRUFBQ0MsTUFBTTtJQUNqQkMsSUFBSSxFQUFDRCxNQUFNO0FBQ2YsQ0FBQztBQUVELEVBQXNCO0FBQ3RCLEtBQUssQ0FBQ0UsVUFBVSxHQUFHLEdBQUcsQ0FBQ1QsUUFBUSxDQUFDRyxNQUFNLENBQUMsQ0FBQztJQUNwQ08sUUFBUSxFQUFFSCxNQUFNO0lBQ2hCSSxhQUFhLEVBQUNKLE1BQU07SUFDcEJLLFdBQVcsRUFBQ0wsTUFBTTtJQUNsQk0sS0FBSyxFQUFDTixNQUFNO0lBQ1pPLFdBQVcsRUFBRVAsTUFBTTtJQUNuQlEsUUFBUSxFQUFDUixNQUFNO0lBQ2ZTLFdBQVcsRUFBQ1QsTUFBTTtBQUN0QixDQUFDO0FBRUQsR0FBRyxDQUFDVSxTQUFTLEdBQUtqQixRQUFRLENBQUNrQixNQUFNLElBQUlsQixRQUFRLENBQUNrQixNQUFNLENBQUNDLElBQUksR0FDbkRuQixRQUFRLENBQUNrQixNQUFNLENBQUNDLElBQUksR0FDcEJuQixRQUFRLENBQUNvQixLQUFLLENBQUMsQ0FBTSxPQUFFWCxVQUFVO0FBRXZDWSxNQUFNLENBQUNDLE9BQU8sR0FBRyxDQUFDTDtJQUFBQSxTQUFTO0FBQUEsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL25mdC1tYXJrZXRwbGFjZS1tdnAvLi9kYXRhYmFzZS9kYk1vZGVsL1VzZXIuanM/Y2JiMyJdLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCBtb25nb29zZSA9IHJlcXVpcmUoXCJtb25nb29zZVwiKVxuXG5jb25zdCBuZXR3b3JrU2NoZW1hID0gbmV3IG1vbmdvb3NlLlNjaGVtYSh7XG4gICAgY2hhaW5JZDpOdW1iZXIsXG4gICAgZW5zQWRkcmVzczpTdHJpbmcsXG4gICAgbmFtZTpTdHJpbmdcbn0pXG5cbi8vUDJQIGV4Y2hhbmdlIGVkaXRpb25cbmNvbnN0IFVzZXJTY2hlbWEgPSBuZXcgbW9uZ29vc2UuU2NoZW1hKHtcbiAgICB1c2VybmFtZTogU3RyaW5nLFxuICAgIHB1YmxpY0FkZHJlc3M6U3RyaW5nLFxuICAgIHByb21wdHBheUlEOlN0cmluZyxcbiAgICBpbWFnZTpTdHJpbmcsXG4gICAgZGVzY3JpcHRpb246IFN0cmluZyxcbiAgICBiYW5rTmFtZTpTdHJpbmcsXG4gICAgYmFua0FjY291bnQ6U3RyaW5nXG59KVxuXG5sZXQgVXNlck1vZGVsID0gIChtb25nb29zZS5tb2RlbHMgJiYgbW9uZ29vc2UubW9kZWxzLlVzZXJcbiAgICA/IG1vbmdvb3NlLm1vZGVscy5Vc2VyXG4gICAgOiBtb25nb29zZS5tb2RlbCgnVXNlcicsIFVzZXJTY2hlbWEpKVxuXG5tb2R1bGUuZXhwb3J0cyA9IHtVc2VyTW9kZWx9Il0sIm5hbWVzIjpbIm1vbmdvb3NlIiwicmVxdWlyZSIsIm5ldHdvcmtTY2hlbWEiLCJTY2hlbWEiLCJjaGFpbklkIiwiTnVtYmVyIiwiZW5zQWRkcmVzcyIsIlN0cmluZyIsIm5hbWUiLCJVc2VyU2NoZW1hIiwidXNlcm5hbWUiLCJwdWJsaWNBZGRyZXNzIiwicHJvbXB0cGF5SUQiLCJpbWFnZSIsImRlc2NyaXB0aW9uIiwiYmFua05hbWUiLCJiYW5rQWNjb3VudCIsIlVzZXJNb2RlbCIsIm1vZGVscyIsIlVzZXIiLCJtb2RlbCIsIm1vZHVsZSIsImV4cG9ydHMiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api)/./database/dbModel/User.js\n");
-
-/***/ }),
-
-/***/ "(api)/./next.config.js":
-/*!************************!*\
-  !*** ./next.config.js ***!
-  \************************/
-/***/ ((module) => {
-
-eval("\nmodule.exports = {\n    reactStrictMode: true,\n    env: {\n        mongoDB_uri: \"mongodb+srv://P2PExchangeAdmin:chGE0zr86MvYagdv@cryptoexchange.wcws5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority\",\n        marketplacePrivateKey: \"01290c7d6abff326948e1514d5a20eeede5b433d36d176e66b2a8d852d83a9cb\",\n        marketplaceWalletAddress: \"0x518707e145604eA17eA6fd319Fa65DCD2E96Eb34\",\n        // This is hardhat localhost network\n        nftMarketAddress: \"0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0\",\n        nftAddress: \"0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9\"\n    },\n    image: {\n        domains: [\n            '/public/image'\n        ]\n    },\n    domainName: \"http://localhost:3000\",\n    api: {\n        bodyParser: {\n            sizeLimit: '4mb'\n        }\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9uZXh0LmNvbmZpZy5qcy5qcyIsIm1hcHBpbmdzIjoiO0FBQUFBLE1BQU0sQ0FBQ0MsT0FBTyxHQUFHLENBQUM7SUFDaEJDLGVBQWUsRUFBRSxJQUFJO0lBQ3JCQyxHQUFHLEVBQUMsQ0FBQztRQUNIQyxXQUFXLEVBQUMsQ0FBOEg7UUFDMUlDLHFCQUFxQixFQUFDLENBQWtFO1FBQ3hGQyx3QkFBd0IsRUFBQyxDQUE0QztRQUNyRSxFQUFvQztRQUNwQ0MsZ0JBQWdCLEVBQUMsQ0FBNEM7UUFDN0RDLFVBQVUsRUFBQyxDQUE0QztJQUN6RCxDQUFDO0lBQ0RDLEtBQUssRUFBQyxDQUFDO1FBQ0xDLE9BQU8sRUFBRSxDQUFDO1lBQUEsQ0FBZTtRQUFBLENBQUM7SUFDNUIsQ0FBQztJQUNEQyxVQUFVLEVBQUMsQ0FBdUI7SUFDbENDLEdBQUcsRUFBRSxDQUFDO1FBQ0pDLFVBQVUsRUFBRSxDQUFDO1lBQ1RDLFNBQVMsRUFBRSxDQUFLO1FBQ3BCLENBQUM7SUFDSCxDQUFDO0FBQ0gsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL25mdC1tYXJrZXRwbGFjZS1tdnAvLi9uZXh0LmNvbmZpZy5qcz8wMWI0Il0sInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0ge1xuICByZWFjdFN0cmljdE1vZGU6IHRydWUsXG4gIGVudjp7XG4gICAgbW9uZ29EQl91cmk6XCJtb25nb2RiK3NydjovL1AyUEV4Y2hhbmdlQWRtaW46Y2hHRTB6cjg2TXZZYWdkdkBjcnlwdG9leGNoYW5nZS53Y3dzNS5tb25nb2RiLm5ldC9teUZpcnN0RGF0YWJhc2U/cmV0cnlXcml0ZXM9dHJ1ZSZ3PW1ham9yaXR5XCIsXG4gICAgbWFya2V0cGxhY2VQcml2YXRlS2V5OlwiMDEyOTBjN2Q2YWJmZjMyNjk0OGUxNTE0ZDVhMjBlZWVkZTViNDMzZDM2ZDE3NmU2NmIyYThkODUyZDgzYTljYlwiLFxuICAgIG1hcmtldHBsYWNlV2FsbGV0QWRkcmVzczpcIjB4NTE4NzA3ZTE0NTYwNGVBMTdlQTZmZDMxOUZhNjVEQ0QyRTk2RWIzNFwiLFxuICAgIC8vIFRoaXMgaXMgaGFyZGhhdCBsb2NhbGhvc3QgbmV0d29ya1xuICAgIG5mdE1hcmtldEFkZHJlc3M6XCIweDlmRTQ2NzM2Njc5ZDJEOWE2NUYwOTkyRjIyNzJkRTlmM2M3ZmE2ZTBcIixcbiAgICBuZnRBZGRyZXNzOlwiMHhDZjdFZDNBY2NBNWE0NjdlOWU3MDRDNzAzRThEODdGNjM0ZkIwRmM5XCIsXG4gIH0sXG4gIGltYWdlOntcbiAgICBkb21haW5zOiBbJy9wdWJsaWMvaW1hZ2UnXSxcbiAgfSxcbiAgZG9tYWluTmFtZTpcImh0dHA6Ly9sb2NhbGhvc3Q6MzAwMFwiLFxuICBhcGk6IHtcbiAgICBib2R5UGFyc2VyOiB7XG4gICAgICAgIHNpemVMaW1pdDogJzRtYicgXG4gICAgfVxuICB9LFxufVxuIl0sIm5hbWVzIjpbIm1vZHVsZSIsImV4cG9ydHMiLCJyZWFjdFN0cmljdE1vZGUiLCJlbnYiLCJtb25nb0RCX3VyaSIsIm1hcmtldHBsYWNlUHJpdmF0ZUtleSIsIm1hcmtldHBsYWNlV2FsbGV0QWRkcmVzcyIsIm5mdE1hcmtldEFkZHJlc3MiLCJuZnRBZGRyZXNzIiwiaW1hZ2UiLCJkb21haW5zIiwiZG9tYWluTmFtZSIsImFwaSIsImJvZHlQYXJzZXIiLCJzaXplTGltaXQiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api)/./next.config.js\n");
-
-/***/ }),
-
-/***/ "(api)/./pages/api/user/[publicAddress].js":
-/*!*******************************************!*\
-  !*** ./pages/api/user/[publicAddress].js ***!
-  \*******************************************/
+/***/ 8927:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ handler)\n/* harmony export */ });\n/* harmony import */ var _database_dbConnect__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../database/dbConnect */ \"(api)/./database/dbConnect.js\");\n/* harmony import */ var _database_dbConnect__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_database_dbConnect__WEBPACK_IMPORTED_MODULE_0__);\n\nconst { UserModel  } = __webpack_require__(/*! ../../../database/dbModel/User */ \"(api)/./database/dbModel/User.js\");\nasync function handler(req, res) {\n    const { publicAddress  } = req.query;\n    _database_dbConnect__WEBPACK_IMPORTED_MODULE_0___default()();\n    const userData = await UserModel.findOne({\n        publicAddress: publicAddress\n    });\n    console.log(req.method);\n    if (req.method === \"GET\") {\n        try {\n            if (!userData) {\n                console.log(\"Find Nothing !,Let's Create\");\n                await UserModel.create({\n                    username: \"unnamed\",\n                    publicAddress: publicAddress,\n                    promptpayID: \"\",\n                    image: \"https://img.favpng.com/20/11/12/computer-icons-user-profile-png-favpng-0UAKKCpRRsMj5NaiELzw1pV7L.jpg\",\n                    description: \"\",\n                    bankName: \"\",\n                    bankAccount: \"\"\n                }).then(async ()=>{\n                    console.log(\"Created new user\");\n                    let newUserData = await UserModel.findOne({\n                        publicAddress: publicAddress\n                    });\n                    res.status(201).json(newUserData);\n                });\n            }\n            // return avaiable user in MongoDB\n            res.status(200).json(userData);\n        } catch (error) {\n            console.log(error);\n        }\n    } else if (req.method === \"POST\") {\n        const { usernameInput , descriptionInput , promptpayIDInput , bankNameInput , bankAccountInput  } = JSON.parse(req.body);\n        // Update user data on MongoDB\n        try {\n            let data = await UserModel.findOneAndUpdate({\n                publicAddress: publicAddress\n            }, {\n                username: usernameInput || userData.username,\n                description: descriptionInput || userData.description,\n                // image: image || userData.image,\n                promptpayID: promptpayIDInput || userData.promptpayID,\n                bankName: bankNameInput || userData.bankName,\n                bankAccount: bankAccountInput || userData.bankAccount\n            }, {\n                new: true\n            });\n            res.status(201).json(data);\n        } catch (error) {\n            console.log(error);\n        }\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvdXNlci9bcHVibGljQWRkcmVzc10uanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQW1EO0FBQ25ELEtBQUssQ0FBQyxDQUFDQyxDQUFBQSxTQUFTLEdBQUMsR0FBR0MsbUJBQU8sQ0FBQyx3RUFBZ0M7QUFDN0MsZUFBZUMsT0FBTyxDQUFDQyxHQUFHLEVBQUNDLEdBQUcsRUFBRSxDQUFDO0lBQzVDLEtBQUssQ0FBQyxDQUFDQyxDQUFBQSxhQUFhLEdBQUMsR0FBR0YsR0FBRyxDQUFDRyxLQUFLO0lBRWpDUCwwREFBUztJQUNULEtBQUssQ0FBQ1EsUUFBUSxHQUFHLEtBQUssQ0FBQ1AsU0FBUyxDQUFDUSxPQUFPLENBQUMsQ0FBQ0g7UUFBQUEsYUFBYSxFQUFDQSxhQUFhO0lBQUEsQ0FBQztJQUV0RUksT0FBTyxDQUFDQyxHQUFHLENBQUNQLEdBQUcsQ0FBQ1EsTUFBTTtJQUN0QixFQUFFLEVBQUVSLEdBQUcsQ0FBQ1EsTUFBTSxLQUFLLENBQUssTUFBRSxDQUFDO1FBRXZCLEdBQUcsQ0FBQyxDQUFDO1lBQ0QsRUFBRSxHQUFHSixRQUFRLEVBQUUsQ0FBQztnQkFDWkUsT0FBTyxDQUFDQyxHQUFHLENBQUMsQ0FBNkI7Z0JBQ3pDLEtBQUssQ0FBQ1YsU0FBUyxDQUFDWSxNQUFNLENBQUMsQ0FBQztvQkFDcEJDLFFBQVEsRUFBRSxDQUFTO29CQUNuQlIsYUFBYSxFQUFFQSxhQUFhO29CQUM1QlMsV0FBVyxFQUFDLENBQUU7b0JBQ2RDLEtBQUssRUFBRSxDQUFzRztvQkFDN0dDLFdBQVcsRUFBRSxDQUFFO29CQUNmQyxRQUFRLEVBQUMsQ0FBRTtvQkFDWEMsV0FBVyxFQUFDLENBQUU7Z0JBQ2xCLENBQUMsRUFBRUMsSUFBSSxXQUFhLENBQUM7b0JBQ2pCVixPQUFPLENBQUNDLEdBQUcsQ0FBQyxDQUFrQjtvQkFDOUIsR0FBRyxDQUFDVSxXQUFXLEdBQUcsS0FBSyxDQUFDcEIsU0FBUyxDQUFDUSxPQUFPLENBQUMsQ0FBQ0g7d0JBQUFBLGFBQWEsRUFBQ0EsYUFBYTtvQkFBQSxDQUFDO29CQUN2RUQsR0FBRyxDQUFDaUIsTUFBTSxDQUFDLEdBQUcsRUFBRUMsSUFBSSxDQUFDRixXQUFXO2dCQUNwQyxDQUFDO1lBQ0wsQ0FBQztZQUNELEVBQWtDO1lBQ2xDaEIsR0FBRyxDQUFDaUIsTUFBTSxDQUFDLEdBQUcsRUFBRUMsSUFBSSxDQUFDZixRQUFRO1FBQ2pDLENBQUMsQ0FBQyxLQUFLLEVBQUVnQixLQUFLLEVBQUUsQ0FBQztZQUNiZCxPQUFPLENBQUNDLEdBQUcsQ0FBQ2EsS0FBSztRQUNyQixDQUFDO0lBRUwsQ0FBQyxNQUFLLEVBQUUsRUFBRXBCLEdBQUcsQ0FBQ1EsTUFBTSxLQUFLLENBQU0sT0FBRSxDQUFDO1FBRTlCLEtBQUssQ0FBQyxDQUFDYSxDQUFBQSxhQUFhLEdBQUNDLGdCQUFnQixHQUFDQyxnQkFBZ0IsR0FBQ0MsYUFBYSxHQUFDQyxnQkFBZ0IsR0FBQyxHQUFHQyxJQUFJLENBQUNDLEtBQUssQ0FBQzNCLEdBQUcsQ0FBQzRCLElBQUk7UUFDNUcsRUFBOEI7UUFDOUIsR0FBRyxDQUFDLENBQUM7WUFDRCxHQUFHLENBQUNDLElBQUksR0FBRyxLQUFLLENBQUNoQyxTQUFTLENBQUNpQyxnQkFBZ0IsQ0FBQyxDQUFDNUI7Z0JBQUFBLGFBQWEsRUFBQ0EsYUFBYTtZQUFBLENBQUMsRUFDckUsQ0FBQztnQkFDR1EsUUFBUSxFQUFFVyxhQUFhLElBQUlqQixRQUFRLENBQUNNLFFBQVE7Z0JBQzVDRyxXQUFXLEVBQUVTLGdCQUFnQixJQUFJbEIsUUFBUSxDQUFDUyxXQUFXO2dCQUNyRCxFQUFrQztnQkFDbENGLFdBQVcsRUFBQ1ksZ0JBQWdCLElBQUluQixRQUFRLENBQUNPLFdBQVc7Z0JBQ3BERyxRQUFRLEVBQUNVLGFBQWEsSUFBSXBCLFFBQVEsQ0FBQ1UsUUFBUTtnQkFDM0NDLFdBQVcsRUFBQ1UsZ0JBQWdCLElBQUlyQixRQUFRLENBQUNXLFdBQVc7WUFDeEQsQ0FBQyxFQUNELENBQUM7Z0JBQ0dnQixHQUFHLEVBQUMsSUFBSTtZQUNaLENBQUM7WUFHTDlCLEdBQUcsQ0FBQ2lCLE1BQU0sQ0FBQyxHQUFHLEVBQUVDLElBQUksQ0FBQ1UsSUFBSTtRQUM3QixDQUFDLENBQUMsS0FBSyxFQUFFVCxLQUFLLEVBQUUsQ0FBQztZQUNiZCxPQUFPLENBQUNDLEdBQUcsQ0FBQ2EsS0FBSztRQUNyQixDQUFDO0lBQ0wsQ0FBQztBQUVMLENBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9uZnQtbWFya2V0cGxhY2UtbXZwLy4vcGFnZXMvYXBpL3VzZXIvW3B1YmxpY0FkZHJlc3NdLmpzPzYwZTUiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGRiQ29ubmVjdCBmcm9tIFwiLi4vLi4vLi4vZGF0YWJhc2UvZGJDb25uZWN0XCI7XG5jb25zdCB7VXNlck1vZGVsfSA9IHJlcXVpcmUoXCIuLi8uLi8uLi9kYXRhYmFzZS9kYk1vZGVsL1VzZXJcIilcbmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uIGhhbmRsZXIocmVxLHJlcykge1xuICAgIGNvbnN0IHtwdWJsaWNBZGRyZXNzfSA9IHJlcS5xdWVyeVxuICAgIFxuICAgIGRiQ29ubmVjdCgpO1xuICAgIGNvbnN0IHVzZXJEYXRhID0gYXdhaXQgVXNlck1vZGVsLmZpbmRPbmUoe3B1YmxpY0FkZHJlc3M6cHVibGljQWRkcmVzc30pXG5cbiAgICBjb25zb2xlLmxvZyhyZXEubWV0aG9kKTtcbiAgICBpZiAocmVxLm1ldGhvZCA9PT0gXCJHRVRcIikge1xuXG4gICAgICAgIHRyeSB7XG4gICAgICAgICAgICBpZiAoIXVzZXJEYXRhKSB7XG4gICAgICAgICAgICAgICAgY29uc29sZS5sb2coXCJGaW5kIE5vdGhpbmcgISxMZXQncyBDcmVhdGVcIik7XG4gICAgICAgICAgICAgICAgYXdhaXQgVXNlck1vZGVsLmNyZWF0ZSh7XG4gICAgICAgICAgICAgICAgICAgIHVzZXJuYW1lOiBcInVubmFtZWRcIixcbiAgICAgICAgICAgICAgICAgICAgcHVibGljQWRkcmVzczogcHVibGljQWRkcmVzcyxcbiAgICAgICAgICAgICAgICAgICAgcHJvbXB0cGF5SUQ6XCJcIixcbiAgICAgICAgICAgICAgICAgICAgaW1hZ2U6IFwiaHR0cHM6Ly9pbWcuZmF2cG5nLmNvbS8yMC8xMS8xMi9jb21wdXRlci1pY29ucy11c2VyLXByb2ZpbGUtcG5nLWZhdnBuZy0wVUFLS0NwUlJzTWo1TmFpRUx6dzFwVjdMLmpwZ1wiLFxuICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbjogXCJcIixcbiAgICAgICAgICAgICAgICAgICAgYmFua05hbWU6XCJcIiAsXG4gICAgICAgICAgICAgICAgICAgIGJhbmtBY2NvdW50OlwiXCJcbiAgICAgICAgICAgICAgICB9KS50aGVuKGFzeW5jICgpID0+IHtcbiAgICAgICAgICAgICAgICAgICAgY29uc29sZS5sb2coXCJDcmVhdGVkIG5ldyB1c2VyXCIpXG4gICAgICAgICAgICAgICAgICAgIGxldCBuZXdVc2VyRGF0YSA9IGF3YWl0IFVzZXJNb2RlbC5maW5kT25lKHtwdWJsaWNBZGRyZXNzOnB1YmxpY0FkZHJlc3N9KTtcbiAgICAgICAgICAgICAgICAgICAgcmVzLnN0YXR1cygyMDEpLmpzb24obmV3VXNlckRhdGEpXG4gICAgICAgICAgICAgICAgfSlcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC8vIHJldHVybiBhdmFpYWJsZSB1c2VyIGluIE1vbmdvREJcbiAgICAgICAgICAgIHJlcy5zdGF0dXMoMjAwKS5qc29uKHVzZXJEYXRhKSAgICBcbiAgICAgICAgfSBjYXRjaCAoZXJyb3IpIHtcbiAgICAgICAgICAgIGNvbnNvbGUubG9nKGVycm9yKTtcbiAgICAgICAgfVxuXG4gICAgfWVsc2UgaWYgKHJlcS5tZXRob2QgPT09IFwiUE9TVFwiKSB7XG5cbiAgICAgICAgY29uc3Qge3VzZXJuYW1lSW5wdXQsZGVzY3JpcHRpb25JbnB1dCxwcm9tcHRwYXlJRElucHV0LGJhbmtOYW1lSW5wdXQsYmFua0FjY291bnRJbnB1dH0gPSBKU09OLnBhcnNlKHJlcS5ib2R5KVxuICAgICAgICAvLyBVcGRhdGUgdXNlciBkYXRhIG9uIE1vbmdvREJcbiAgICAgICAgdHJ5IHtcbiAgICAgICAgICAgIGxldCBkYXRhID0gYXdhaXQgVXNlck1vZGVsLmZpbmRPbmVBbmRVcGRhdGUoe3B1YmxpY0FkZHJlc3M6cHVibGljQWRkcmVzc30sXG4gICAgICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgICAgICB1c2VybmFtZTogdXNlcm5hbWVJbnB1dCB8fCB1c2VyRGF0YS51c2VybmFtZSAsXG4gICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uOiBkZXNjcmlwdGlvbklucHV0IHx8IHVzZXJEYXRhLmRlc2NyaXB0aW9uLFxuICAgICAgICAgICAgICAgICAgICAvLyBpbWFnZTogaW1hZ2UgfHwgdXNlckRhdGEuaW1hZ2UsXG4gICAgICAgICAgICAgICAgICAgIHByb21wdHBheUlEOnByb21wdHBheUlESW5wdXQgfHwgdXNlckRhdGEucHJvbXB0cGF5SUQsXG4gICAgICAgICAgICAgICAgICAgIGJhbmtOYW1lOmJhbmtOYW1lSW5wdXQgfHwgdXNlckRhdGEuYmFua05hbWUgLFxuICAgICAgICAgICAgICAgICAgICBiYW5rQWNjb3VudDpiYW5rQWNjb3VudElucHV0IHx8IHVzZXJEYXRhLmJhbmtBY2NvdW50IFxuICAgICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgICAgICBuZXc6dHJ1ZVxuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIClcblxuICAgICAgICAgICAgcmVzLnN0YXR1cygyMDEpLmpzb24oZGF0YSlcbiAgICAgICAgfSBjYXRjaCAoZXJyb3IpIHtcbiAgICAgICAgICAgIGNvbnNvbGUubG9nKGVycm9yKTtcbiAgICAgICAgfSBcbiAgICB9XG4gICAgICAgIFxufSJdLCJuYW1lcyI6WyJkYkNvbm5lY3QiLCJVc2VyTW9kZWwiLCJyZXF1aXJlIiwiaGFuZGxlciIsInJlcSIsInJlcyIsInB1YmxpY0FkZHJlc3MiLCJxdWVyeSIsInVzZXJEYXRhIiwiZmluZE9uZSIsImNvbnNvbGUiLCJsb2ciLCJtZXRob2QiLCJjcmVhdGUiLCJ1c2VybmFtZSIsInByb21wdHBheUlEIiwiaW1hZ2UiLCJkZXNjcmlwdGlvbiIsImJhbmtOYW1lIiwiYmFua0FjY291bnQiLCJ0aGVuIiwibmV3VXNlckRhdGEiLCJzdGF0dXMiLCJqc29uIiwiZXJyb3IiLCJ1c2VybmFtZUlucHV0IiwiZGVzY3JpcHRpb25JbnB1dCIsInByb21wdHBheUlESW5wdXQiLCJiYW5rTmFtZUlucHV0IiwiYmFua0FjY291bnRJbnB1dCIsIkpTT04iLCJwYXJzZSIsImJvZHkiLCJkYXRhIiwiZmluZE9uZUFuZFVwZGF0ZSIsIm5ldyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(api)/./pages/api/user/[publicAddress].js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ handler)
+/* harmony export */ });
+/* harmony import */ var _database_dbConnect__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7873);
+/* harmony import */ var _database_dbConnect__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_database_dbConnect__WEBPACK_IMPORTED_MODULE_0__);
+
+const { UserModel  } = __webpack_require__(9970);
+async function handler(req, res) {
+    const { publicAddress  } = req.query;
+    _database_dbConnect__WEBPACK_IMPORTED_MODULE_0___default()();
+    const userData = await UserModel.findOne({
+        publicAddress: publicAddress
+    });
+    console.log(req.method);
+    if (req.method === "GET") {
+        try {
+            if (!userData) {
+                console.log("Find Nothing !,Let's Create");
+                await UserModel.create({
+                    username: "unnamed",
+                    publicAddress: publicAddress,
+                    promptpayID: "",
+                    image: "https://img.favpng.com/20/11/12/computer-icons-user-profile-png-favpng-0UAKKCpRRsMj5NaiELzw1pV7L.jpg",
+                    description: "",
+                    bankName: "",
+                    bankAccount: ""
+                }).then(async ()=>{
+                    console.log("Created new user");
+                    let newUserData = await UserModel.findOne({
+                        publicAddress: publicAddress
+                    });
+                    res.status(201).json(newUserData);
+                });
+            }
+            // return avaiable user in MongoDB
+            res.status(200).json(userData);
+        } catch (error) {
+            console.log(error);
+        }
+    } else if (req.method === "POST") {
+        const { usernameInput , descriptionInput , promptpayIDInput , bankNameInput , bankAccountInput  } = JSON.parse(req.body);
+        // Update user data on MongoDB
+        try {
+            let data = await UserModel.findOneAndUpdate({
+                publicAddress: publicAddress
+            }, {
+                username: usernameInput || userData.username,
+                description: descriptionInput || userData.description,
+                // image: image || userData.image,
+                promptpayID: promptpayIDInput || userData.promptpayID,
+                bankName: bankNameInput || userData.bankName,
+                bankAccount: bankAccountInput || userData.bankAccount
+            }, {
+                new: true
+            });
+            res.status(201).json(data);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+};
+
 
 /***/ })
 
@@ -70,7 +116,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 var __webpack_require__ = require("../../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/user/[publicAddress].js"));
+var __webpack_exports__ = __webpack_require__.X(0, [873], () => (__webpack_exec__(8927)));
 module.exports = __webpack_exports__;
 
 })();

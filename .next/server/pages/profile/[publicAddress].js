@@ -1,125 +1,388 @@
 "use strict";
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 (() => {
 var exports = {};
-exports.id = "pages/profile/[publicAddress]";
-exports.ids = ["pages/profile/[publicAddress]"];
+exports.id = 126;
+exports.ids = [126];
 exports.modules = {
 
-/***/ "./next.config.js":
-/*!************************!*\
-  !*** ./next.config.js ***!
-  \************************/
+/***/ 5725:
 /***/ ((module) => {
 
-eval("\nmodule.exports = {\n    reactStrictMode: true,\n    env: {\n        mongoDB_uri: \"mongodb+srv://P2PExchangeAdmin:chGE0zr86MvYagdv@cryptoexchange.wcws5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority\",\n        marketplacePrivateKey: \"01290c7d6abff326948e1514d5a20eeede5b433d36d176e66b2a8d852d83a9cb\",\n        marketplaceWalletAddress: \"0x518707e145604eA17eA6fd319Fa65DCD2E96Eb34\",\n        // This is hardhat localhost network\n        nftMarketAddress: \"0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0\",\n        nftAddress: \"0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9\"\n    },\n    image: {\n        domains: [\n            '/public/image'\n        ]\n    },\n    domainName: \"http://localhost:3000\",\n    api: {\n        bodyParser: {\n            sizeLimit: '4mb'\n        }\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9uZXh0LmNvbmZpZy5qcy5qcyIsIm1hcHBpbmdzIjoiO0FBQUFBLE1BQU0sQ0FBQ0MsT0FBTyxHQUFHLENBQUM7SUFDaEJDLGVBQWUsRUFBRSxJQUFJO0lBQ3JCQyxHQUFHLEVBQUMsQ0FBQztRQUNIQyxXQUFXLEVBQUMsQ0FBOEg7UUFDMUlDLHFCQUFxQixFQUFDLENBQWtFO1FBQ3hGQyx3QkFBd0IsRUFBQyxDQUE0QztRQUNyRSxFQUFvQztRQUNwQ0MsZ0JBQWdCLEVBQUMsQ0FBNEM7UUFDN0RDLFVBQVUsRUFBQyxDQUE0QztJQUN6RCxDQUFDO0lBQ0RDLEtBQUssRUFBQyxDQUFDO1FBQ0xDLE9BQU8sRUFBRSxDQUFDO1lBQUEsQ0FBZTtRQUFBLENBQUM7SUFDNUIsQ0FBQztJQUNEQyxVQUFVLEVBQUMsQ0FBdUI7SUFDbENDLEdBQUcsRUFBRSxDQUFDO1FBQ0pDLFVBQVUsRUFBRSxDQUFDO1lBQ1RDLFNBQVMsRUFBRSxDQUFLO1FBQ3BCLENBQUM7SUFDSCxDQUFDO0FBQ0gsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL25mdC1tYXJrZXRwbGFjZS1tdnAvLi9uZXh0LmNvbmZpZy5qcz8wMWI0Il0sInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0ge1xuICByZWFjdFN0cmljdE1vZGU6IHRydWUsXG4gIGVudjp7XG4gICAgbW9uZ29EQl91cmk6XCJtb25nb2RiK3NydjovL1AyUEV4Y2hhbmdlQWRtaW46Y2hHRTB6cjg2TXZZYWdkdkBjcnlwdG9leGNoYW5nZS53Y3dzNS5tb25nb2RiLm5ldC9teUZpcnN0RGF0YWJhc2U/cmV0cnlXcml0ZXM9dHJ1ZSZ3PW1ham9yaXR5XCIsXG4gICAgbWFya2V0cGxhY2VQcml2YXRlS2V5OlwiMDEyOTBjN2Q2YWJmZjMyNjk0OGUxNTE0ZDVhMjBlZWVkZTViNDMzZDM2ZDE3NmU2NmIyYThkODUyZDgzYTljYlwiLFxuICAgIG1hcmtldHBsYWNlV2FsbGV0QWRkcmVzczpcIjB4NTE4NzA3ZTE0NTYwNGVBMTdlQTZmZDMxOUZhNjVEQ0QyRTk2RWIzNFwiLFxuICAgIC8vIFRoaXMgaXMgaGFyZGhhdCBsb2NhbGhvc3QgbmV0d29ya1xuICAgIG5mdE1hcmtldEFkZHJlc3M6XCIweDlmRTQ2NzM2Njc5ZDJEOWE2NUYwOTkyRjIyNzJkRTlmM2M3ZmE2ZTBcIixcbiAgICBuZnRBZGRyZXNzOlwiMHhDZjdFZDNBY2NBNWE0NjdlOWU3MDRDNzAzRThEODdGNjM0ZkIwRmM5XCIsXG4gIH0sXG4gIGltYWdlOntcbiAgICBkb21haW5zOiBbJy9wdWJsaWMvaW1hZ2UnXSxcbiAgfSxcbiAgZG9tYWluTmFtZTpcImh0dHA6Ly9sb2NhbGhvc3Q6MzAwMFwiLFxuICBhcGk6IHtcbiAgICBib2R5UGFyc2VyOiB7XG4gICAgICAgIHNpemVMaW1pdDogJzRtYicgXG4gICAgfVxuICB9LFxufVxuIl0sIm5hbWVzIjpbIm1vZHVsZSIsImV4cG9ydHMiLCJyZWFjdFN0cmljdE1vZGUiLCJlbnYiLCJtb25nb0RCX3VyaSIsIm1hcmtldHBsYWNlUHJpdmF0ZUtleSIsIm1hcmtldHBsYWNlV2FsbGV0QWRkcmVzcyIsIm5mdE1hcmtldEFkZHJlc3MiLCJuZnRBZGRyZXNzIiwiaW1hZ2UiLCJkb21haW5zIiwiZG9tYWluTmFtZSIsImFwaSIsImJvZHlQYXJzZXIiLCJzaXplTGltaXQiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./next.config.js\n");
+
+module.exports = {
+    reactStrictMode: true,
+    env: {
+        mongoDB_uri: "mongodb+srv://P2PExchangeAdmin:chGE0zr86MvYagdv@cryptoexchange.wcws5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+        marketplacePrivateKey: "01290c7d6abff326948e1514d5a20eeede5b433d36d176e66b2a8d852d83a9cb",
+        marketplaceWalletAddress: "0x518707e145604eA17eA6fd319Fa65DCD2E96Eb34",
+        // This is hardhat localhost network
+        nftMarketAddress: "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        nftAddress: "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9"
+    },
+    image: {
+        domains: [
+            '/public/image'
+        ]
+    },
+    domainName: "http://localhost:3000",
+    api: {
+        bodyParser: {
+            sizeLimit: '4mb'
+        }
+    }
+};
+
 
 /***/ }),
 
-/***/ "./pages/profile/[publicAddress].js":
-/*!******************************************!*\
-  !*** ./pages/profile/[publicAddress].js ***!
-  \******************************************/
+/***/ 2093:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   \"getServerSideProps\": () => (/* binding */ getServerSideProps)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/router */ \"next/router\");\n/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _heroicons_react_solid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @heroicons/react/solid */ \"@heroicons/react/solid\");\n/* harmony import */ var _heroicons_react_solid__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_heroicons_react_solid__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/head */ \"next/head\");\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ \"react-redux\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _redux_actions_userAction__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../redux/actions/userAction */ \"./redux/actions/userAction.js\");\n\n\n\n\n\n\n\nconst config = __webpack_require__(/*! ../../next.config */ \"./next.config.js\");\nconst Profile = ({ userData  })=>{\n    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_1__.useRouter)();\n    const { publicAddress  } = router.query;\n    const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_5__.useDispatch)();\n    const { username , image , promptpayID , description , bankAccount , bankName  } = userData;\n    const { 0: edit , 1: setEdit  } = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false);\n    const { 0: usernameInput , 1: setUsernameInput  } = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(username);\n    const { 0: promptpayIDInput , 1: setPromptpayIDInput  } = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(promptpayID);\n    const { 0: descriptionInput , 1: setDescriptionInput  } = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(description);\n    const { 0: bankAccountInput , 1: setBankAccountInput  } = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(\"\");\n    const { 0: bankNameInput , 1: setBankNameInput  } = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(\"\");\n    const handleSubmitEditProfile = async ()=>{\n        let editData = {\n            usernameInput,\n            promptpayIDInput,\n            descriptionInput,\n            bankAccountInput,\n            bankNameInput\n        };\n        let res = await fetch(`${config.domainName}/api/user/${publicAddress}`, {\n            method: \"POST\",\n            body: JSON.stringify(editData)\n        });\n        let data = await res.json();\n        dispatch((0,_redux_actions_userAction__WEBPACK_IMPORTED_MODULE_6__.logIn)({\n            username: data.username,\n            publicAddress: data.publicAddress,\n            promptpayID: data.promptpayID || \"\",\n            description: data.description,\n            bankName: data.bankName,\n            bankAccount: data.bankAccount\n        }));\n        console.log(data);\n        router.push(`${config.domainName}/profile/${publicAddress}`);\n        setEdit(!edit);\n    };\n    return(/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        className: \"grid grid-cols-1 place-items-start px-40 py-10 gap-y-4 font-bold w-full\",\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_head__WEBPACK_IMPORTED_MODULE_4___default()), {\n                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"title\", {\n                    children: [\n                        username,\n                        \" profile\"\n                    ]\n                }, void 0, true, {\n                    fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                    lineNumber: 45,\n                    columnNumber: 11\n                }, undefined)\n            }, void 0, false, {\n                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                lineNumber: 44,\n                columnNumber: 9\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h1\", {\n                className: \"text-3xl font-bold\",\n                children: \"Profile\"\n            }, void 0, false, {\n                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                lineNumber: 48,\n                columnNumber: 9\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_heroicons_react_solid__WEBPACK_IMPORTED_MODULE_3__.UserCircleIcon, {\n                className: \"w-40 h-40 text-blue-500 ml-10\"\n            }, void 0, false, {\n                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                lineNumber: 49,\n                columnNumber: 9\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                className: \"border-2 flex space-x-4 rounded px-4 py-1 items-center border-amber-500 cursor-pointer ml-10\",\n                onClick: ()=>setEdit(!edit)\n                ,\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_heroicons_react_solid__WEBPACK_IMPORTED_MODULE_3__.PencilAltIcon, {\n                        className: \"w-10 h-10 text-amber-500\"\n                    }, void 0, false, {\n                        fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                        lineNumber: 55,\n                        columnNumber: 11\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                        children: \"Edit your profile\"\n                    }, void 0, false, {\n                        fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                        lineNumber: 56,\n                        columnNumber: 11\n                    }, undefined)\n                ]\n            }, void 0, true, {\n                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                lineNumber: 51,\n                columnNumber: 9\n            }, undefined),\n            edit ? /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                className: \"grid grid-cols-1 place-items-start px-10 py-10 gap-y-4 font-bold w-full\",\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                        className: \"text-2xl\",\n                        children: \"Edit\"\n                    }, void 0, false, {\n                        fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                        lineNumber: 61,\n                        columnNumber: 13\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"grid grid-cols-6 place-items-start text-xl gap-x-20\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                className: \"text-gray-500 font-bold\",\n                                children: \"username\"\n                            }, void 0, false, {\n                                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                                lineNumber: 63,\n                                columnNumber: 15\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"input\", {\n                                type: \"text\",\n                                value: usernameInput,\n                                placeholder: usernameInput,\n                                className: \"border-2 rounded py-1 px-2 outlined-none font-medium\",\n                                onChange: (e)=>setUsernameInput(e.target.value)\n                            }, void 0, false, {\n                                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                                lineNumber: 64,\n                                columnNumber: 15\n                            }, undefined)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                        lineNumber: 62,\n                        columnNumber: 13\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"grid grid-cols-6 place-items-start text-xl gap-x-4\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                className: \"text-gray-500 font-bold\",\n                                children: \"Blockchain Address\"\n                            }, void 0, false, {\n                                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                                lineNumber: 71,\n                                columnNumber: 15\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                className: \"col-span-4\",\n                                children: publicAddress\n                            }, void 0, false, {\n                                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                                lineNumber: 72,\n                                columnNumber: 15\n                            }, undefined)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                        lineNumber: 70,\n                        columnNumber: 13\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"grid grid-cols-1 place-items-start text-xl gap-x-4\",\n                        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \"grid grid-cols-6 gap-x-12\",\n                            children: [\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                    className: \"text-gray-500 font-bold\",\n                                    children: \"PromptpayID\"\n                                }, void 0, false, {\n                                    fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                                    lineNumber: 77,\n                                    columnNumber: 17\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"input\", {\n                                    type: \"text\",\n                                    value: promptpayIDInput,\n                                    placeholder: promptpayIDInput,\n                                    className: \"border-2 rounded py-1 px-2 outlined-none font-medium\",\n                                    onChange: (e)=>setPromptpayIDInput(e.target.value)\n                                }, void 0, false, {\n                                    fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                                    lineNumber: 78,\n                                    columnNumber: 17\n                                }, undefined)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                            lineNumber: 76,\n                            columnNumber: 15\n                        }, undefined)\n                    }, void 0, false, {\n                        fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                        lineNumber: 75,\n                        columnNumber: 13\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"grid grid-cols-6 place-items-start text-xl gap-x-4\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                className: \"text-gray-500 font-bold\",\n                                children: \"Bank Name\"\n                            }, void 0, false, {\n                                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                                lineNumber: 86,\n                                columnNumber: 15\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"input\", {\n                                type: \"text\",\n                                value: bankNameInput,\n                                placeholder: bankNameInput,\n                                className: \"border-2 rounded py-1 px-2 outlined-none font-medium\",\n                                onChange: (e)=>setBankNameInput(e.target.value)\n                            }, void 0, false, {\n                                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                                lineNumber: 87,\n                                columnNumber: 15\n                            }, undefined)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                        lineNumber: 85,\n                        columnNumber: 13\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"grid grid-cols-6 place-items-start text-xl gap-x-4\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                className: \"text-gray-500 font-bold\",\n                                children: \"Bank Account\"\n                            }, void 0, false, {\n                                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                                lineNumber: 93,\n                                columnNumber: 15\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"input\", {\n                                type: \"text\",\n                                value: bankAccountInput,\n                                placeholder: bankAccountInput,\n                                className: \"border-2 rounded py-1 px-2 outlined-none font-medium\",\n                                onChange: (e)=>setBankAccountInput(e.target.value)\n                            }, void 0, false, {\n                                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                                lineNumber: 94,\n                                columnNumber: 15\n                            }, undefined)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                        lineNumber: 92,\n                        columnNumber: 13\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"grid grid-cols-6 place-items-start text-xl w-full\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                className: \"text-gray-500 font-bold\",\n                                children: \"Description\"\n                            }, void 0, false, {\n                                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                                lineNumber: 102,\n                                columnNumber: 15\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"textarea\", {\n                                type: \"text\",\n                                value: descriptionInput,\n                                placeholder: descriptionInput,\n                                className: \"border-2 rounded py-1 px-2 outlined-none font-medium w-full col-span-4 h-fit\",\n                                onChange: (e)=>setDescriptionInput(e.target.value)\n                            }, void 0, false, {\n                                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                                lineNumber: 103,\n                                columnNumber: 15\n                            }, undefined)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                        lineNumber: 101,\n                        columnNumber: 13\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                        className: \"border-2 p-4 text-xl font-bold bg-green-500 text-white rounded place-self-center\",\n                        onClick: handleSubmitEditProfile,\n                        children: \"Submit Edit\"\n                    }, void 0, false, {\n                        fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                        lineNumber: 109,\n                        columnNumber: 13\n                    }, undefined)\n                ]\n            }, void 0, true, {\n                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                lineNumber: 60,\n                columnNumber: 11\n            }, undefined) : /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                className: \"grid grid-cols-1 place-items-start px-10 py-10 gap-y-4 font-bold\",\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"grid grid-cols-6 place-items-start text-xl gap-x-20\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                className: \"text-gray-500 font-bold\",\n                                children: \"username\"\n                            }, void 0, false, {\n                                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                                lineNumber: 120,\n                                columnNumber: 15\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                className: \"col-span-4\",\n                                children: username\n                            }, void 0, false, {\n                                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                                lineNumber: 121,\n                                columnNumber: 15\n                            }, undefined)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                        lineNumber: 119,\n                        columnNumber: 13\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"grid grid-cols-6 place-items-start text-xl\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                className: \"text-gray-500 font-bold\",\n                                children: \"Blockchain Address\"\n                            }, void 0, false, {\n                                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                                lineNumber: 125,\n                                columnNumber: 15\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                className: \"col-span-4\",\n                                children: publicAddress\n                            }, void 0, false, {\n                                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                                lineNumber: 126,\n                                columnNumber: 15\n                            }, undefined)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                        lineNumber: 124,\n                        columnNumber: 13\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"grid grid-cols-1 place-items-start text-xl gap-x-4\",\n                        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \"grid grid-cols-6 gap-x-12\",\n                            children: [\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                    className: \"text-gray-500 font-bold\",\n                                    children: \"PromptpayID\"\n                                }, void 0, false, {\n                                    fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                                    lineNumber: 131,\n                                    columnNumber: 17\n                                }, undefined),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                    className: \"col-span-4\",\n                                    children: promptpayID\n                                }, void 0, false, {\n                                    fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                                    lineNumber: 132,\n                                    columnNumber: 17\n                                }, undefined)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                            lineNumber: 130,\n                            columnNumber: 15\n                        }, undefined)\n                    }, void 0, false, {\n                        fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                        lineNumber: 129,\n                        columnNumber: 13\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"grid grid-cols-6 place-items-start text-xl gap-x-4\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                className: \"text-gray-500 font-bold\",\n                                children: \"Bank Name\"\n                            }, void 0, false, {\n                                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                                lineNumber: 137,\n                                columnNumber: 15\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                children: bankName\n                            }, void 0, false, {\n                                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                                lineNumber: 138,\n                                columnNumber: 15\n                            }, undefined)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                        lineNumber: 136,\n                        columnNumber: 13\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"grid grid-cols-6 place-items-start text-xl gap-x-4\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                className: \"text-gray-500 font-bold\",\n                                children: \"Bank Account\"\n                            }, void 0, false, {\n                                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                                lineNumber: 142,\n                                columnNumber: 15\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                children: bankAccount\n                            }, void 0, false, {\n                                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                                lineNumber: 143,\n                                columnNumber: 15\n                            }, undefined)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                        lineNumber: 141,\n                        columnNumber: 13\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"grid grid-cols-6 place-items-start text-xl\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                className: \"text-gray-500 font-bold\",\n                                children: \"Description\"\n                            }, void 0, false, {\n                                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                                lineNumber: 147,\n                                columnNumber: 15\n                            }, undefined),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                className: \"col-span-4\",\n                                children: description\n                            }, void 0, false, {\n                                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                                lineNumber: 148,\n                                columnNumber: 15\n                            }, undefined)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                        lineNumber: 146,\n                        columnNumber: 13\n                    }, undefined)\n                ]\n            }, void 0, true, {\n                fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n                lineNumber: 118,\n                columnNumber: 11\n            }, undefined)\n        ]\n    }, void 0, true, {\n        fileName: \"/home/khemmapich/Work/blockchain/freecoinflow/pages/profile/[publicAddress].js\",\n        lineNumber: 43,\n        columnNumber: 5\n    }, undefined));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Profile);\n// This gets called on every request\nasync function getServerSideProps(context) {\n    let publicAddress = context.params.publicAddress;\n    // fetch order data\n    const res = await fetch(`${config.domainName}/api/user/${publicAddress}`);\n    const userData = await res.json();\n    return {\n        props: {\n            userData\n        }\n    };\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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LENBQUM7MENBQUVqQyxXQUFXOzs7Ozs7Ozs7Ozs7Z0dBR2hCNEIsQ0FBRzt3QkFBQ0MsU0FBUyxFQUFDLENBQTRDOzt3R0FDeERJLENBQUM7Z0NBQUNKLFNBQVMsRUFBQyxDQUF5QjswQ0FBQyxDQUFXOzs7Ozs7d0dBQ2pESSxDQUFDO2dDQUFDSixTQUFTLEVBQUMsQ0FBWTswQ0FBRTlCLFdBQVc7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQVNwRCxDQUFDO0FBRUQsaUVBQWVULE9BQU87QUFFdEIsRUFBb0M7QUFDN0IsZUFBZXFELGtCQUFrQixDQUFDQyxPQUFPLEVBQUUsQ0FBQztJQUNqRCxHQUFHLENBQUNuRCxhQUFhLEdBQUdtRCxPQUFPLENBQUNDLE1BQU0sQ0FBQ3BELGFBQWE7SUFDaEQsRUFBbUI7SUFDbkIsS0FBSyxDQUFDdUIsR0FBRyxHQUFHLEtBQUssQ0FBQ0MsS0FBSyxJQUFJN0IsTUFBTSxDQUFDOEIsVUFBVSxDQUFDLFVBQVUsRUFBRXpCLGFBQWE7SUFDdEUsS0FBSyxDQUFDRixRQUFRLEdBQUcsS0FBSyxDQUFDeUIsR0FBRyxDQUFDUSxJQUFJO0lBRS9CLE1BQU0sQ0FBQyxDQUFDO1FBQUNzQixLQUFLLEVBQUUsQ0FBQztZQUFDdkQsUUFBUTtRQUFBLENBQUM7SUFBQyxDQUFDO0FBQy9CLENBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9uZnQtbWFya2V0cGxhY2UtbXZwLy4vcGFnZXMvcHJvZmlsZS9bcHVibGljQWRkcmVzc10uanM/OGQwNyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB1c2VSb3V0ZXIgfSBmcm9tICduZXh0L3JvdXRlcidcbmltcG9ydCBSZWFjdCwgeyB1c2VTdGF0ZSB9IGZyb20gJ3JlYWN0J1xuY29uc3QgY29uZmlnID0gcmVxdWlyZShcIi4uLy4uL25leHQuY29uZmlnXCIpXG5pbXBvcnQgeyBVc2VyQ2lyY2xlSWNvbiAsUGVuY2lsQWx0SWNvbn0gZnJvbSAnQGhlcm9pY29ucy9yZWFjdC9zb2xpZCdcbmltcG9ydCBIZWFkIGZyb20gJ25leHQvaGVhZCdcbmltcG9ydCB7IHVzZURpc3BhdGNoIH0gZnJvbSAncmVhY3QtcmVkdXgnXG5pbXBvcnQgeyBsb2dJbiB9IGZyb20gJy4uLy4uL3JlZHV4L2FjdGlvbnMvdXNlckFjdGlvbidcblxuY29uc3QgUHJvZmlsZSA9ICh7dXNlckRhdGF9KSA9PiB7XG4gIGNvbnN0IHJvdXRlciA9IHVzZVJvdXRlcigpXG4gIGNvbnN0IHtwdWJsaWNBZGRyZXNzfSA9IHJvdXRlci5xdWVyeVxuICBjb25zdCBkaXNwYXRjaCA9IHVzZURpc3BhdGNoKCk7XG4gIGNvbnN0IHt1c2VybmFtZSxpbWFnZSxwcm9tcHRwYXlJRCxkZXNjcmlwdGlvbixiYW5rQWNjb3VudCxiYW5rTmFtZX0gPSB1c2VyRGF0YVxuICBjb25zdCBbZWRpdCwgc2V0RWRpdF0gPSB1c2VTdGF0ZShmYWxzZSlcbiAgY29uc3QgW3VzZXJuYW1lSW5wdXQsIHNldFVzZXJuYW1lSW5wdXRdID0gdXNlU3RhdGUodXNlcm5hbWUpXG4gIGNvbnN0IFtwcm9tcHRwYXlJRElucHV0LCBzZXRQcm9tcHRwYXlJRElucHV0XSA9IHVzZVN0YXRlKHByb21wdHBheUlEKVxuICBjb25zdCBbZGVzY3JpcHRpb25JbnB1dCwgc2V0RGVzY3JpcHRpb25JbnB1dF0gPSB1c2VTdGF0ZShkZXNjcmlwdGlvbilcbiAgY29uc3QgW2JhbmtBY2NvdW50SW5wdXQsIHNldEJhbmtBY2NvdW50SW5wdXRdID0gdXNlU3RhdGUoXCJcIilcbiAgY29uc3QgW2JhbmtOYW1lSW5wdXQsIHNldEJhbmtOYW1lSW5wdXRdID0gdXNlU3RhdGUoXCJcIilcblxuICBjb25zdCBoYW5kbGVTdWJtaXRFZGl0UHJvZmlsZSA9IGFzeW5jICgpID0+IHtcbiAgICBsZXQgZWRpdERhdGEgPSB7dXNlcm5hbWVJbnB1dCxwcm9tcHRwYXlJRElucHV0LGRlc2NyaXB0aW9uSW5wdXQsYmFua0FjY291bnRJbnB1dCxiYW5rTmFtZUlucHV0fVxuICAgIGxldCByZXMgPSBhd2FpdCBmZXRjaChgJHtjb25maWcuZG9tYWluTmFtZX0vYXBpL3VzZXIvJHtwdWJsaWNBZGRyZXNzfWAse1xuICAgICAgbWV0aG9kOlwiUE9TVFwiLFxuICAgICAgYm9keTpKU09OLnN0cmluZ2lmeShlZGl0RGF0YSlcbiAgICB9KVxuICAgIGxldCBkYXRhID0gYXdhaXQgcmVzLmpzb24oKTtcbiAgICBkaXNwYXRjaChsb2dJbih7XG4gICAgICB1c2VybmFtZTpkYXRhLnVzZXJuYW1lLFxuICAgICAgcHVibGljQWRkcmVzczogZGF0YS5wdWJsaWNBZGRyZXNzLFxuICAgICAgcHJvbXB0cGF5SUQ6ZGF0YS5wcm9tcHRwYXlJRCB8fCBcIlwiLFxuICAgICAgZGVzY3JpcHRpb246ZGF0YS5kZXNjcmlwdGlvbixcbiAgICAgIGJhbmtOYW1lOmRhdGEuYmFua05hbWUsXG4gICAgICBiYW5rQWNjb3VudDpkYXRhLmJhbmtBY2NvdW50LFxuICAgIH0pKVxuICAgIGNvbnNvbGUubG9nKGRhdGEpXG4gICAgcm91dGVyLnB1c2goYCR7Y29uZmlnLmRvbWFpbk5hbWV9L3Byb2ZpbGUvJHtwdWJsaWNBZGRyZXNzfWApXG4gICAgc2V0RWRpdCghZWRpdCk7XG4gICAgXG4gIH1cbiAgXG4gIHJldHVybiAoXG4gICAgPGRpdiBjbGFzc05hbWU9J2dyaWQgZ3JpZC1jb2xzLTEgcGxhY2UtaXRlbXMtc3RhcnQgcHgtNDAgcHktMTAgZ2FwLXktNCBmb250LWJvbGQgdy1mdWxsJz5cbiAgICAgICAgPEhlYWQ+XG4gICAgICAgICAgPHRpdGxlPnt1c2VybmFtZX0gcHJvZmlsZTwvdGl0bGU+XG4gICAgICAgIDwvSGVhZD5cblxuICAgICAgICA8aDEgY2xhc3NOYW1lPSd0ZXh0LTN4bCBmb250LWJvbGQnPlByb2ZpbGU8L2gxPlxuICAgICAgICA8VXNlckNpcmNsZUljb24gY2xhc3NOYW1lPSd3LTQwIGgtNDAgdGV4dC1ibHVlLTUwMCBtbC0xMCcgLz5cbiAgICAgICAgXG4gICAgICAgIDxkaXYgXG4gICAgICAgICAgY2xhc3NOYW1lPSdib3JkZXItMiBmbGV4IHNwYWNlLXgtNCByb3VuZGVkIHB4LTQgcHktMSBpdGVtcy1jZW50ZXIgYm9yZGVyLWFtYmVyLTUwMCBjdXJzb3ItcG9pbnRlciBtbC0xMCdcbiAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBzZXRFZGl0KCFlZGl0KX0gIFxuICAgICAgICAgID5cbiAgICAgICAgICA8UGVuY2lsQWx0SWNvbiBjbGFzc05hbWU9XCJ3LTEwIGgtMTAgdGV4dC1hbWJlci01MDBcIiAvPlxuICAgICAgICAgIDxwPkVkaXQgeW91ciBwcm9maWxlPC9wPlxuICAgICAgICA8L2Rpdj5cblxuICAgICAgICB7ZWRpdCA/IChcbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0nZ3JpZCBncmlkLWNvbHMtMSBwbGFjZS1pdGVtcy1zdGFydCBweC0xMCBweS0xMCBnYXAteS00IGZvbnQtYm9sZCB3LWZ1bGwnPlxuICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSd0ZXh0LTJ4bCc+RWRpdDwvcD5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSdncmlkIGdyaWQtY29scy02IHBsYWNlLWl0ZW1zLXN0YXJ0IHRleHQteGwgZ2FwLXgtMjAnPlxuICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9J3RleHQtZ3JheS01MDAgZm9udC1ib2xkJz51c2VybmFtZTwvcD5cbiAgICAgICAgICAgICAgPGlucHV0IHR5cGU9XCJ0ZXh0XCIgdmFsdWU9e3VzZXJuYW1lSW5wdXR9IHBsYWNlaG9sZGVyPXt1c2VybmFtZUlucHV0fSBcbiAgICAgICAgICAgICAgICBjbGFzc05hbWU9XCJib3JkZXItMiByb3VuZGVkIHB5LTEgcHgtMiBvdXRsaW5lZC1ub25lIGZvbnQtbWVkaXVtXCIgXG4gICAgICAgICAgICAgICAgb25DaGFuZ2U9eyhlKSA9PiBzZXRVc2VybmFtZUlucHV0KGUudGFyZ2V0LnZhbHVlKX1cbiAgICAgICAgICAgICAgLz5cbiAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0nZ3JpZCBncmlkLWNvbHMtNiBwbGFjZS1pdGVtcy1zdGFydCB0ZXh0LXhsIGdhcC14LTQnPlxuICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9J3RleHQtZ3JheS01MDAgZm9udC1ib2xkJz5CbG9ja2NoYWluIEFkZHJlc3M8L3A+XG4gICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0nY29sLXNwYW4tNCc+e3B1YmxpY0FkZHJlc3N9PC9wPlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICBcbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSdncmlkIGdyaWQtY29scy0xIHBsYWNlLWl0ZW1zLXN0YXJ0IHRleHQteGwgZ2FwLXgtNCc+XG4gICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSdncmlkIGdyaWQtY29scy02IGdhcC14LTEyJz5cbiAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9J3RleHQtZ3JheS01MDAgZm9udC1ib2xkJz5Qcm9tcHRwYXlJRDwvcD5cbiAgICAgICAgICAgICAgICA8aW5wdXQgdHlwZT1cInRleHRcIiB2YWx1ZT17cHJvbXB0cGF5SURJbnB1dH0gcGxhY2Vob2xkZXI9e3Byb21wdHBheUlESW5wdXR9IFxuICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwiYm9yZGVyLTIgcm91bmRlZCBweS0xIHB4LTIgb3V0bGluZWQtbm9uZSBmb250LW1lZGl1bVwiIFxuICAgICAgICAgICAgICAgICAgb25DaGFuZ2U9eyhlKSA9PiBzZXRQcm9tcHRwYXlJRElucHV0KGUudGFyZ2V0LnZhbHVlKX1cbiAgICAgICAgICAgICAgICAvPlxuICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0nZ3JpZCBncmlkLWNvbHMtNiBwbGFjZS1pdGVtcy1zdGFydCB0ZXh0LXhsIGdhcC14LTQnPlxuICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9J3RleHQtZ3JheS01MDAgZm9udC1ib2xkJz5CYW5rIE5hbWU8L3A+XG4gICAgICAgICAgICAgIDxpbnB1dCB0eXBlPVwidGV4dFwiIHZhbHVlPXtiYW5rTmFtZUlucHV0fSBwbGFjZWhvbGRlcj17YmFua05hbWVJbnB1dH0gXG4gICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwiYm9yZGVyLTIgcm91bmRlZCBweS0xIHB4LTIgb3V0bGluZWQtbm9uZSBmb250LW1lZGl1bVwiIFxuICAgICAgICAgICAgICAgIG9uQ2hhbmdlPXsoZSkgPT4gc2V0QmFua05hbWVJbnB1dChlLnRhcmdldC52YWx1ZSl9XG4gICAgICAgICAgICAgIC8+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSdncmlkIGdyaWQtY29scy02IHBsYWNlLWl0ZW1zLXN0YXJ0IHRleHQteGwgZ2FwLXgtNCc+XG4gICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0ndGV4dC1ncmF5LTUwMCBmb250LWJvbGQnPkJhbmsgQWNjb3VudDwvcD5cbiAgICAgICAgICAgICAgPGlucHV0IHR5cGU9XCJ0ZXh0XCIgdmFsdWU9e2JhbmtBY2NvdW50SW5wdXR9IHBsYWNlaG9sZGVyPXtiYW5rQWNjb3VudElucHV0fSBcbiAgICAgICAgICAgICAgICBjbGFzc05hbWU9XCJib3JkZXItMiByb3VuZGVkIHB5LTEgcHgtMiBvdXRsaW5lZC1ub25lIGZvbnQtbWVkaXVtXCIgXG4gICAgICAgICAgICAgICAgb25DaGFuZ2U9eyhlKSA9PiBzZXRCYW5rQWNjb3VudElucHV0KGUudGFyZ2V0LnZhbHVlKX1cbiAgICAgICAgICAgICAgLz5cbiAgICAgICAgICAgIDwvZGl2PlxuXG5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSdncmlkIGdyaWQtY29scy02IHBsYWNlLWl0ZW1zLXN0YXJ0IHRleHQteGwgdy1mdWxsJz5cbiAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSd0ZXh0LWdyYXktNTAwIGZvbnQtYm9sZCc+RGVzY3JpcHRpb248L3A+XG4gICAgICAgICAgICAgIDx0ZXh0YXJlYSB0eXBlPVwidGV4dFwiIHZhbHVlPXtkZXNjcmlwdGlvbklucHV0fSBwbGFjZWhvbGRlcj17ZGVzY3JpcHRpb25JbnB1dH0gXG4gICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwiYm9yZGVyLTIgcm91bmRlZCBweS0xIHB4LTIgb3V0bGluZWQtbm9uZSBmb250LW1lZGl1bSB3LWZ1bGwgY29sLXNwYW4tNCBoLWZpdFwiIFxuICAgICAgICAgICAgICAgIG9uQ2hhbmdlPXsoZSkgPT4gc2V0RGVzY3JpcHRpb25JbnB1dChlLnRhcmdldC52YWx1ZSl9XG4gICAgICAgICAgICAgIC8+XG4gICAgICAgICAgICA8L2Rpdj4gICAgICAgICAgICBcbiAgICAgICAgICAgIFxuICAgICAgICAgICAgPGJ1dHRvbiBcbiAgICAgICAgICAgICAgY2xhc3NOYW1lPSdib3JkZXItMiBwLTQgdGV4dC14bCBmb250LWJvbGQgYmctZ3JlZW4tNTAwIHRleHQtd2hpdGUgcm91bmRlZCBwbGFjZS1zZWxmLWNlbnRlcidcbiAgICAgICAgICAgICAgb25DbGljaz17aGFuZGxlU3VibWl0RWRpdFByb2ZpbGV9ICBcbiAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgU3VibWl0IEVkaXRcbiAgICAgICAgICAgIDwvYnV0dG9uPlxuICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICkgOiAoXG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9J2dyaWQgZ3JpZC1jb2xzLTEgcGxhY2UtaXRlbXMtc3RhcnQgcHgtMTAgcHktMTAgZ2FwLXktNCBmb250LWJvbGQnPlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9J2dyaWQgZ3JpZC1jb2xzLTYgcGxhY2UtaXRlbXMtc3RhcnQgdGV4dC14bCBnYXAteC0yMCc+XG4gICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0ndGV4dC1ncmF5LTUwMCBmb250LWJvbGQnPnVzZXJuYW1lPC9wPlxuICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9J2NvbC1zcGFuLTQnPnt1c2VybmFtZX08L3A+XG4gICAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9J2dyaWQgZ3JpZC1jb2xzLTYgcGxhY2UtaXRlbXMtc3RhcnQgdGV4dC14bCc+XG4gICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0ndGV4dC1ncmF5LTUwMCBmb250LWJvbGQnPkJsb2NrY2hhaW4gQWRkcmVzczwvcD5cbiAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSdjb2wtc3Bhbi00Jz57cHVibGljQWRkcmVzc308L3A+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIFxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9J2dyaWQgZ3JpZC1jb2xzLTEgcGxhY2UtaXRlbXMtc3RhcnQgdGV4dC14bCBnYXAteC00Jz5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9J2dyaWQgZ3JpZC1jb2xzLTYgZ2FwLXgtMTInPlxuICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0ndGV4dC1ncmF5LTUwMCBmb250LWJvbGQnPlByb21wdHBheUlEPC9wPlxuICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0nY29sLXNwYW4tNCc+e3Byb21wdHBheUlEfTwvcD5cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9J2dyaWQgZ3JpZC1jb2xzLTYgcGxhY2UtaXRlbXMtc3RhcnQgdGV4dC14bCBnYXAteC00Jz5cbiAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSd0ZXh0LWdyYXktNTAwIGZvbnQtYm9sZCc+QmFuayBOYW1lPC9wPlxuICAgICAgICAgICAgICA8cD57YmFua05hbWV9PC9wPlxuICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSdncmlkIGdyaWQtY29scy02IHBsYWNlLWl0ZW1zLXN0YXJ0IHRleHQteGwgZ2FwLXgtNCc+XG4gICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0ndGV4dC1ncmF5LTUwMCBmb250LWJvbGQnPkJhbmsgQWNjb3VudDwvcD5cbiAgICAgICAgICAgICAgPHA+e2JhbmtBY2NvdW50fTwvcD5cbiAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0nZ3JpZCBncmlkLWNvbHMtNiBwbGFjZS1pdGVtcy1zdGFydCB0ZXh0LXhsJz5cbiAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSd0ZXh0LWdyYXktNTAwIGZvbnQtYm9sZCc+RGVzY3JpcHRpb248L3A+XG4gICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0nY29sLXNwYW4tNCc+e2Rlc2NyaXB0aW9ufTwvcD5cbiAgICAgICAgICAgIDwvZGl2PiAgICAgICAgICAgIFxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICApfVxuICAgICAgICBcblxuICAgICAgICBcbiAgICA8L2Rpdj5cbiAgKVxufVxuXG5leHBvcnQgZGVmYXVsdCBQcm9maWxlXG5cbi8vIFRoaXMgZ2V0cyBjYWxsZWQgb24gZXZlcnkgcmVxdWVzdFxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGdldFNlcnZlclNpZGVQcm9wcyhjb250ZXh0KSB7XG4gIGxldCBwdWJsaWNBZGRyZXNzID0gY29udGV4dC5wYXJhbXMucHVibGljQWRkcmVzcztcbiAgLy8gZmV0Y2ggb3JkZXIgZGF0YVxuICBjb25zdCByZXMgPSBhd2FpdCBmZXRjaChgJHtjb25maWcuZG9tYWluTmFtZX0vYXBpL3VzZXIvJHtwdWJsaWNBZGRyZXNzfWApXG4gIGNvbnN0IHVzZXJEYXRhID0gYXdhaXQgcmVzLmpzb24oKVxuICBcbiAgcmV0dXJuIHsgcHJvcHM6IHsgdXNlckRhdGF9IH1cbn1cbiJdLCJuYW1lcyI6WyJ1c2VSb3V0ZXIiLCJSZWFjdCIsInVzZVN0YXRlIiwiVXNlckNpcmNsZUljb24iLCJQZW5jaWxBbHRJY29uIiwiSGVhZCIsInVzZURpc3BhdGNoIiwibG9nSW4iLCJjb25maWciLCJyZXF1aXJlIiwiUHJvZmlsZSIsInVzZXJEYXRhIiwicm91dGVyIiwicHVibGljQWRkcmVzcyIsInF1ZXJ5IiwiZGlzcGF0Y2giLCJ1c2VybmFtZSIsImltYWdlIiwicHJvbXB0cGF5SUQiLCJkZXNjcmlwdGlvbiIsImJhbmtBY2NvdW50IiwiYmFua05hbWUiLCJlZGl0Iiwic2V0RWRpdCIsInVzZXJuYW1lSW5wdXQiLCJzZXRVc2VybmFtZUlucHV0IiwicHJvbXB0cGF5SURJbnB1dCIsInNldFByb21wdHBheUlESW5wdXQiLCJkZXNjcmlwdGlvbklucHV0Iiwic2V0RGVzY3JpcHRpb25JbnB1dCIsImJhbmtBY2NvdW50SW5wdXQiLCJzZXRCYW5rQWNjb3VudElucHV0IiwiYmFua05hbWVJbnB1dCIsInNldEJhbmtOYW1lSW5wdXQiLCJoYW5kbGVTdWJtaXRFZGl0UHJvZmlsZSIsImVkaXREYXRhIiwicmVzIiwiZmV0Y2giLCJkb21haW5OYW1lIiwibWV0aG9kIiwiYm9keSIsIkpTT04iLCJzdHJpbmdpZnkiLCJkYXRhIiwianNvbiIsImNvbnNvbGUiLCJsb2ciLCJwdXNoIiwiZGl2IiwiY2xhc3NOYW1lIiwidGl0bGUiLCJoMSIsIm9uQ2xpY2siLCJwIiwiaW5wdXQiLCJ0eXBlIiwidmFsdWUiLCJwbGFjZWhvbGRlciIsIm9uQ2hhbmdlIiwiZSIsInRhcmdldCIsInRleHRhcmVhIiwiYnV0dG9uIiwiZ2V0U2VydmVyU2lkZVByb3BzIiwiY29udGV4dCIsInBhcmFtcyIsInByb3BzIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./pages/profile/[publicAddress].js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "getServerSideProps": () => (/* binding */ getServerSideProps)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1853);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _heroicons_react_solid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1143);
+/* harmony import */ var _heroicons_react_solid__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_heroicons_react_solid__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(968);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6022);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _redux_actions_userAction__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7867);
+
+
+
+
+
+
+
+const config = __webpack_require__(5725);
+const Profile = ({ userData  })=>{
+    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_1__.useRouter)();
+    const { publicAddress  } = router.query;
+    const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_5__.useDispatch)();
+    const { username , image , promptpayID , description , bankAccount , bankName  } = userData;
+    const { 0: edit , 1: setEdit  } = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false);
+    const { 0: usernameInput , 1: setUsernameInput  } = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(username);
+    const { 0: promptpayIDInput , 1: setPromptpayIDInput  } = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(promptpayID);
+    const { 0: descriptionInput , 1: setDescriptionInput  } = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(description);
+    const { 0: bankAccountInput , 1: setBankAccountInput  } = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)("");
+    const { 0: bankNameInput , 1: setBankNameInput  } = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)("");
+    const handleSubmitEditProfile = async ()=>{
+        let editData = {
+            usernameInput,
+            promptpayIDInput,
+            descriptionInput,
+            bankAccountInput,
+            bankNameInput
+        };
+        let res = await fetch(`${config.domainName}/api/user/${publicAddress}`, {
+            method: "POST",
+            body: JSON.stringify(editData)
+        });
+        let data = await res.json();
+        dispatch((0,_redux_actions_userAction__WEBPACK_IMPORTED_MODULE_6__/* .logIn */ .I)({
+            username: data.username,
+            publicAddress: data.publicAddress,
+            promptpayID: data.promptpayID || "",
+            description: data.description,
+            bankName: data.bankName,
+            bankAccount: data.bankAccount
+        }));
+        console.log(data);
+        router.push(`${config.domainName}/profile/${publicAddress}`);
+        setEdit(!edit);
+    };
+    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+        className: "grid grid-cols-1 place-items-start px-40 py-10 gap-y-4 font-bold w-full",
+        children: [
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_head__WEBPACK_IMPORTED_MODULE_4___default()), {
+                children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("title", {
+                    children: [
+                        username,
+                        " profile"
+                    ]
+                })
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+                className: "text-3xl font-bold",
+                children: "Profile"
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_heroicons_react_solid__WEBPACK_IMPORTED_MODULE_3__.UserCircleIcon, {
+                className: "w-40 h-40 text-blue-500 ml-10"
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                className: "border-2 flex space-x-4 rounded px-4 py-1 items-center border-amber-500 cursor-pointer ml-10",
+                onClick: ()=>setEdit(!edit)
+                ,
+                children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_heroicons_react_solid__WEBPACK_IMPORTED_MODULE_3__.PencilAltIcon, {
+                        className: "w-10 h-10 text-amber-500"
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                        children: "Edit your profile"
+                    })
+                ]
+            }),
+            edit ? /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                className: "grid grid-cols-1 place-items-start px-10 py-10 gap-y-4 font-bold w-full",
+                children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                        className: "text-2xl",
+                        children: "Edit"
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                        className: "grid grid-cols-6 place-items-start text-xl gap-x-20",
+                        children: [
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                className: "text-gray-500 font-bold",
+                                children: "username"
+                            }),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("input", {
+                                type: "text",
+                                value: usernameInput,
+                                placeholder: usernameInput,
+                                className: "border-2 rounded py-1 px-2 outlined-none font-medium",
+                                onChange: (e)=>setUsernameInput(e.target.value)
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                        className: "grid grid-cols-6 place-items-start text-xl gap-x-4",
+                        children: [
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                className: "text-gray-500 font-bold",
+                                children: "Blockchain Address"
+                            }),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                className: "col-span-4",
+                                children: publicAddress
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                        className: "grid grid-cols-1 place-items-start text-xl gap-x-4",
+                        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                            className: "grid grid-cols-6 gap-x-12",
+                            children: [
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                    className: "text-gray-500 font-bold",
+                                    children: "PromptpayID"
+                                }),
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("input", {
+                                    type: "text",
+                                    value: promptpayIDInput,
+                                    placeholder: promptpayIDInput,
+                                    className: "border-2 rounded py-1 px-2 outlined-none font-medium",
+                                    onChange: (e)=>setPromptpayIDInput(e.target.value)
+                                })
+                            ]
+                        })
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                        className: "grid grid-cols-6 place-items-start text-xl gap-x-4",
+                        children: [
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                className: "text-gray-500 font-bold",
+                                children: "Bank Name"
+                            }),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("input", {
+                                type: "text",
+                                value: bankNameInput,
+                                placeholder: bankNameInput,
+                                className: "border-2 rounded py-1 px-2 outlined-none font-medium",
+                                onChange: (e)=>setBankNameInput(e.target.value)
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                        className: "grid grid-cols-6 place-items-start text-xl gap-x-4",
+                        children: [
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                className: "text-gray-500 font-bold",
+                                children: "Bank Account"
+                            }),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("input", {
+                                type: "text",
+                                value: bankAccountInput,
+                                placeholder: bankAccountInput,
+                                className: "border-2 rounded py-1 px-2 outlined-none font-medium",
+                                onChange: (e)=>setBankAccountInput(e.target.value)
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                        className: "grid grid-cols-6 place-items-start text-xl w-full",
+                        children: [
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                className: "text-gray-500 font-bold",
+                                children: "Description"
+                            }),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("textarea", {
+                                type: "text",
+                                value: descriptionInput,
+                                placeholder: descriptionInput,
+                                className: "border-2 rounded py-1 px-2 outlined-none font-medium w-full col-span-4 h-fit",
+                                onChange: (e)=>setDescriptionInput(e.target.value)
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
+                        className: "border-2 p-4 text-xl font-bold bg-green-500 text-white rounded place-self-center",
+                        onClick: handleSubmitEditProfile,
+                        children: "Submit Edit"
+                    })
+                ]
+            }) : /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                className: "grid grid-cols-1 place-items-start px-10 py-10 gap-y-4 font-bold",
+                children: [
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                        className: "grid grid-cols-6 place-items-start text-xl gap-x-20",
+                        children: [
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                className: "text-gray-500 font-bold",
+                                children: "username"
+                            }),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                className: "col-span-4",
+                                children: username
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                        className: "grid grid-cols-6 place-items-start text-xl",
+                        children: [
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                className: "text-gray-500 font-bold",
+                                children: "Blockchain Address"
+                            }),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                className: "col-span-4",
+                                children: publicAddress
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                        className: "grid grid-cols-1 place-items-start text-xl gap-x-4",
+                        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                            className: "grid grid-cols-6 gap-x-12",
+                            children: [
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                    className: "text-gray-500 font-bold",
+                                    children: "PromptpayID"
+                                }),
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                    className: "col-span-4",
+                                    children: promptpayID
+                                })
+                            ]
+                        })
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                        className: "grid grid-cols-6 place-items-start text-xl gap-x-4",
+                        children: [
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                className: "text-gray-500 font-bold",
+                                children: "Bank Name"
+                            }),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                children: bankName
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                        className: "grid grid-cols-6 place-items-start text-xl gap-x-4",
+                        children: [
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                className: "text-gray-500 font-bold",
+                                children: "Bank Account"
+                            }),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                children: bankAccount
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                        className: "grid grid-cols-6 place-items-start text-xl",
+                        children: [
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                className: "text-gray-500 font-bold",
+                                children: "Description"
+                            }),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                className: "col-span-4",
+                                children: description
+                            })
+                        ]
+                    })
+                ]
+            })
+        ]
+    }));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Profile);
+// This gets called on every request
+async function getServerSideProps(context) {
+    let publicAddress = context.params.publicAddress;
+    // fetch order data
+    const res = await fetch(`${config.domainName}/api/user/${publicAddress}`);
+    const userData = await res.json();
+    return {
+        props: {
+            userData
+        }
+    };
+}
+
 
 /***/ }),
 
-/***/ "./redux/actionTypes.js":
-/*!******************************!*\
-  !*** ./redux/actionTypes.js ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"LOGIN\": () => (/* binding */ LOGIN),\n/* harmony export */   \"LOGOUT\": () => (/* binding */ LOGOUT),\n/* harmony export */   \"CRYPTO\": () => (/* binding */ CRYPTO),\n/* harmony export */   \"CURRENCY\": () => (/* binding */ CURRENCY),\n/* harmony export */   \"TRANSACTION\": () => (/* binding */ TRANSACTION),\n/* harmony export */   \"PAYMENT\": () => (/* binding */ PAYMENT)\n/* harmony export */ });\n//* Redux action types\nconst LOGIN = \"LOGIN\";\nconst LOGOUT = \"LOGOUT\";\nconst CRYPTO = \"CRYPTO\";\nconst CURRENCY = \"CURRENCY\";\nconst TRANSACTION = \"TRANSACTION\";\nconst PAYMENT = \"PAYMENT\";\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZWR1eC9hY3Rpb25UeXBlcy5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7QUFBQSxFQUFzQjtBQUNmLEtBQUssQ0FBQ0EsS0FBSyxHQUFHLENBQU87QUFDckIsS0FBSyxDQUFDQyxNQUFNLEdBQUcsQ0FBUTtBQUN2QixLQUFLLENBQUNDLE1BQU0sR0FBRyxDQUFRO0FBQ3ZCLEtBQUssQ0FBQ0MsUUFBUSxHQUFHLENBQVU7QUFDM0IsS0FBSyxDQUFDQyxXQUFXLEdBQUcsQ0FBYTtBQUNqQyxLQUFLLENBQUNDLE9BQU8sR0FBRyxDQUFTIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbmZ0LW1hcmtldHBsYWNlLW12cC8uL3JlZHV4L2FjdGlvblR5cGVzLmpzP2MzZmUiXSwic291cmNlc0NvbnRlbnQiOlsiLy8qIFJlZHV4IGFjdGlvbiB0eXBlc1xuZXhwb3J0IGNvbnN0IExPR0lOID0gXCJMT0dJTlwiIDtcbmV4cG9ydCBjb25zdCBMT0dPVVQgPSBcIkxPR09VVFwiIDtcbmV4cG9ydCBjb25zdCBDUllQVE8gPSBcIkNSWVBUT1wiIDtcbmV4cG9ydCBjb25zdCBDVVJSRU5DWSA9IFwiQ1VSUkVOQ1lcIiA7XG5leHBvcnQgY29uc3QgVFJBTlNBQ1RJT04gPSBcIlRSQU5TQUNUSU9OXCIgO1xuZXhwb3J0IGNvbnN0IFBBWU1FTlQgPSBcIlBBWU1FTlRcIiA7XG4iXSwibmFtZXMiOlsiTE9HSU4iLCJMT0dPVVQiLCJDUllQVE8iLCJDVVJSRU5DWSIsIlRSQU5TQUNUSU9OIiwiUEFZTUVOVCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./redux/actionTypes.js\n");
-
-/***/ }),
-
-/***/ "./redux/actions/userAction.js":
-/*!*************************************!*\
-  !*** ./redux/actions/userAction.js ***!
-  \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"logIn\": () => (/* binding */ logIn),\n/* harmony export */   \"logOut\": () => (/* binding */ logOut)\n/* harmony export */ });\n/* harmony import */ var _actionTypes_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actionTypes.js */ \"./redux/actionTypes.js\");\n/* harmony import */ var _reducers_userReducer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../reducers/userReducer.js */ \"./redux/reducers/userReducer.js\");\n\n\n// LOGIN: Set User Data we get from wallets\nconst logIn = (userData)=>async (dispatch)=>{\n        try {\n            dispatch({\n                type: _actionTypes_js__WEBPACK_IMPORTED_MODULE_0__.LOGIN,\n                payload: {\n                    username: userData.username,\n                    publicAddress: userData.publicAddress,\n                    balance: userData.balance,\n                    network: userData.network,\n                    promptpayID: userData.promptpayID || \"\",\n                    image: userData.image,\n                    description: userData.description,\n                    bankName: userData.bankName,\n                    bankAccount: userData.bankAccount\n                }\n            });\n        } catch (error) {\n            console.log(error);\n        }\n    }\n;\n// LOGOUT: clear User Data we get from wallets\nconst logOut = ()=>(dispatch)=>dispatch({\n            type: _actionTypes_js__WEBPACK_IMPORTED_MODULE_0__.LOGOUT,\n            payload: {\n                ..._reducers_userReducer_js__WEBPACK_IMPORTED_MODULE_1__.InitailUserState\n            }\n        })\n;\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZWR1eC9hY3Rpb25zL3VzZXJBY3Rpb24uanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUE4QztBQUNlO0FBRTdELEVBQTJDO0FBQ3BDLEtBQUssQ0FBQ0csS0FBSyxJQUFJQyxRQUFRLFVBQVlDLFFBQVEsR0FBSSxDQUFDO1FBQ25ELEdBQUcsQ0FBQyxDQUFDO1lBQ0RBLFFBQVEsQ0FBQyxDQUFDO2dCQUNOQyxJQUFJLEVBQUVOLGtEQUFLO2dCQUNYTyxPQUFPLEVBQUUsQ0FBQztvQkFDTkMsUUFBUSxFQUFFSixRQUFRLENBQUNJLFFBQVE7b0JBQzNCQyxhQUFhLEVBQUVMLFFBQVEsQ0FBQ0ssYUFBYTtvQkFDckNDLE9BQU8sRUFBQ04sUUFBUSxDQUFDTSxPQUFPO29CQUN4QkMsT0FBTyxFQUFDUCxRQUFRLENBQUNPLE9BQU87b0JBQ3hCQyxXQUFXLEVBQUNSLFFBQVEsQ0FBQ1EsV0FBVyxJQUFJLENBQUU7b0JBQ3RDQyxLQUFLLEVBQUVULFFBQVEsQ0FBQ1MsS0FBSztvQkFDckJDLFdBQVcsRUFBQ1YsUUFBUSxDQUFDVSxXQUFXO29CQUNoQ0MsUUFBUSxFQUFDWCxRQUFRLENBQUNXLFFBQVE7b0JBQzFCQyxXQUFXLEVBQUNaLFFBQVEsQ0FBQ1ksV0FBVztnQkFDcEMsQ0FBQztZQUNMLENBQUM7UUFDTCxDQUFDLENBQUMsS0FBSyxFQUFFQyxLQUFLLEVBQUUsQ0FBQztZQUNiQyxPQUFPLENBQUNDLEdBQUcsQ0FBQ0YsS0FBSztRQUNyQixDQUFDO0lBQ0wsQ0FBQzs7QUFHRCxFQUE4QztBQUN2QyxLQUFLLENBQUNHLE1BQU0sUUFBVWYsUUFBUSxHQUNuQ0EsUUFBUSxDQUFDLENBQUM7WUFDUkMsSUFBSSxFQUFDTCxtREFBTTtZQUNYTSxPQUFPLEVBQUUsQ0FBQzttQkFDSEwsc0VBQWdCO1lBQ3ZCLENBQUM7UUFDTCxDQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbmZ0LW1hcmtldHBsYWNlLW12cC8uL3JlZHV4L2FjdGlvbnMvdXNlckFjdGlvbi5qcz82NGM4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7TE9HSU4sTE9HT1VUfSBmcm9tICcuLi9hY3Rpb25UeXBlcy5qcydcbmltcG9ydCB7IEluaXRhaWxVc2VyU3RhdGUgfSBmcm9tICcuLi9yZWR1Y2Vycy91c2VyUmVkdWNlci5qcyc7XG5cbi8vIExPR0lOOiBTZXQgVXNlciBEYXRhIHdlIGdldCBmcm9tIHdhbGxldHNcbmV4cG9ydCBjb25zdCBsb2dJbiA9ICh1c2VyRGF0YSkgPT4gYXN5bmMgKGRpc3BhdGNoKSA9PntcbiAgICB0cnkge1xuICAgICAgICBkaXNwYXRjaCh7XG4gICAgICAgICAgICB0eXBlOiBMT0dJTixcbiAgICAgICAgICAgIHBheWxvYWQ6IHtcbiAgICAgICAgICAgICAgICB1c2VybmFtZTogdXNlckRhdGEudXNlcm5hbWUsXG4gICAgICAgICAgICAgICAgcHVibGljQWRkcmVzczogdXNlckRhdGEucHVibGljQWRkcmVzcyxcbiAgICAgICAgICAgICAgICBiYWxhbmNlOnVzZXJEYXRhLmJhbGFuY2UsXG4gICAgICAgICAgICAgICAgbmV0d29yazp1c2VyRGF0YS5uZXR3b3JrLFxuICAgICAgICAgICAgICAgIHByb21wdHBheUlEOnVzZXJEYXRhLnByb21wdHBheUlEIHx8IFwiXCIsXG4gICAgICAgICAgICAgICAgaW1hZ2U6IHVzZXJEYXRhLmltYWdlICxcbiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbjp1c2VyRGF0YS5kZXNjcmlwdGlvbixcbiAgICAgICAgICAgICAgICBiYW5rTmFtZTp1c2VyRGF0YS5iYW5rTmFtZSxcbiAgICAgICAgICAgICAgICBiYW5rQWNjb3VudDp1c2VyRGF0YS5iYW5rQWNjb3VudCxcbiAgICAgICAgICAgIH1cbiAgICAgICAgfSkgICAgXG4gICAgfSBjYXRjaCAoZXJyb3IpIHtcbiAgICAgICAgY29uc29sZS5sb2coZXJyb3IpO1xuICAgIH0gICAgXG59XG5cblxuLy8gTE9HT1VUOiBjbGVhciBVc2VyIERhdGEgd2UgZ2V0IGZyb20gd2FsbGV0c1xuZXhwb3J0IGNvbnN0IGxvZ091dCA9ICgpID0+IChkaXNwYXRjaCkgPT5cbiAgZGlzcGF0Y2goe1xuICAgIHR5cGU6TE9HT1VULFxuICAgIHBheWxvYWQ6IHtcbiAgICAgICAgLi4uSW5pdGFpbFVzZXJTdGF0ZVxuICAgIH0sXG59KVxuXG4iXSwibmFtZXMiOlsiTE9HSU4iLCJMT0dPVVQiLCJJbml0YWlsVXNlclN0YXRlIiwibG9nSW4iLCJ1c2VyRGF0YSIsImRpc3BhdGNoIiwidHlwZSIsInBheWxvYWQiLCJ1c2VybmFtZSIsInB1YmxpY0FkZHJlc3MiLCJiYWxhbmNlIiwibmV0d29yayIsInByb21wdHBheUlEIiwiaW1hZ2UiLCJkZXNjcmlwdGlvbiIsImJhbmtOYW1lIiwiYmFua0FjY291bnQiLCJlcnJvciIsImNvbnNvbGUiLCJsb2ciLCJsb2dPdXQiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./redux/actions/userAction.js\n");
-
-/***/ }),
-
-/***/ "./redux/reducers/userReducer.js":
-/*!***************************************!*\
-  !*** ./redux/reducers/userReducer.js ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"InitailUserState\": () => (/* binding */ InitailUserState),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _actionTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actionTypes */ \"./redux/actionTypes.js\");\n\n// Initial user state\nconst InitailUserState = {\n    username: \"\",\n    publicAddress: \"\",\n    image: \"\",\n    description: \"\",\n    promptpayID: \"\"\n};\nconst userReducer = (state = InitailUserState, { type , payload  })=>{\n    switch(type){\n        case _actionTypes__WEBPACK_IMPORTED_MODULE_0__.LOGIN:\n            return {\n                username: payload.username,\n                publicAddress: payload.publicAddress,\n                image: payload.profileImage,\n                description: payload.description,\n                promptpayID: payload.promptpayID,\n                balance: payload.balance,\n                network: payload.network,\n                bankName: payload.bankName,\n                bankAccount: payload.bankAccount\n            };\n        case _actionTypes__WEBPACK_IMPORTED_MODULE_0__.LOGOUT:\n            return {\n                ...InitailUserState\n            };\n        default:\n            return state;\n    }\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (userReducer); // {\n //     username: payload.username,\n //     walletAddress: payload.walletAddress,\n //     balance:payload.balance,\n //     network:payload.network,\n //     profileImage: payload.profileImage,\n //     description: payload.description,\n //     socialNetworks: payload.socialNetworks,\n // }\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZWR1eC9yZWR1Y2Vycy91c2VyUmVkdWNlci5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7QUFBMkM7QUFFM0MsRUFBcUI7QUFDZCxLQUFLLENBQUNFLGdCQUFnQixHQUFHLENBQUM7SUFDN0JDLFFBQVEsRUFBRSxDQUFFO0lBQ1pDLGFBQWEsRUFBRSxDQUFFO0lBQ2pCQyxLQUFLLEVBQUUsQ0FBRTtJQUNUQyxXQUFXLEVBQUUsQ0FBRTtJQUNmQyxXQUFXLEVBQUUsQ0FBRTtBQUNuQixDQUFDO0FBRUQsS0FBSyxDQUFDQyxXQUFXLElBQUlDLEtBQUssR0FBR1AsZ0JBQWdCLEVBQUMsQ0FBQ1EsQ0FBQUEsSUFBSSxHQUFDQyxPQUFPLEdBQUMsR0FBSyxDQUFDO0lBQzlELE1BQU0sQ0FBQ0QsSUFBSTtRQUNQLElBQUksQ0FBQ1YsK0NBQUs7WUFDTixNQUFNLENBQUMsQ0FBQztnQkFDSkcsUUFBUSxFQUFFUSxPQUFPLENBQUNSLFFBQVE7Z0JBQzFCQyxhQUFhLEVBQUVPLE9BQU8sQ0FBQ1AsYUFBYTtnQkFDcENDLEtBQUssRUFBRU0sT0FBTyxDQUFDQyxZQUFZO2dCQUMzQk4sV0FBVyxFQUFFSyxPQUFPLENBQUNMLFdBQVc7Z0JBQ2hDQyxXQUFXLEVBQUVJLE9BQU8sQ0FBQ0osV0FBVztnQkFDaENNLE9BQU8sRUFBQ0YsT0FBTyxDQUFDRSxPQUFPO2dCQUN2QkMsT0FBTyxFQUFDSCxPQUFPLENBQUNHLE9BQU87Z0JBQ3ZCQyxRQUFRLEVBQUNKLE9BQU8sQ0FBQ0ksUUFBUTtnQkFDekJDLFdBQVcsRUFBQ0wsT0FBTyxDQUFDSyxXQUFXO1lBQ25DLENBQUM7UUFDTCxJQUFJLENBQUNmLGdEQUFNO1lBQ1AsTUFBTSxDQUFDLENBQUM7bUJBQUdDLGdCQUFnQjtZQUFBLENBQUM7O1lBRTVCLE1BQU0sQ0FBQ08sS0FBSzs7QUFFeEIsQ0FBQztBQUVELGlFQUFlRCxXQUFXLEVBRTFCLENBQUk7QUFDSixDQUFrQztBQUNsQyxDQUE0QztBQUM1QyxDQUErQjtBQUMvQixDQUErQjtBQUMvQixDQUEwQztBQUMxQyxDQUF3QztBQUN4QyxDQUE4QztBQUM5QyxDQUFJIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbmZ0LW1hcmtldHBsYWNlLW12cC8uL3JlZHV4L3JlZHVjZXJzL3VzZXJSZWR1Y2VyLmpzPzgxMDgiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtMT0dJTixMT0dPVVR9IGZyb20gXCIuLi9hY3Rpb25UeXBlc1wiXG5cbi8vIEluaXRpYWwgdXNlciBzdGF0ZVxuZXhwb3J0IGNvbnN0IEluaXRhaWxVc2VyU3RhdGUgPSB7XG4gICAgdXNlcm5hbWU6IFwiXCIsXG4gICAgcHVibGljQWRkcmVzczogXCJcIixcbiAgICBpbWFnZTogXCJcIixcbiAgICBkZXNjcmlwdGlvbjogXCJcIixcbiAgICBwcm9tcHRwYXlJRDogXCJcIixcbn1cblxuY29uc3QgdXNlclJlZHVjZXIgPSAoc3RhdGUgPSBJbml0YWlsVXNlclN0YXRlLHt0eXBlLHBheWxvYWR9KSA9PiB7XG4gICAgc3dpdGNoKHR5cGUpIHtcbiAgICAgICAgY2FzZSBMT0dJTiA6IFxuICAgICAgICAgICAgcmV0dXJuIHtcbiAgICAgICAgICAgICAgICB1c2VybmFtZTogcGF5bG9hZC51c2VybmFtZSxcbiAgICAgICAgICAgICAgICBwdWJsaWNBZGRyZXNzOiBwYXlsb2FkLnB1YmxpY0FkZHJlc3MsXG4gICAgICAgICAgICAgICAgaW1hZ2U6IHBheWxvYWQucHJvZmlsZUltYWdlICxcbiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbjogcGF5bG9hZC5kZXNjcmlwdGlvbixcbiAgICAgICAgICAgICAgICBwcm9tcHRwYXlJRDogcGF5bG9hZC5wcm9tcHRwYXlJRCxcbiAgICAgICAgICAgICAgICBiYWxhbmNlOnBheWxvYWQuYmFsYW5jZSxcbiAgICAgICAgICAgICAgICBuZXR3b3JrOnBheWxvYWQubmV0d29yayxcbiAgICAgICAgICAgICAgICBiYW5rTmFtZTpwYXlsb2FkLmJhbmtOYW1lLFxuICAgICAgICAgICAgICAgIGJhbmtBY2NvdW50OnBheWxvYWQuYmFua0FjY291bnQsXG4gICAgICAgICAgICB9XG4gICAgICAgIGNhc2UgTE9HT1VUIDogXG4gICAgICAgICAgICByZXR1cm4gey4uLkluaXRhaWxVc2VyU3RhdGV9XG4gICAgICAgIGRlZmF1bHQgOlxuICAgICAgICAgICAgcmV0dXJuIHN0YXRlXG4gICAgfVxufVxuXG5leHBvcnQgZGVmYXVsdCB1c2VyUmVkdWNlcjtcblxuLy8ge1xuLy8gICAgIHVzZXJuYW1lOiBwYXlsb2FkLnVzZXJuYW1lLFxuLy8gICAgIHdhbGxldEFkZHJlc3M6IHBheWxvYWQud2FsbGV0QWRkcmVzcyxcbi8vICAgICBiYWxhbmNlOnBheWxvYWQuYmFsYW5jZSxcbi8vICAgICBuZXR3b3JrOnBheWxvYWQubmV0d29yayxcbi8vICAgICBwcm9maWxlSW1hZ2U6IHBheWxvYWQucHJvZmlsZUltYWdlLFxuLy8gICAgIGRlc2NyaXB0aW9uOiBwYXlsb2FkLmRlc2NyaXB0aW9uLFxuLy8gICAgIHNvY2lhbE5ldHdvcmtzOiBwYXlsb2FkLnNvY2lhbE5ldHdvcmtzLFxuLy8gfSJdLCJuYW1lcyI6WyJMT0dJTiIsIkxPR09VVCIsIkluaXRhaWxVc2VyU3RhdGUiLCJ1c2VybmFtZSIsInB1YmxpY0FkZHJlc3MiLCJpbWFnZSIsImRlc2NyaXB0aW9uIiwicHJvbXB0cGF5SUQiLCJ1c2VyUmVkdWNlciIsInN0YXRlIiwidHlwZSIsInBheWxvYWQiLCJwcm9maWxlSW1hZ2UiLCJiYWxhbmNlIiwibmV0d29yayIsImJhbmtOYW1lIiwiYmFua0FjY291bnQiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./redux/reducers/userReducer.js\n");
-
-/***/ }),
-
-/***/ "@heroicons/react/solid":
-/*!*****************************************!*\
-  !*** external "@heroicons/react/solid" ***!
-  \*****************************************/
+/***/ 1143:
 /***/ ((module) => {
 
 module.exports = require("@heroicons/react/solid");
 
 /***/ }),
 
-/***/ "next/head":
-/*!****************************!*\
-  !*** external "next/head" ***!
-  \****************************/
+/***/ 968:
 /***/ ((module) => {
 
 module.exports = require("next/head");
 
 /***/ }),
 
-/***/ "next/router":
-/*!******************************!*\
-  !*** external "next/router" ***!
-  \******************************/
+/***/ 1853:
 /***/ ((module) => {
 
 module.exports = require("next/router");
 
 /***/ }),
 
-/***/ "react":
-/*!************************!*\
-  !*** external "react" ***!
-  \************************/
+/***/ 6689:
 /***/ ((module) => {
 
 module.exports = require("react");
 
 /***/ }),
 
-/***/ "react-redux":
-/*!******************************!*\
-  !*** external "react-redux" ***!
-  \******************************/
+/***/ 6022:
 /***/ ((module) => {
 
 module.exports = require("react-redux");
 
 /***/ }),
 
-/***/ "react/jsx-dev-runtime":
-/*!****************************************!*\
-  !*** external "react/jsx-dev-runtime" ***!
-  \****************************************/
+/***/ 997:
 /***/ ((module) => {
 
-module.exports = require("react/jsx-dev-runtime");
+module.exports = require("react/jsx-runtime");
 
 /***/ })
 
@@ -130,7 +393,7 @@ module.exports = require("react/jsx-dev-runtime");
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("./pages/profile/[publicAddress].js"));
+var __webpack_exports__ = __webpack_require__.X(0, [867], () => (__webpack_exec__(2093)));
 module.exports = __webpack_exports__;
 
 })();

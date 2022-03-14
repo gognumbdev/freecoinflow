@@ -1,75 +1,258 @@
 "use strict";
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 (() => {
 var exports = {};
-exports.id = "pages/api/fiatCrypto/[order]";
-exports.ids = ["pages/api/fiatCrypto/[order]"];
+exports.id = 646;
+exports.ids = [646];
 exports.modules = {
 
-/***/ "mongoose":
-/*!***************************!*\
-  !*** external "mongoose" ***!
-  \***************************/
+/***/ 2663:
 /***/ ((module) => {
 
 module.exports = require("mongoose");
 
 /***/ }),
 
-/***/ "(api)/./database/dbConnect.js":
-/*!*******************************!*\
-  !*** ./database/dbConnect.js ***!
-  \*******************************/
+/***/ 6158:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("\nconst mongoose = __webpack_require__(/*! mongoose */ \"mongoose\");\nconst config = __webpack_require__(/*! ../next.config */ \"(api)/./next.config.js\");\nconst dbConnect = async ()=>{\n    let connection = mongoose.connection.readyState;\n    if (connection === 0) {\n        await mongoose.connect(config.env.mongoDB_uri).then(()=>console.log('MongoDB Connected Successfully')\n        ).catch((err)=>console.error('Not Connected')\n        );\n    } else if (connection === 1) {\n        console.log(\"MongoDB already connected\");\n    }\n};\nmodule.exports = dbConnect;\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9kYXRhYmFzZS9kYkNvbm5lY3QuanMuanMiLCJtYXBwaW5ncyI6IjtBQUFBLEtBQUssQ0FBQ0EsUUFBUSxHQUFHQyxtQkFBTyxDQUFDLDBCQUFVO0FBQ25DLEtBQUssQ0FBQ0MsTUFBTSxHQUFHRCxtQkFBTyxDQUFDLDhDQUFnQjtBQUV2QyxLQUFLLENBQUNFLFNBQVMsYUFBZSxDQUFDO0lBQzNCLEdBQUcsQ0FBQ0MsVUFBVSxHQUFHSixRQUFRLENBQUNJLFVBQVUsQ0FBQ0MsVUFBVTtJQUUvQyxFQUFFLEVBQUVELFVBQVUsS0FBSyxDQUFDLEVBQUMsQ0FBQztRQUNsQixLQUFLLENBQUNKLFFBQVEsQ0FBQ00sT0FBTyxDQUFDSixNQUFNLENBQUNLLEdBQUcsQ0FBQ0MsV0FBVyxFQUM1Q0MsSUFBSSxLQUFPQyxPQUFPLENBQUNDLEdBQUcsQ0FBQyxDQUFnQztVQUN2REMsS0FBSyxFQUFFQyxHQUFHLEdBQUtILE9BQU8sQ0FBQ0ksS0FBSyxDQUFDLENBQWU7O0lBQ2pELENBQUMsTUFBSyxFQUFFLEVBQUVWLFVBQVUsS0FBRyxDQUFDLEVBQUMsQ0FBQztRQUN0Qk0sT0FBTyxDQUFDQyxHQUFHLENBQUMsQ0FBMkI7SUFDM0MsQ0FBQztBQUVMLENBQUM7QUFFREksTUFBTSxDQUFDQyxPQUFPLEdBQUdiLFNBQVMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9uZnQtbWFya2V0cGxhY2UtbXZwLy4vZGF0YWJhc2UvZGJDb25uZWN0LmpzP2M4ZDkiXSwic291cmNlc0NvbnRlbnQiOlsiY29uc3QgbW9uZ29vc2UgPSByZXF1aXJlKFwibW9uZ29vc2VcIik7XG5jb25zdCBjb25maWcgPSByZXF1aXJlKFwiLi4vbmV4dC5jb25maWdcIilcblxuY29uc3QgZGJDb25uZWN0ID0gYXN5bmMgKCkgPT4ge1xuICAgIGxldCBjb25uZWN0aW9uID0gbW9uZ29vc2UuY29ubmVjdGlvbi5yZWFkeVN0YXRlO1xuICAgIFxuICAgIGlmIChjb25uZWN0aW9uID09PSAwKXtcbiAgICAgICAgYXdhaXQgbW9uZ29vc2UuY29ubmVjdChjb25maWcuZW52Lm1vbmdvREJfdXJpKSBcbiAgICAgICAgLnRoZW4oKCkgPT4gY29uc29sZS5sb2coJ01vbmdvREIgQ29ubmVjdGVkIFN1Y2Nlc3NmdWxseScpKVxuICAgICAgICAuY2F0Y2goKGVycikgPT4gY29uc29sZS5lcnJvcignTm90IENvbm5lY3RlZCcpKTtcbiAgICB9ZWxzZSBpZiAoY29ubmVjdGlvbj09PTEpe1xuICAgICAgICBjb25zb2xlLmxvZyhcIk1vbmdvREIgYWxyZWFkeSBjb25uZWN0ZWRcIilcbiAgICB9XG4gICAgXG59XG5cbm1vZHVsZS5leHBvcnRzID0gZGJDb25uZWN0XG4iXSwibmFtZXMiOlsibW9uZ29vc2UiLCJyZXF1aXJlIiwiY29uZmlnIiwiZGJDb25uZWN0IiwiY29ubmVjdGlvbiIsInJlYWR5U3RhdGUiLCJjb25uZWN0IiwiZW52IiwibW9uZ29EQl91cmkiLCJ0aGVuIiwiY29uc29sZSIsImxvZyIsImNhdGNoIiwiZXJyIiwiZXJyb3IiLCJtb2R1bGUiLCJleHBvcnRzIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(api)/./database/dbConnect.js\n");
+
+const mongoose = __webpack_require__(2663);
+const TransactionInfo = new mongoose.Schema({
+    name: String,
+    code: String,
+    amount: Number
+});
+const TransactionDetail = new mongoose.Schema({
+    order: Number,
+    offerNo: Number,
+    blockchain: String,
+    fromAddress: String,
+    toAddress: String,
+    payment: String,
+    fiatCurrecy: TransactionInfo,
+    cryptocurrency: TransactionInfo,
+    date: String,
+    transactionState: String,
+    description: String
+});
+const UserTransactionsInfo = new mongoose.Schema({
+    number: Number,
+    success: Number,
+    fail: Number,
+    transactionDetails: [
+        {
+            offerNo: Number,
+            order: Number,
+            transactioState: String
+        }
+    ]
+});
+const FiatCryptoTransactionSchema = new mongoose.Schema({
+    publicAddress: String,
+    transactionsList: [
+        TransactionDetail
+    ],
+    complete: Number,
+    sellInfo: [
+        UserTransactionsInfo
+    ],
+    buyInfo: [
+        UserTransactionsInfo
+    ]
+});
+let FiatCryptoTransactionModel = mongoose.models && mongoose.models.FiatCryptoTransaction ? mongoose.models.FiatCryptoTransaction : mongoose.model('FiatCryptoTransaction', FiatCryptoTransactionSchema);
+module.exports = {
+    FiatCryptoTransactionModel
+};
+
 
 /***/ }),
 
-/***/ "(api)/./database/dbModel/FiatCryptoTransaction.js":
-/*!***************************************************!*\
-  !*** ./database/dbModel/FiatCryptoTransaction.js ***!
-  \***************************************************/
+/***/ 8171:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("\nconst mongoose = __webpack_require__(/*! mongoose */ \"mongoose\");\nconst TransactionInfo = new mongoose.Schema({\n    name: String,\n    code: String,\n    amount: Number\n});\nconst TransactionDetail = new mongoose.Schema({\n    order: Number,\n    offerNo: Number,\n    blockchain: String,\n    fromAddress: String,\n    toAddress: String,\n    payment: String,\n    fiatCurrecy: TransactionInfo,\n    cryptocurrency: TransactionInfo,\n    date: String,\n    transactionState: String,\n    description: String\n});\nconst UserTransactionsInfo = new mongoose.Schema({\n    number: Number,\n    success: Number,\n    fail: Number,\n    transactionDetails: [\n        {\n            offerNo: Number,\n            order: Number,\n            transactioState: String\n        }\n    ]\n});\nconst FiatCryptoTransactionSchema = new mongoose.Schema({\n    publicAddress: String,\n    transactionsList: [\n        TransactionDetail\n    ],\n    complete: Number,\n    sellInfo: [\n        UserTransactionsInfo\n    ],\n    buyInfo: [\n        UserTransactionsInfo\n    ]\n});\nlet FiatCryptoTransactionModel = mongoose.models && mongoose.models.FiatCryptoTransaction ? mongoose.models.FiatCryptoTransaction : mongoose.model('FiatCryptoTransaction', FiatCryptoTransactionSchema);\nmodule.exports = {\n    FiatCryptoTransactionModel\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9kYXRhYmFzZS9kYk1vZGVsL0ZpYXRDcnlwdG9UcmFuc2FjdGlvbi5qcy5qcyIsIm1hcHBpbmdzIjoiO0FBQUEsS0FBSyxDQUFDQSxRQUFRLEdBQUdDLG1CQUFPLENBQUMsMEJBQVU7QUFFbkMsS0FBSyxDQUFDQyxlQUFlLEdBQUcsR0FBRyxDQUFDRixRQUFRLENBQUNHLE1BQU0sQ0FBQyxDQUFDO0lBQ3pDQyxJQUFJLEVBQUNDLE1BQU07SUFDWEMsSUFBSSxFQUFDRCxNQUFNO0lBQ1hFLE1BQU0sRUFBQ0MsTUFBTTtBQUNqQixDQUFDO0FBRUQsS0FBSyxDQUFDQyxpQkFBaUIsR0FBRyxHQUFHLENBQUNULFFBQVEsQ0FBQ0csTUFBTSxDQUFDLENBQUM7SUFDM0NPLEtBQUssRUFBQ0YsTUFBTTtJQUNaRyxPQUFPLEVBQUNILE1BQU07SUFDZEksVUFBVSxFQUFDUCxNQUFNO0lBQ2pCUSxXQUFXLEVBQUNSLE1BQU07SUFDbEJTLFNBQVMsRUFBQ1QsTUFBTTtJQUNoQlUsT0FBTyxFQUFDVixNQUFNO0lBQ2RXLFdBQVcsRUFBQ2QsZUFBZTtJQUMzQmUsY0FBYyxFQUFDZixlQUFlO0lBQzlCZ0IsSUFBSSxFQUFDYixNQUFNO0lBQ1hjLGdCQUFnQixFQUFDZCxNQUFNO0lBQ3ZCZSxXQUFXLEVBQUNmLE1BQU07QUFDdEIsQ0FBQztBQUVELEtBQUssQ0FBQ2dCLG9CQUFvQixHQUFHLEdBQUcsQ0FBQ3JCLFFBQVEsQ0FBQ0csTUFBTSxDQUFDLENBQUM7SUFDOUNtQixNQUFNLEVBQUNkLE1BQU07SUFDYmUsT0FBTyxFQUFDZixNQUFNO0lBQ2RnQixJQUFJLEVBQUNoQixNQUFNO0lBQ1hpQixrQkFBa0IsRUFBQyxDQUFDO1FBQUEsQ0FBQztZQUNqQmQsT0FBTyxFQUFDSCxNQUFNO1lBQ2RFLEtBQUssRUFBQ0YsTUFBTTtZQUNaa0IsZUFBZSxFQUFDckIsTUFBTTtRQUMxQixDQUFDO0lBQUEsQ0FBQztBQUNOLENBQUM7QUFFRCxLQUFLLENBQUNzQiwyQkFBMkIsR0FBRyxHQUFHLENBQUMzQixRQUFRLENBQUNHLE1BQU0sQ0FBQyxDQUFDO0lBQ3JEeUIsYUFBYSxFQUFDdkIsTUFBTTtJQUNwQndCLGdCQUFnQixFQUFDLENBQUNwQjtRQUFBQSxpQkFBaUI7SUFBQSxDQUFDO0lBQ3BDcUIsUUFBUSxFQUFDdEIsTUFBTTtJQUNmdUIsUUFBUSxFQUFDLENBQUNWO1FBQUFBLG9CQUFvQjtJQUFBLENBQUM7SUFDL0JXLE9BQU8sRUFBQyxDQUFDWDtRQUFBQSxvQkFBb0I7SUFBQSxDQUFDO0FBQ2xDLENBQUM7QUFFRCxHQUFHLENBQUNZLDBCQUEwQixHQUFLakMsUUFBUSxDQUFDa0MsTUFBTSxJQUFJbEMsUUFBUSxDQUFDa0MsTUFBTSxDQUFDQyxxQkFBcUIsR0FDckZuQyxRQUFRLENBQUNrQyxNQUFNLENBQUNDLHFCQUFxQixHQUNyQ25DLFFBQVEsQ0FBQ29DLEtBQUssQ0FBQyxDQUF1Qix3QkFBRVQsMkJBQTJCO0FBRXpFVSxNQUFNLENBQUNDLE9BQU8sR0FBRyxDQUFDTDtJQUFBQSwwQkFBMEI7QUFBQSxDQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbmZ0LW1hcmtldHBsYWNlLW12cC8uL2RhdGFiYXNlL2RiTW9kZWwvRmlhdENyeXB0b1RyYW5zYWN0aW9uLmpzPzVkMjEiXSwic291cmNlc0NvbnRlbnQiOlsiY29uc3QgbW9uZ29vc2UgPSByZXF1aXJlKFwibW9uZ29vc2VcIilcblxuY29uc3QgVHJhbnNhY3Rpb25JbmZvID0gbmV3IG1vbmdvb3NlLlNjaGVtYSh7XG4gICAgbmFtZTpTdHJpbmcsXG4gICAgY29kZTpTdHJpbmcsXG4gICAgYW1vdW50Ok51bWJlclxufSlcblxuY29uc3QgVHJhbnNhY3Rpb25EZXRhaWwgPSBuZXcgbW9uZ29vc2UuU2NoZW1hKHtcbiAgICBvcmRlcjpOdW1iZXIsXG4gICAgb2ZmZXJObzpOdW1iZXIsXG4gICAgYmxvY2tjaGFpbjpTdHJpbmcsXG4gICAgZnJvbUFkZHJlc3M6U3RyaW5nLFxuICAgIHRvQWRkcmVzczpTdHJpbmcsXG4gICAgcGF5bWVudDpTdHJpbmcsXG4gICAgZmlhdEN1cnJlY3k6VHJhbnNhY3Rpb25JbmZvLFxuICAgIGNyeXB0b2N1cnJlbmN5OlRyYW5zYWN0aW9uSW5mbyxcbiAgICBkYXRlOlN0cmluZyxcbiAgICB0cmFuc2FjdGlvblN0YXRlOlN0cmluZyxcbiAgICBkZXNjcmlwdGlvbjpTdHJpbmcsXG59KVxuXG5jb25zdCBVc2VyVHJhbnNhY3Rpb25zSW5mbyA9IG5ldyBtb25nb29zZS5TY2hlbWEoe1xuICAgIG51bWJlcjpOdW1iZXIsXG4gICAgc3VjY2VzczpOdW1iZXIsXG4gICAgZmFpbDpOdW1iZXIsXG4gICAgdHJhbnNhY3Rpb25EZXRhaWxzOlt7XG4gICAgICAgIG9mZmVyTm86TnVtYmVyLFxuICAgICAgICBvcmRlcjpOdW1iZXIsXG4gICAgICAgIHRyYW5zYWN0aW9TdGF0ZTpTdHJpbmdcbiAgICB9XVxufSlcblxuY29uc3QgRmlhdENyeXB0b1RyYW5zYWN0aW9uU2NoZW1hID0gbmV3IG1vbmdvb3NlLlNjaGVtYSh7XG4gICAgcHVibGljQWRkcmVzczpTdHJpbmcsXG4gICAgdHJhbnNhY3Rpb25zTGlzdDpbVHJhbnNhY3Rpb25EZXRhaWxdLFxuICAgIGNvbXBsZXRlOk51bWJlcixcbiAgICBzZWxsSW5mbzpbVXNlclRyYW5zYWN0aW9uc0luZm9dLFxuICAgIGJ1eUluZm86W1VzZXJUcmFuc2FjdGlvbnNJbmZvXSxcbn0pXG5cbmxldCBGaWF0Q3J5cHRvVHJhbnNhY3Rpb25Nb2RlbCA9ICAobW9uZ29vc2UubW9kZWxzICYmIG1vbmdvb3NlLm1vZGVscy5GaWF0Q3J5cHRvVHJhbnNhY3Rpb25cbiAgICA/IG1vbmdvb3NlLm1vZGVscy5GaWF0Q3J5cHRvVHJhbnNhY3Rpb25cbiAgICA6IG1vbmdvb3NlLm1vZGVsKCdGaWF0Q3J5cHRvVHJhbnNhY3Rpb24nLCBGaWF0Q3J5cHRvVHJhbnNhY3Rpb25TY2hlbWEpKVxuXG5tb2R1bGUuZXhwb3J0cyA9IHtGaWF0Q3J5cHRvVHJhbnNhY3Rpb25Nb2RlbH0iXSwibmFtZXMiOlsibW9uZ29vc2UiLCJyZXF1aXJlIiwiVHJhbnNhY3Rpb25JbmZvIiwiU2NoZW1hIiwibmFtZSIsIlN0cmluZyIsImNvZGUiLCJhbW91bnQiLCJOdW1iZXIiLCJUcmFuc2FjdGlvbkRldGFpbCIsIm9yZGVyIiwib2ZmZXJObyIsImJsb2NrY2hhaW4iLCJmcm9tQWRkcmVzcyIsInRvQWRkcmVzcyIsInBheW1lbnQiLCJmaWF0Q3VycmVjeSIsImNyeXB0b2N1cnJlbmN5IiwiZGF0ZSIsInRyYW5zYWN0aW9uU3RhdGUiLCJkZXNjcmlwdGlvbiIsIlVzZXJUcmFuc2FjdGlvbnNJbmZvIiwibnVtYmVyIiwic3VjY2VzcyIsImZhaWwiLCJ0cmFuc2FjdGlvbkRldGFpbHMiLCJ0cmFuc2FjdGlvU3RhdGUiLCJGaWF0Q3J5cHRvVHJhbnNhY3Rpb25TY2hlbWEiLCJwdWJsaWNBZGRyZXNzIiwidHJhbnNhY3Rpb25zTGlzdCIsImNvbXBsZXRlIiwic2VsbEluZm8iLCJidXlJbmZvIiwiRmlhdENyeXB0b1RyYW5zYWN0aW9uTW9kZWwiLCJtb2RlbHMiLCJGaWF0Q3J5cHRvVHJhbnNhY3Rpb24iLCJtb2RlbCIsIm1vZHVsZSIsImV4cG9ydHMiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api)/./database/dbModel/FiatCryptoTransaction.js\n");
+
+const mongoose = __webpack_require__(2663);
+const OrderSchema = new mongoose.Schema({
+    order: Number,
+    offerNo: Number,
+    offerType: String,
+    sellerPublicAddress: String,
+    buyerPublicAddress: String,
+    amountToPay: Number,
+    amountToReceive: Number,
+    description: String,
+    transactionState: [
+        String
+    ],
+    date: String
+});
+let OrderModel = mongoose.models && mongoose.models.Order ? mongoose.models.Order : mongoose.model('Order', OrderSchema);
+module.exports = {
+    OrderModel
+};
+
 
 /***/ }),
 
-/***/ "(api)/./database/dbModel/Order.js":
-/*!***********************************!*\
-  !*** ./database/dbModel/Order.js ***!
-  \***********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("\nconst mongoose = __webpack_require__(/*! mongoose */ \"mongoose\");\nconst OrderSchema = new mongoose.Schema({\n    order: Number,\n    offerNo: Number,\n    offerType: String,\n    sellerPublicAddress: String,\n    buyerPublicAddress: String,\n    amountToPay: Number,\n    amountToReceive: Number,\n    description: String,\n    transactionState: [\n        String\n    ],\n    date: String\n});\nlet OrderModel = mongoose.models && mongoose.models.Order ? mongoose.models.Order : mongoose.model('Order', OrderSchema);\nmodule.exports = {\n    OrderModel\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9kYXRhYmFzZS9kYk1vZGVsL09yZGVyLmpzLmpzIiwibWFwcGluZ3MiOiI7QUFBQSxLQUFLLENBQUNBLFFBQVEsR0FBR0MsbUJBQU8sQ0FBQywwQkFBVTtBQUVuQyxLQUFLLENBQUNDLFdBQVcsR0FBRyxHQUFHLENBQUNGLFFBQVEsQ0FBQ0csTUFBTSxDQUFDLENBQUM7SUFDckNDLEtBQUssRUFBQ0MsTUFBTTtJQUNaQyxPQUFPLEVBQUNELE1BQU07SUFDZEUsU0FBUyxFQUFDQyxNQUFNO0lBQ2hCQyxtQkFBbUIsRUFBQ0QsTUFBTTtJQUMxQkUsa0JBQWtCLEVBQUNGLE1BQU07SUFDekJHLFdBQVcsRUFBQ04sTUFBTTtJQUNsQk8sZUFBZSxFQUFDUCxNQUFNO0lBQ3RCUSxXQUFXLEVBQUNMLE1BQU07SUFDbEJNLGdCQUFnQixFQUFDLENBQUNOO1FBQUFBLE1BQU07SUFBQSxDQUFDO0lBQ3pCTyxJQUFJLEVBQUNQLE1BQU07QUFDZixDQUFDO0FBRUQsR0FBRyxDQUFDUSxVQUFVLEdBQUtoQixRQUFRLENBQUNpQixNQUFNLElBQUlqQixRQUFRLENBQUNpQixNQUFNLENBQUNDLEtBQUssR0FDckRsQixRQUFRLENBQUNpQixNQUFNLENBQUNDLEtBQUssR0FDckJsQixRQUFRLENBQUNtQixLQUFLLENBQUMsQ0FBTyxRQUFFakIsV0FBVztBQUV6Q2tCLE1BQU0sQ0FBQ0MsT0FBTyxHQUFHLENBQUNMO0lBQUFBLFVBQVU7QUFBQSxDQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbmZ0LW1hcmtldHBsYWNlLW12cC8uL2RhdGFiYXNlL2RiTW9kZWwvT3JkZXIuanM/YmZmMCJdLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCBtb25nb29zZSA9IHJlcXVpcmUoXCJtb25nb29zZVwiKVxuXG5jb25zdCBPcmRlclNjaGVtYSA9IG5ldyBtb25nb29zZS5TY2hlbWEoe1xuICAgIG9yZGVyOk51bWJlcixcbiAgICBvZmZlck5vOk51bWJlcixcbiAgICBvZmZlclR5cGU6U3RyaW5nLFxuICAgIHNlbGxlclB1YmxpY0FkZHJlc3M6U3RyaW5nLFxuICAgIGJ1eWVyUHVibGljQWRkcmVzczpTdHJpbmcsXG4gICAgYW1vdW50VG9QYXk6TnVtYmVyLFxuICAgIGFtb3VudFRvUmVjZWl2ZTpOdW1iZXIsXG4gICAgZGVzY3JpcHRpb246U3RyaW5nLFxuICAgIHRyYW5zYWN0aW9uU3RhdGU6W1N0cmluZ10sXG4gICAgZGF0ZTpTdHJpbmdcbn0pXG5cbmxldCBPcmRlck1vZGVsID0gIChtb25nb29zZS5tb2RlbHMgJiYgbW9uZ29vc2UubW9kZWxzLk9yZGVyXG4gICAgPyBtb25nb29zZS5tb2RlbHMuT3JkZXJcbiAgICA6IG1vbmdvb3NlLm1vZGVsKCdPcmRlcicsIE9yZGVyU2NoZW1hKSlcblxubW9kdWxlLmV4cG9ydHMgPSB7T3JkZXJNb2RlbH1cbiJdLCJuYW1lcyI6WyJtb25nb29zZSIsInJlcXVpcmUiLCJPcmRlclNjaGVtYSIsIlNjaGVtYSIsIm9yZGVyIiwiTnVtYmVyIiwib2ZmZXJObyIsIm9mZmVyVHlwZSIsIlN0cmluZyIsInNlbGxlclB1YmxpY0FkZHJlc3MiLCJidXllclB1YmxpY0FkZHJlc3MiLCJhbW91bnRUb1BheSIsImFtb3VudFRvUmVjZWl2ZSIsImRlc2NyaXB0aW9uIiwidHJhbnNhY3Rpb25TdGF0ZSIsImRhdGUiLCJPcmRlck1vZGVsIiwibW9kZWxzIiwiT3JkZXIiLCJtb2RlbCIsIm1vZHVsZSIsImV4cG9ydHMiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api)/./database/dbModel/Order.js\n");
-
-/***/ }),
-
-/***/ "(api)/./next.config.js":
-/*!************************!*\
-  !*** ./next.config.js ***!
-  \************************/
-/***/ ((module) => {
-
-eval("\nmodule.exports = {\n    reactStrictMode: true,\n    env: {\n        mongoDB_uri: \"mongodb+srv://P2PExchangeAdmin:chGE0zr86MvYagdv@cryptoexchange.wcws5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority\",\n        marketplacePrivateKey: \"01290c7d6abff326948e1514d5a20eeede5b433d36d176e66b2a8d852d83a9cb\",\n        marketplaceWalletAddress: \"0x518707e145604eA17eA6fd319Fa65DCD2E96Eb34\",\n        // This is hardhat localhost network\n        nftMarketAddress: \"0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0\",\n        nftAddress: \"0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9\"\n    },\n    image: {\n        domains: [\n            '/public/image'\n        ]\n    },\n    domainName: \"http://localhost:3000\",\n    api: {\n        bodyParser: {\n            sizeLimit: '4mb'\n        }\n    }\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9uZXh0LmNvbmZpZy5qcy5qcyIsIm1hcHBpbmdzIjoiO0FBQUFBLE1BQU0sQ0FBQ0MsT0FBTyxHQUFHLENBQUM7SUFDaEJDLGVBQWUsRUFBRSxJQUFJO0lBQ3JCQyxHQUFHLEVBQUMsQ0FBQztRQUNIQyxXQUFXLEVBQUMsQ0FBOEg7UUFDMUlDLHFCQUFxQixFQUFDLENBQWtFO1FBQ3hGQyx3QkFBd0IsRUFBQyxDQUE0QztRQUNyRSxFQUFvQztRQUNwQ0MsZ0JBQWdCLEVBQUMsQ0FBNEM7UUFDN0RDLFVBQVUsRUFBQyxDQUE0QztJQUN6RCxDQUFDO0lBQ0RDLEtBQUssRUFBQyxDQUFDO1FBQ0xDLE9BQU8sRUFBRSxDQUFDO1lBQUEsQ0FBZTtRQUFBLENBQUM7SUFDNUIsQ0FBQztJQUNEQyxVQUFVLEVBQUMsQ0FBdUI7SUFDbENDLEdBQUcsRUFBRSxDQUFDO1FBQ0pDLFVBQVUsRUFBRSxDQUFDO1lBQ1RDLFNBQVMsRUFBRSxDQUFLO1FBQ3BCLENBQUM7SUFDSCxDQUFDO0FBQ0gsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL25mdC1tYXJrZXRwbGFjZS1tdnAvLi9uZXh0LmNvbmZpZy5qcz8wMWI0Il0sInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0ge1xuICByZWFjdFN0cmljdE1vZGU6IHRydWUsXG4gIGVudjp7XG4gICAgbW9uZ29EQl91cmk6XCJtb25nb2RiK3NydjovL1AyUEV4Y2hhbmdlQWRtaW46Y2hHRTB6cjg2TXZZYWdkdkBjcnlwdG9leGNoYW5nZS53Y3dzNS5tb25nb2RiLm5ldC9teUZpcnN0RGF0YWJhc2U/cmV0cnlXcml0ZXM9dHJ1ZSZ3PW1ham9yaXR5XCIsXG4gICAgbWFya2V0cGxhY2VQcml2YXRlS2V5OlwiMDEyOTBjN2Q2YWJmZjMyNjk0OGUxNTE0ZDVhMjBlZWVkZTViNDMzZDM2ZDE3NmU2NmIyYThkODUyZDgzYTljYlwiLFxuICAgIG1hcmtldHBsYWNlV2FsbGV0QWRkcmVzczpcIjB4NTE4NzA3ZTE0NTYwNGVBMTdlQTZmZDMxOUZhNjVEQ0QyRTk2RWIzNFwiLFxuICAgIC8vIFRoaXMgaXMgaGFyZGhhdCBsb2NhbGhvc3QgbmV0d29ya1xuICAgIG5mdE1hcmtldEFkZHJlc3M6XCIweDlmRTQ2NzM2Njc5ZDJEOWE2NUYwOTkyRjIyNzJkRTlmM2M3ZmE2ZTBcIixcbiAgICBuZnRBZGRyZXNzOlwiMHhDZjdFZDNBY2NBNWE0NjdlOWU3MDRDNzAzRThEODdGNjM0ZkIwRmM5XCIsXG4gIH0sXG4gIGltYWdlOntcbiAgICBkb21haW5zOiBbJy9wdWJsaWMvaW1hZ2UnXSxcbiAgfSxcbiAgZG9tYWluTmFtZTpcImh0dHA6Ly9sb2NhbGhvc3Q6MzAwMFwiLFxuICBhcGk6IHtcbiAgICBib2R5UGFyc2VyOiB7XG4gICAgICAgIHNpemVMaW1pdDogJzRtYicgXG4gICAgfVxuICB9LFxufVxuIl0sIm5hbWVzIjpbIm1vZHVsZSIsImV4cG9ydHMiLCJyZWFjdFN0cmljdE1vZGUiLCJlbnYiLCJtb25nb0RCX3VyaSIsIm1hcmtldHBsYWNlUHJpdmF0ZUtleSIsIm1hcmtldHBsYWNlV2FsbGV0QWRkcmVzcyIsIm5mdE1hcmtldEFkZHJlc3MiLCJuZnRBZGRyZXNzIiwiaW1hZ2UiLCJkb21haW5zIiwiZG9tYWluTmFtZSIsImFwaSIsImJvZHlQYXJzZXIiLCJzaXplTGltaXQiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api)/./next.config.js\n");
-
-/***/ }),
-
-/***/ "(api)/./pages/api/fiatCrypto/[order].js":
-/*!*****************************************!*\
-  !*** ./pages/api/fiatCrypto/[order].js ***!
-  \*****************************************/
+/***/ 3613:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ handler)\n/* harmony export */ });\n/* harmony import */ var _database_dbModel_Order__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../database/dbModel/Order */ \"(api)/./database/dbModel/Order.js\");\n/* harmony import */ var _database_dbModel_Order__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_database_dbModel_Order__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _database_dbModel_FiatCryptoTransaction__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../database/dbModel/FiatCryptoTransaction */ \"(api)/./database/dbModel/FiatCryptoTransaction.js\");\n/* harmony import */ var _database_dbModel_FiatCryptoTransaction__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_database_dbModel_FiatCryptoTransaction__WEBPACK_IMPORTED_MODULE_1__);\n\n\nconst dbConnect = __webpack_require__(/*! ../../../database/dbConnect */ \"(api)/./database/dbConnect.js\");\nasync function handler(req, res) {\n    dbConnect();\n    //* Send back to client only the product data which match productId\n    const { order  } = req.query;\n    console.log(order);\n    if (req.method === \"GET\") {\n        try {\n            let orderData = await _database_dbModel_Order__WEBPACK_IMPORTED_MODULE_0__.OrderModel.findOne({\n                order: order\n            });\n            res.status(200).json(orderData);\n        } catch (error) {\n            console.log(error);\n            res.status(400).json(\"Sorry, we can't found it.\");\n        }\n    } else if (req.method === \"POST\") {\n        let { order , offerNo , offerType , sellerPublicAddress , buyerPublicAddress , amountToPay , amountToReceive , description , transactionState , date , cryptoCode , currencyCode  } = JSON.parse(req.body);\n        try {\n            let data = await _database_dbModel_Order__WEBPACK_IMPORTED_MODULE_0__.OrderModel.create({\n                order,\n                offerNo,\n                offerType,\n                sellerPublicAddress,\n                buyerPublicAddress,\n                amountToPay,\n                amountToReceive,\n                description,\n                transactionState,\n                date\n            });\n            console.log(\"Success , we post this order\");\n            // Create Transaction for seller and buyer \n            // create transaction info for seller\n            // await FiatCryptoTransactionModel.create({\n            //     publicAddress:sellerPublicAddress,\n            //     transactionsList:[{\n            //         order,\n            //         offerNo,\n            //         blockchain:blockchainFilter[cryptoCode],\n            //         fromAddress:sellerPublicAddress,\n            //         toAddress:buyerPublicAddress,\n            //         payment:\"Mobile Banking (Promptpay)\",\n            //         fiatCurrecy:{\n            //             name:cryptoName[cryptoCode],\n            //             code:cryptoCode,\n            //             amount:amountToPay\n            //         },\n            //         cryptocurrency:{\n            //             name:currencyName[currencyCode],\n            //             code:currencyCode,\n            //             amount:amountToReceive\n            //         },\n            //         date,\n            //         transactionState:\"order\",\n            //         description:\"\",\n            //     }],\n            //     complete:0,\n            //     sellInfo:[{\n            //         number:1,\n            //         success:0,\n            //         fail:0,\n            //         transactionDetails:[{\n            //             offerNo,\n            //             order,\n            //             transactioState:\"order\"\n            //         }]\n            //     }],\n            //     buyInfo:[],\n            // });\n            // create transaction info for buyer\n            // await FiatCryptoTransactionModel.create({\n            //     publicAddress:buyerPublicAddress,\n            //     transactionsList:[{\n            //         order,\n            //         offerNo,\n            //         blockchain:blockchainFilter[cryptoCode],\n            //         fromAddress:sellerPublicAddress,\n            //         toAddress:buyerPublicAddress,\n            //         payment:\"Mobile Banking (Promptpay)\",\n            //         fiatCurrecy:{\n            //             name:cryptoName[cryptoCode],\n            //             code:cryptoCode,\n            //             amount:amountToPay\n            //         },\n            //         cryptocurrency:{\n            //             name:currencyName[currencyCode],\n            //             code:currencyCode,\n            //             amount:amountToReceive\n            //         },\n            //         date,\n            //         transactionState:\"order\",\n            //         description:\"\",\n            //     }],\n            //     complete:0,\n            //     sellInfo:[],\n            //     buyInfo:[{\n            //         number:1,\n            //         success:0,\n            //         fail:0,\n            //         transactionDetails:[{\n            //             offerNo,\n            //             order,\n            //             transactioState:\"order\"\n            //         }]\n            //     }],\n            // });\n            res.status(201).send(data);\n        } catch (error) {\n            console.log(error);\n            res.status(400).json(\"Sorry, we can't found it.\");\n        }\n    } else if (req.method === \"DELETE\") {\n        try {\n            await _database_dbModel_Order__WEBPACK_IMPORTED_MODULE_0__.OrderModel.findOneAndDelete({\n                order: order\n            });\n            res.status(200).send(`Delete order:${order} success.`);\n        } catch (error) {\n            console.log(error);\n            res.status(500).json(\"The server has encountered a situation it does not know how to handle.\");\n        }\n    }\n};\nlet blockchainFilter = {\n    \"BTC\": \"Bitcoin Blockchain\",\n    \"ETH\": \"Ethereum Blockchain\",\n    \"BNB\": \"BNB Chain\",\n    \"BUSD\": \"BNB Chain\",\n    \"Matic\": \"Polygon Blockchain\",\n    \"USDC\": \"Ethereum Blockchain\",\n    \"USDT\": \"Ethereum Blockchain\"\n};\nlet cryptoName = {\n    \"BTC\": \"Bitcoin\",\n    \"ETH\": \"Ether\",\n    \"BNB\": \"Binance Coin\",\n    \"BUSD\": \"Binance USD\",\n    \"Matic\": \"Polygon Matic\"\n};\nlet currencyName = {\n    \"THB\": \"Thai Baht\",\n    \"USD\": \"US Dollar\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvZmlhdENyeXB0by9bb3JkZXJdLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7O0FBQTREO0FBQ2dDO0FBQzVGLEtBQUssQ0FBQ0UsU0FBUyxHQUFHQyxtQkFBTyxDQUFDLGtFQUE2QjtBQUV4QyxlQUFlQyxPQUFPLENBQUNDLEdBQUcsRUFBQ0MsR0FBRyxFQUFFLENBQUM7SUFDNUNKLFNBQVM7SUFDVCxFQUFtRTtJQUNuRSxLQUFLLENBQUMsQ0FBQ0ssQ0FBQUEsS0FBSyxHQUFDLEdBQUdGLEdBQUcsQ0FBQ0csS0FBSztJQUN6QkMsT0FBTyxDQUFDQyxHQUFHLENBQUNILEtBQUs7SUFFakIsRUFBRSxFQUFDRixHQUFHLENBQUNNLE1BQU0sS0FBSyxDQUFLLE1BQUMsQ0FBQztRQUNyQixHQUFHLENBQUMsQ0FBQztZQUNELEdBQUcsQ0FBQ0MsU0FBUyxHQUFHLEtBQUssQ0FBQ1osdUVBQWtCLENBQUMsQ0FBQ087Z0JBQUFBLEtBQUssRUFBQ0EsS0FBSztZQUFBLENBQUM7WUFDdERELEdBQUcsQ0FBQ1EsTUFBTSxDQUFDLEdBQUcsRUFBRUMsSUFBSSxDQUFDSCxTQUFTO1FBRWxDLENBQUMsQ0FBQyxLQUFLLEVBQUVJLEtBQUssRUFBRSxDQUFDO1lBQ2JQLE9BQU8sQ0FBQ0MsR0FBRyxDQUFDTSxLQUFLO1lBQ2pCVixHQUFHLENBQUNRLE1BQU0sQ0FBQyxHQUFHLEVBQUVDLElBQUksQ0FBQyxDQUEyQjtRQUNwRCxDQUFDO0lBR0wsQ0FBQyxNQUFLLEVBQUUsRUFBRVYsR0FBRyxDQUFDTSxNQUFNLEtBQUssQ0FBTSxPQUFDLENBQUM7UUFDN0IsR0FBRyxDQUFDLENBQUNKLENBQUFBLEtBQUssR0FBQ1UsT0FBTyxHQUFDQyxTQUFTLEdBQUNDLG1CQUFtQixHQUFDQyxrQkFBa0IsR0FBQ0MsV0FBVyxHQUFDQyxlQUFlLEdBQUNDLFdBQVcsR0FBQ0MsZ0JBQWdCLEdBQUNDLElBQUksR0FBQ0MsVUFBVSxHQUFDQyxZQUFZLEdBQUMsR0FBR0Ms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LENBQW9CO0lBQzFCLENBQUssTUFBQyxDQUFxQjtJQUMzQixDQUFLLE1BQUMsQ0FBVztJQUNqQixDQUFNLE9BQUMsQ0FBVztJQUNsQixDQUFPLFFBQUMsQ0FBb0I7SUFDNUIsQ0FBTSxPQUFDLENBQXFCO0lBQzVCLENBQU0sT0FBQyxDQUFxQjtBQUNoQyxDQUFDO0FBRUQsR0FBRyxDQUFDQyxVQUFVLEdBQUcsQ0FBQztJQUNkLENBQUssTUFBQyxDQUFTO0lBQ2YsQ0FBSyxNQUFDLENBQU87SUFDYixDQUFLLE1BQUMsQ0FBYztJQUNwQixDQUFNLE9BQUMsQ0FBYTtJQUNwQixDQUFPLFFBQUMsQ0FBZTtBQUMzQixDQUFDO0FBRUQsR0FBRyxDQUFDQyxZQUFZLEdBQUcsQ0FBQztJQUNoQixDQUFLLE1BQUMsQ0FBVztJQUNqQixDQUFLLE1BQUMsQ0FBVztBQUNyQixDQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbmZ0LW1hcmtldHBsYWNlLW12cC8uL3BhZ2VzL2FwaS9maWF0Q3J5cHRvL1tvcmRlcl0uanM/OGE5YSJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBPcmRlck1vZGVsIH0gZnJvbSBcIi4uLy4uLy4uL2RhdGFiYXNlL2RiTW9kZWwvT3JkZXJcIjtcbmltcG9ydCB7IEZpYXRDcnlwdG9UcmFuc2FjdGlvbk1vZGVsIH0gZnJvbSBcIi4uLy4uLy4uL2RhdGFiYXNlL2RiTW9kZWwvRmlhdENyeXB0b1RyYW5zYWN0aW9uXCI7XG5jb25zdCBkYkNvbm5lY3QgPSByZXF1aXJlKFwiLi4vLi4vLi4vZGF0YWJhc2UvZGJDb25uZWN0XCIpXG5cbmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uIGhhbmRsZXIocmVxLHJlcykge1xuICAgIGRiQ29ubmVjdCgpO1xuICAgIC8vKiBTZW5kIGJhY2sgdG8gY2xpZW50IG9ubHkgdGhlIHByb2R1Y3QgZGF0YSB3aGljaCBtYXRjaCBwcm9kdWN0SWRcbiAgICBjb25zdCB7b3JkZXJ9ID0gcmVxLnF1ZXJ5O1xuICAgIGNvbnNvbGUubG9nKG9yZGVyKVxuXG4gICAgaWYocmVxLm1ldGhvZCA9PT0gXCJHRVRcIil7XG4gICAgICAgIHRyeSB7XG4gICAgICAgICAgICBsZXQgb3JkZXJEYXRhID0gYXdhaXQgT3JkZXJNb2RlbC5maW5kT25lKHtvcmRlcjpvcmRlcn0pO1xuICAgICAgICAgICAgcmVzLnN0YXR1cygyMDApLmpzb24ob3JkZXJEYXRhKTtcblxuICAgICAgICB9IGNhdGNoIChlcnJvcikge1xuICAgICAgICAgICAgY29uc29sZS5sb2coZXJyb3IpXG4gICAgICAgICAgICByZXMuc3RhdHVzKDQwMCkuanNvbihcIlNvcnJ5LCB3ZSBjYW4ndCBmb3VuZCBpdC5cIik7XG4gICAgICAgIH1cbiAgICAgICAgXG4gICAgICAgIFxuICAgIH1lbHNlIGlmIChyZXEubWV0aG9kID09PSBcIlBPU1RcIil7XG4gICAgICAgIGxldCB7b3JkZXIsb2ZmZXJObyxvZmZlclR5cGUsc2VsbGVyUHVibGljQWRkcmVzcyxidXllclB1YmxpY0FkZHJlc3MsYW1vdW50VG9QYXksYW1vdW50VG9SZWNlaXZlLGRlc2NyaXB0aW9uLHRyYW5zYWN0aW9uU3RhdGUsZGF0ZSxjcnlwdG9Db2RlLGN1cnJlbmN5Q29kZX0gPSBKU09OLnBhcnNlKHJlcS5ib2R5KVxuICAgICAgICB0cnkge1xuICAgICAgICAgICAgbGV0IGRhdGEgPSBhd2FpdCBPcmRlck1vZGVsLmNyZWF0ZSh7XG4gICAgICAgICAgICAgICAgb3JkZXIsXG4gICAgICAgICAgICAgICAgb2ZmZXJObyxcbiAgICAgICAgICAgICAgICBvZmZlclR5cGUsXG4gICAgICAgICAgICAgICAgc2VsbGVyUHVibGljQWRkcmVzcyxcbiAgICAgICAgICAgICAgICBidXllclB1YmxpY0FkZHJlc3MsXG4gICAgICAgICAgICAgICAgYW1vdW50VG9QYXksXG4gICAgICAgICAgICAgICAgYW1vdW50VG9SZWNlaXZlLFxuICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uLFxuICAgICAgICAgICAgICAgIHRyYW5zYWN0aW9uU3RhdGUsXG4gICAgICAgICAgICAgICAgZGF0ZVxuICAgICAgICAgICAgfSk7XG5cbiAgICAgICAgICAgIGNvbnNvbGUubG9nKFwiU3VjY2VzcyAsIHdlIHBvc3QgdGhpcyBvcmRlclwiKVxuXG4gICAgICAgICAgICAvLyBDcmVhdGUgVHJhbnNhY3Rpb24gZm9yIHNlbGxlciBhbmQgYnV5ZXIgXG4gICAgICAgICAgICAvLyBjcmVhdGUgdHJhbnNhY3Rpb24gaW5mbyBmb3Igc2VsbGVyXG4gICAgICAgICAgICAvLyBhd2FpdCBGaWF0Q3J5cHRvVHJhbnNhY3Rpb25Nb2RlbC5jcmVhdGUoe1xuICAgICAgICAgICAgLy8gICAgIHB1YmxpY0FkZHJlc3M6c2VsbGVyUHVibGljQWRkcmVzcyxcbiAgICAgICAgICAgIC8vICAgICB0cmFuc2FjdGlvbnNMaXN0Olt7XG4gICAgICAgICAgICAvLyAgICAgICAgIG9yZGVyLFxuICAgICAgICAgICAgLy8gICAgICAgICBvZmZlck5vLFxuICAgICAgICAgICAgLy8gICAgICAgICBibG9ja2NoYWluOmJsb2NrY2hhaW5GaWx0ZXJbY3J5cHRvQ29kZV0sXG4gICAgICAgICAgICAvLyAgICAgICAgIGZyb21BZGRyZXNzOnNlbGxlclB1YmxpY0FkZHJlc3MsXG4gICAgICAgICAgICAvLyAgICAgICAgIHRvQWRkcmVzczpidXllclB1YmxpY0FkZHJlc3MsXG4gICAgICAgICAgICAvLyAgICAgICAgIHBheW1lbnQ6XCJNb2JpbGUgQmFua2luZyAoUHJvbXB0cGF5KVwiLFxuICAgICAgICAgICAgLy8gICAgICAgICBmaWF0Q3VycmVjeTp7XG4gICAgICAgICAgICAvLyAgICAgICAgICAgICBuYW1lOmNyeXB0b05hbWVbY3J5cHRvQ29kZV0sXG4gICAgICAgICAgICAvLyAgICAgICAgICAgICBjb2RlOmNyeXB0b0NvZGUsXG4gICAgICAgICAgICAvLyAgICAgICAgICAgICBhbW91bnQ6YW1vdW50VG9QYXlcbiAgICAgICAgICAgIC8vICAgICAgICAgfSxcbiAgICAgICAgICAgIC8vICAgICAgICAgY3J5cHRvY3VycmVuY3k6e1xuICAgICAgICAgICAgLy8gICAgICAgICAgICAgbmFtZTpjdXJyZW5jeU5hbWVbY3VycmVuY3lDb2RlXSxcbiAgICAgICAgICAgIC8vICAgICAgICAgICAgIGNvZGU6Y3VycmVuY3lDb2RlLFxuICAgICAgICAgICAgLy8gICAgICAgICAgICAgYW1vdW50OmFtb3VudFRvUmVjZWl2ZVxuICAgICAgICAgICAgLy8gICAgICAgICB9LFxuICAgICAgICAgICAgLy8gICAgICAgICBkYXRlLFxuICAgICAgICAgICAgLy8gICAgICAgICB0cmFuc2FjdGlvblN0YXRlOlwib3JkZXJcIixcbiAgICAgICAgICAgIC8vICAgICAgICAgZGVzY3JpcHRpb246XCJcIixcbiAgICAgICAgICAgIC8vICAgICB9XSxcbiAgICAgICAgICAgIC8vICAgICBjb21wbGV0ZTowLFxuICAgICAgICAgICAgLy8gICAgIHNlbGxJbmZvOlt7XG4gICAgICAgICAgICAvLyAgICAgICAgIG51bWJlcjoxLFxuICAgICAgICAgICAgLy8gICAgICAgICBzdWNjZXNzOjAsXG4gICAgICAgICAgICAvLyAgICAgICAgIGZhaWw6MCxcbiAgICAgICAgICAgIC8vICAgICAgICAgdHJhbnNhY3Rpb25EZXRhaWxzOlt7XG4gICAgICAgICAgICAvLyAgICAgICAgICAgICBvZmZlck5vLFxuICAgICAgICAgICAgLy8gICAgICAgICAgICAgb3JkZXIsXG4gICAgICAgICAgICAvLyAgICAgICAgICAgICB0cmFuc2FjdGlvU3RhdGU6XCJvcmRlclwiXG4gICAgICAgICAgICAvLyAgICAgICAgIH1dXG4gICAgICAgICAgICAvLyAgICAgfV0sXG4gICAgICAgICAgICAvLyAgICAgYnV5SW5mbzpbXSxcbiAgICAgICAgICAgIC8vIH0pO1xuXG4gICAgICAgICAgICAvLyBjcmVhdGUgdHJhbnNhY3Rpb24gaW5mbyBmb3IgYnV5ZXJcbiAgICAgICAgICAgIC8vIGF3YWl0IEZpYXRDcnlwdG9UcmFuc2FjdGlvbk1vZGVsLmNyZWF0ZSh7XG4gICAgICAgICAgICAvLyAgICAgcHVibGljQWRkcmVzczpidXllclB1YmxpY0FkZHJlc3MsXG4gICAgICAgICAgICAvLyAgICAgdHJhbnNhY3Rpb25zTGlzdDpbe1xuICAgICAgICAgICAgLy8gICAgICAgICBvcmRlcixcbiAgICAgICAgICAgIC8vICAgICAgICAgb2ZmZXJObyxcbiAgICAgICAgICAgIC8vICAgICAgICAgYmxvY2tjaGFpbjpibG9ja2NoYWluRmlsdGVyW2NyeXB0b0NvZGVdLFxuICAgICAgICAgICAgLy8gICAgICAgICBmcm9tQWRkcmVzczpzZWxsZXJQdWJsaWNBZGRyZXNzLFxuICAgICAgICAgICAgLy8gICAgICAgICB0b0FkZHJlc3M6YnV5ZXJQdWJsaWNBZGRyZXNzLFxuICAgICAgICAgICAgLy8gICAgICAgICBwYXltZW50OlwiTW9iaWxlIEJhbmtpbmcgKFByb21wdHBheSlcIixcbiAgICAgICAgICAgIC8vICAgICAgICAgZmlhdEN1cnJlY3k6e1xuICAgICAgICAgICAgLy8gICAgICAgICAgICAgbmFtZTpjcnlwdG9OYW1lW2NyeXB0b0NvZGVdLFxuICAgICAgICAgICAgLy8gICAgICAgICAgICAgY29kZTpjcnlwdG9Db2RlLFxuICAgICAgICAgICAgLy8gICAgICAgICAgICAgYW1vdW50OmFtb3VudFRvUGF5XG4gICAgICAgICAgICAvLyAgICAgICAgIH0sXG4gICAgICAgICAgICAvLyAgICAgICAgIGNyeXB0b2N1cnJlbmN5OntcbiAgICAgICAgICAgIC8vICAgICAgICAgICAgIG5hbWU6Y3VycmVuY3lOYW1lW2N1cnJlbmN5Q29kZV0sXG4gICAgICAgICAgICAvLyAgICAgICAgICAgICBjb2RlOmN1cnJlbmN5Q29kZSxcbiAgICAgICAgICAgIC8vICAgICAgICAgICAgIGFtb3VudDphbW91bnRUb1JlY2VpdmVcbiAgICAgICAgICAgIC8vICAgICAgICAgfSxcbiAgICAgICAgICAgIC8vICAgICAgICAgZGF0ZSxcbiAgICAgICAgICAgIC8vICAgICAgICAgdHJhbnNhY3Rpb25TdGF0ZTpcIm9yZGVyXCIsXG4gICAgICAgICAgICAvLyAgICAgICAgIGRlc2NyaXB0aW9uOlwiXCIsXG4gICAgICAgICAgICAvLyAgICAgfV0sXG4gICAgICAgICAgICAvLyAgICAgY29tcGxldGU6MCxcbiAgICAgICAgICAgIC8vICAgICBzZWxsSW5mbzpbXSxcbiAgICAgICAgICAgIC8vICAgICBidXlJbmZvOlt7XG4gICAgICAgICAgICAvLyAgICAgICAgIG51bWJlcjoxLFxuICAgICAgICAgICAgLy8gICAgICAgICBzdWNjZXNzOjAsXG4gICAgICAgICAgICAvLyAgICAgICAgIGZhaWw6MCxcbiAgICAgICAgICAgIC8vICAgICAgICAgdHJhbnNhY3Rpb25EZXRhaWxzOlt7XG4gICAgICAgICAgICAvLyAgICAgICAgICAgICBvZmZlck5vLFxuICAgICAgICAgICAgLy8gICAgICAgICAgICAgb3JkZXIsXG4gICAgICAgICAgICAvLyAgICAgICAgICAgICB0cmFuc2FjdGlvU3RhdGU6XCJvcmRlclwiXG4gICAgICAgICAgICAvLyAgICAgICAgIH1dXG4gICAgICAgICAgICAvLyAgICAgfV0sXG4gICAgICAgICAgICAvLyB9KTtcbiAgICAgICAgXG4gICAgICAgICAgICByZXMuc3RhdHVzKDIwMSkuc2VuZChkYXRhKTtcbiAgICAgICAgfSBjYXRjaCAoZXJyb3IpIHtcbiAgICAgICAgICAgIGNvbnNvbGUubG9nKGVycm9yKVxuICAgICAgICAgICAgcmVzLnN0YXR1cyg0MDApLmpzb24oXCJTb3JyeSwgd2UgY2FuJ3QgZm91bmQgaXQuXCIpO1xuICAgICAgICB9XG4gICAgfWVsc2UgaWYgKHJlcS5tZXRob2QgPT09IFwiREVMRVRFXCIpe1xuICAgICAgICB0cnkge1xuICAgICAgICAgICAgYXdhaXQgT3JkZXJNb2RlbC5maW5kT25lQW5kRGVsZXRlKHtvcmRlcjpvcmRlcn0pO1xuICAgICAgICAgICAgcmVzLnN0YXR1cygyMDApLnNlbmQoYERlbGV0ZSBvcmRlcjoke29yZGVyfSBzdWNjZXNzLmApXG4gICAgICAgIH0gY2F0Y2ggKGVycm9yKSB7XG4gICAgICAgICAgICBjb25zb2xlLmxvZyhlcnJvcilcbiAgICAgICAgICAgIHJlcy5zdGF0dXMoNTAwKS5qc29uKFwiVGhlIHNlcnZlciBoYXMgZW5jb3VudGVyZWQgYSBzaXR1YXRpb24gaXQgZG9lcyBub3Qga25vdyBob3cgdG8gaGFuZGxlLlwiKTtcbiAgICAgICAgfVxuICAgIH1cbiAgICBcbn1cblxubGV0IGJsb2NrY2hhaW5GaWx0ZXIgPSB7XG4gICAgXCJCVENcIjpcIkJpdGNvaW4gQmxvY2tjaGFpblwiLFxuICAgIFwiRVRIXCI6XCJFdGhlcmV1bSBCbG9ja2NoYWluXCIsXG4gICAgXCJCTkJcIjpcIkJOQiBDaGFpblwiLFxuICAgIFwiQlVTRFwiOlwiQk5CIENoYWluXCIsXG4gICAgXCJNYXRpY1wiOlwiUG9seWdvbiBCbG9ja2NoYWluXCIsXG4gICAgXCJVU0RDXCI6XCJFdGhlcmV1bSBCbG9ja2NoYWluXCIsXG4gICAgXCJVU0RUXCI6XCJFdGhlcmV1bSBCbG9ja2NoYWluXCJcbn1cblxubGV0IGNyeXB0b05hbWUgPSB7XG4gICAgXCJCVENcIjpcIkJpdGNvaW5cIixcbiAgICBcIkVUSFwiOlwiRXRoZXJcIixcbiAgICBcIkJOQlwiOlwiQmluYW5jZSBDb2luXCIsXG4gICAgXCJCVVNEXCI6XCJCaW5hbmNlIFVTRFwiLFxuICAgIFwiTWF0aWNcIjpcIlBvbHlnb24gTWF0aWNcIlxufVxuXG5sZXQgY3VycmVuY3lOYW1lID0ge1xuICAgIFwiVEhCXCI6XCJUaGFpIEJhaHRcIixcbiAgICBcIlVTRFwiOlwiVVMgRG9sbGFyXCJcbn0iXSwibmFtZXMiOlsiT3JkZXJNb2RlbCIsIkZpYXRDcnlwdG9UcmFuc2FjdGlvbk1vZGVsIiwiZGJDb25uZWN0IiwicmVxdWlyZSIsImhhbmRsZXIiLCJyZXEiLCJyZXMiLCJvcmRlciIsInF1ZXJ5IiwiY29uc29sZSIsImxvZyIsIm1ldGhvZCIsIm9yZGVyRGF0YSIsImZpbmRPbmUiLCJzdGF0dXMiLCJqc29uIiwiZXJyb3IiLCJvZmZlck5vIiwib2ZmZXJUeXBlIiwic2VsbGVyUHVibGljQWRkcmVzcyIsImJ1eWVyUHVibGljQWRkcmVzcyIsImFtb3VudFRvUGF5IiwiYW1vdW50VG9SZWNlaXZlIiwiZGVzY3JpcHRpb24iLCJ0cmFuc2FjdGlvblN0YXRlIiwiZGF0ZSIsImNyeXB0b0NvZGUiLCJjdXJyZW5jeUNvZGUiLCJKU09OIiwicGFyc2UiLCJib2R5IiwiZGF0YSIsImNyZWF0ZSIsInNlbmQiLCJmaW5kT25lQW5kRGVsZXRlIiwiYmxvY2tjaGFpbkZpbHRlciIsImNyeXB0b05hbWUiLCJjdXJyZW5jeU5hbWUiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api)/./pages/api/fiatCrypto/[order].js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ handler)
+/* harmony export */ });
+/* harmony import */ var _database_dbModel_Order__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8171);
+/* harmony import */ var _database_dbModel_Order__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_database_dbModel_Order__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _database_dbModel_FiatCryptoTransaction__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6158);
+/* harmony import */ var _database_dbModel_FiatCryptoTransaction__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_database_dbModel_FiatCryptoTransaction__WEBPACK_IMPORTED_MODULE_1__);
+
+
+const dbConnect = __webpack_require__(7873);
+async function handler(req, res) {
+    dbConnect();
+    //* Send back to client only the product data which match productId
+    const { order  } = req.query;
+    console.log(order);
+    if (req.method === "GET") {
+        try {
+            let orderData = await _database_dbModel_Order__WEBPACK_IMPORTED_MODULE_0__.OrderModel.findOne({
+                order: order
+            });
+            res.status(200).json(orderData);
+        } catch (error) {
+            console.log(error);
+            res.status(400).json("Sorry, we can't found it.");
+        }
+    } else if (req.method === "POST") {
+        let { order , offerNo , offerType , sellerPublicAddress , buyerPublicAddress , amountToPay , amountToReceive , description , transactionState , date , cryptoCode , currencyCode  } = JSON.parse(req.body);
+        try {
+            let data = await _database_dbModel_Order__WEBPACK_IMPORTED_MODULE_0__.OrderModel.create({
+                order,
+                offerNo,
+                offerType,
+                sellerPublicAddress,
+                buyerPublicAddress,
+                amountToPay,
+                amountToReceive,
+                description,
+                transactionState,
+                date
+            });
+            console.log("Success , we post this order");
+            // Create Transaction for seller and buyer 
+            // create transaction info for seller
+            // await FiatCryptoTransactionModel.create({
+            //     publicAddress:sellerPublicAddress,
+            //     transactionsList:[{
+            //         order,
+            //         offerNo,
+            //         blockchain:blockchainFilter[cryptoCode],
+            //         fromAddress:sellerPublicAddress,
+            //         toAddress:buyerPublicAddress,
+            //         payment:"Mobile Banking (Promptpay)",
+            //         fiatCurrecy:{
+            //             name:cryptoName[cryptoCode],
+            //             code:cryptoCode,
+            //             amount:amountToPay
+            //         },
+            //         cryptocurrency:{
+            //             name:currencyName[currencyCode],
+            //             code:currencyCode,
+            //             amount:amountToReceive
+            //         },
+            //         date,
+            //         transactionState:"order",
+            //         description:"",
+            //     }],
+            //     complete:0,
+            //     sellInfo:[{
+            //         number:1,
+            //         success:0,
+            //         fail:0,
+            //         transactionDetails:[{
+            //             offerNo,
+            //             order,
+            //             transactioState:"order"
+            //         }]
+            //     }],
+            //     buyInfo:[],
+            // });
+            // create transaction info for buyer
+            // await FiatCryptoTransactionModel.create({
+            //     publicAddress:buyerPublicAddress,
+            //     transactionsList:[{
+            //         order,
+            //         offerNo,
+            //         blockchain:blockchainFilter[cryptoCode],
+            //         fromAddress:sellerPublicAddress,
+            //         toAddress:buyerPublicAddress,
+            //         payment:"Mobile Banking (Promptpay)",
+            //         fiatCurrecy:{
+            //             name:cryptoName[cryptoCode],
+            //             code:cryptoCode,
+            //             amount:amountToPay
+            //         },
+            //         cryptocurrency:{
+            //             name:currencyName[currencyCode],
+            //             code:currencyCode,
+            //             amount:amountToReceive
+            //         },
+            //         date,
+            //         transactionState:"order",
+            //         description:"",
+            //     }],
+            //     complete:0,
+            //     sellInfo:[],
+            //     buyInfo:[{
+            //         number:1,
+            //         success:0,
+            //         fail:0,
+            //         transactionDetails:[{
+            //             offerNo,
+            //             order,
+            //             transactioState:"order"
+            //         }]
+            //     }],
+            // });
+            res.status(201).send(data);
+        } catch (error) {
+            console.log(error);
+            res.status(400).json("Sorry, we can't found it.");
+        }
+    } else if (req.method === "DELETE") {
+        try {
+            await _database_dbModel_Order__WEBPACK_IMPORTED_MODULE_0__.OrderModel.findOneAndDelete({
+                order: order
+            });
+            res.status(200).send(`Delete order:${order} success.`);
+        } catch (error) {
+            console.log(error);
+            res.status(500).json("The server has encountered a situation it does not know how to handle.");
+        }
+    }
+};
+let blockchainFilter = {
+    "BTC": "Bitcoin Blockchain",
+    "ETH": "Ethereum Blockchain",
+    "BNB": "BNB Chain",
+    "BUSD": "BNB Chain",
+    "Matic": "Polygon Blockchain",
+    "USDC": "Ethereum Blockchain",
+    "USDT": "Ethereum Blockchain"
+};
+let cryptoName = {
+    "BTC": "Bitcoin",
+    "ETH": "Ether",
+    "BNB": "Binance Coin",
+    "BUSD": "Binance USD",
+    "Matic": "Polygon Matic"
+};
+let currencyName = {
+    "THB": "Thai Baht",
+    "USD": "US Dollar"
+};
+
 
 /***/ })
 
@@ -80,7 +263,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 var __webpack_require__ = require("../../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/fiatCrypto/[order].js"));
+var __webpack_exports__ = __webpack_require__.X(0, [873], () => (__webpack_exec__(3613)));
 module.exports = __webpack_exports__;
 
 })();
