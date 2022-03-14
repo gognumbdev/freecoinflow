@@ -3,14 +3,16 @@ import thunk from 'redux-thunk'
 import userReducer from './reducers/userReducer'
 import { persistStore,persistReducer } from 'redux-persist'
 import storage from "redux-persist/lib/storage"
+import tradeReducer from './reducers/tradeReducer'
 
 const persistConfig = {
     key:"root",
-    storage
+    storage,
 }
 
 const reducers = combineReducers({
-    user:userReducer
+    user:userReducer,
+    trade:tradeReducer
 })
 
 const persistedReducer = persistReducer(persistConfig,reducers)

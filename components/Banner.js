@@ -11,17 +11,13 @@ const Banner = () => {
                 {/* Text */}
                 <div className="grid grid-cols-1 place-items-start space-y-10 w-5/6 place-self-center">
                     <p className="text-4xl font-bold place-self-center">
-                        Exchange your money on reliable decentralized peer to peer exchange solution.
+                        Buy and sell your cryptocurrency directly to your own blockchain address.
                     </p>
                     <p className="text-2xl">
-                        FreeCoinFlow facilitate peer to peer fiat-crypto exchange on local scope and crypto-cypto exchange on global scope by serve you with our Decentralized P2P Exchange of the
-                        <span className="font-bold ml-4 text-blue-500">Free</span>
-                        <span className="font-bold text-amber-500">Coin</span>
-                        <span className="font-bold text-blue-500 mr-4">Flow</span>
-                        platform in the easy,secure and private way.
+                        Neoflow facilitate peer to peer fiat-crypto exchange on local and crypto-cypto exchange on global. These can transact with your own crypto wallet such as MetaMask.
                     </p>
                     <p className="text-2xl font-regular ">
-                        This is MVP of our platform so it doesn't charge your money, Just try it and give your feedback to FreeCoincFlow team.
+                        This is MVP of our platform so it doesn't charge your money, Just try it and give your feedback to Neoflow team.
                         We hope this platform help your life easier.
                     </p>
                 </div>

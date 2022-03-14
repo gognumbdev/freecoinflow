@@ -1,27 +1,30 @@
 /* This example requires Tailwind CSS v2.0+ */
-
-import {findSellersById,findBuyersById,getOffers} from "../../utils/filter/local/fiatCryptoFilter"
 import { useEffect, useState } from "react"
 import SellerOffer from "./SellerOffer"
 import BuyerOffer from "./BuyerOffer"
+import { useSelector } from "react-redux"
+const config = require("../../../next.config")
 
-export default function OfferListLocal({transaction,crypto,currency,payment}) {
-    const [sellers, setSellers] = useState([])
-    const [buyers, setBuyers] = useState([])
+export default function OfferListLocal() {
+  const [sellers, setSellers] = useState([])
+  const [buyers, setBuyers] = useState([])
 
-    // useEffect(() => {
-    //   let offers = getOffers(transaction,crypto.code,currency.code,payment.name);
-    //   if(transaction==="buy"){
-    //     let sellersResult = findSellersById(offers)
-    //     setSellers(sellersResult);
-    //   }else if(transaction === "sell"){
-    //     let buyersResult = findBuyersById(offers);
-    //     setBuyers(buyersResult);
-    //   }
-    
-    // }, [transaction,currency,crypto,payment])
-
-
+  const {transaction,crypto,currency,payment} = useSelector(state => state.trade)
+  
+  useEffect(async () => {
+    if(transaction === "buy"){
+      let res = await fetch(`${config.domainName}/api/offer/sellOffer/${crypto.code}/${currency.code}/${payment.name}`)
+      let sellersData = await res.json()
+      // console.log("sellersData : ",sellersData)
+      setSellers(sellersData);
+    }else if (transaction === "sell") {
+      let res = await fetch(`${config.domainName}/api/offer/buyOffer/${crypto.code}/${currency.code}/${payment.name}`)
+      let buyersData = await res.json()
+      // console.log("buyersData : ",buyersData)
+      setBuyers(buyersData);
+    }
+  }, [transaction,crypto,currency,payment])
+  
     return (
       <div className="flex flex-col">
         <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -64,17 +67,13 @@ export default function OfferListLocal({transaction,crypto,currency,payment}) {
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
                   {transaction === "buy" ? (
-                    sellers.map(seller => {
-                      if(seller?.offerInfo){
-                        return <SellerOffer sellerInfo={seller} crypto={crypto.code} currency={currency.code} payment={payment} offerInfo={seller?.offerInfo} />
-                      }
-                    })
+                    sellers.map(seller => 
+                    <SellerOffer sellerInfo={seller}  />
+                    )
                   ) : (
-                    buyers.map(buyer => {
-                      if(buyer?.offerInfo){
-                        return <BuyerOffer buyerInfo={buyer} crypto={crypto.code} currency={currency.code} offerInfo={buyer?.offerInfo} />
-                      }
-                    })
+                    buyers.map(buyer => 
+                      <BuyerOffer buyerInfo={buyer}  />
+                    )
                   )}
                 </tbody>
               </table>
@@ -83,5 +82,5 @@ export default function OfferListLocal({transaction,crypto,currency,payment}) {
         </div>
       </div>
     )
-  }
-  
+}
+

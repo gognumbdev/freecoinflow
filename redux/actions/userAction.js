@@ -13,7 +13,9 @@ export const logIn = (userData) => async (dispatch) =>{
                 network:userData.network,
                 promptpayID:userData.promptpayID || "",
                 image: userData.image ,
-                description:userData.description
+                description:userData.description,
+                bankName:userData.bankName,
+                bankAccount:userData.bankAccount,
             }
         })    
     } catch (error) {

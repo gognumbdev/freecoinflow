@@ -72,7 +72,7 @@ export default function ConnectWallet({logUserIn}) {
                   <XCircleIcon className='h-8 text-red-500 cursor-pointer' onClick={closeModal}/>
                 </Dialog.Title>
                 <div className="w-full shadow-xl bg-white mt-5 p-2 transform transition duration-150 ease-in rounded-xl
-                hover:scale-105 hover:shadow-xl cursor-pointer active:scale-90 " >
+                  cursor-pointer active:scale-90 border-2 hover:-translate-y-1 hover:border-amber-500" >
                   <button className="flex space-x-5 rounded justify-start items-center"
                       onClick={() => {close();logUserIn()}}>
                       <Image 
@@ -82,7 +82,10 @@ export default function ConnectWallet({logUserIn}) {
                           objectFit="cover" 
                           alt="Logo of Metamask wallet"
                       />
-                      <p className="text-xl">MetaMask</p>
+                      <p className="text-xl grid grid-cols-1">
+                        <span>MetaMask</span>
+                        <span className='text-sm text-gray-500'>You may need to click the extension after you click this button.</span>
+                      </p>
                   </button>
                 </div>
                   

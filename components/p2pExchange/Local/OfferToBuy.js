@@ -1,9 +1,13 @@
-import { Dialog, RadioGroup, Switch, Transition } from '@headlessui/react'
+import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import { XCircleIcon } from '@heroicons/react/outline';
 import { useRouter } from 'next/router';
+import { useSelector } from 'react-redux';
+const config = require("../../../next.config")
 
-export default function OfferToBuy({crypto,currency,fiatCryptoInfo,sellerUid}) {
+export default function OfferToBuy({sellerInfo}) {
+  const {transaction,crypto,currency,payment} = useSelector(state => state.trade)
+  const {publicAddress} = useSelector(state => state.user)
   let [isOpen, setIsOpen] = useState(false)
   const [pay, setPay] = useState(0.0)
   const [receive, setrReceive] = useState(0.0)
@@ -14,19 +18,42 @@ export default function OfferToBuy({crypto,currency,fiatCryptoInfo,sellerUid}) {
   }
 
   function openModal() {
-    setIsOpen(true)
+    if (publicAddress === sellerInfo.publicAddress){
+      alert("Sorry it's your own offer. You can't buy your own offer.")
+    }else{
+      setIsOpen(true)
+    }
   }
 
-  const goToTransactionPage = () => {
+  // State -> order,pending,checked,transfer,(success or fail)
+  const submitOrder = async () => {
+    let order = Date.now();
+    let orderData = {
+      order:order,
+      offerNo:sellerInfo.offerNo,
+      offerType:"sell",
+      sellerPublicAddress:sellerInfo.publicAddress,
+      buyerPublicAddress:publicAddress,
+      amountToPay:pay,
+      amountToReceive:receive,
+      description:`Order number ${order} was start.`,
+      transactionState:["order"],
+      date:new Date(order).toString(),
+      cryptoCode:crypto.code,
+      currencyCode:currency.code
+    }
+
+    let res = await fetch(`${config.domainName}/api/fiatCrypto/${order}`,{
+      method:"POST",
+      body:JSON.stringify(orderData)
+    })
+
+    let data = await res.json();
+    console.log("Posted data : ",data)
     router.push({
-      pathname:"/p2pexchange/fiatCrypto/transaction/buyer/[orderNO]",
+      pathname:"/p2pexchange/fiatCrypto/[order]",
       query:{
-        orderNO:0,
-        sellOfferNO:fiatCryptoInfo?.sellOfferNO,
-        sellerUid:sellerUid,
-        amount:pay,
-        crypto:fiatCryptoInfo?.crypto,
-        currency:fiatCryptoInfo?.currency,
+        order:order,
       }
     })
   }
@@ -34,7 +61,7 @@ export default function OfferToBuy({crypto,currency,fiatCryptoInfo,sellerUid}) {
   const handlePayChange = (e) => {
     let payAmount = e.target.value;
     setPay(payAmount);
-    setrReceive(payAmount/fiatCryptoInfo?.price);
+    setrReceive(payAmount/sellerInfo?.price);
 
   }
 
@@ -44,10 +71,10 @@ export default function OfferToBuy({crypto,currency,fiatCryptoInfo,sellerUid}) {
         <button
           type="button"
           onClick={openModal}
-          className="px-4 py-2 font-medium text-white bg-green-500 rounded-md hover:bg-opacity-90 
+          className="px-4 py-2 font-medium text-white bg-green-500 rounded-md hover:bg-opacity-90 text-sm
             focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 transition duration-100 transform ease-out"
         >
-          Buy {crypto}
+          Buy {crypto.code}
         </button>
       </div>
 
@@ -91,7 +118,7 @@ export default function OfferToBuy({crypto,currency,fiatCryptoInfo,sellerUid}) {
                   as="h3"
                   className="text-lg font-medium leading-6 text-gray-900 flex justify-between items-center"
                 >
-                  <p>Offer to Buy {crypto}</p>
+                  <p>Offer to Buy {crypto.name}</p>
                   <XCircleIcon className='h-8 text-red-500 cursor-pointer' onClick={closeModal}/>
                 </Dialog.Title>
         
@@ -112,7 +139,7 @@ export default function OfferToBuy({crypto,currency,fiatCryptoInfo,sellerUid}) {
                         onChange={handlePayChange}
                         />
                         {/* Currency Units */}
-                        <span className=''>{currency}</span>
+                        <span className=''>{currency.code}</span>
                     </div>
                 </div>
 
@@ -123,7 +150,7 @@ export default function OfferToBuy({crypto,currency,fiatCryptoInfo,sellerUid}) {
                     <div className="mt-1 relative rounded-md shadow-sm border-2 flex p-2 justify-between ">
                         <span>{receive}</span>
                         {/* Currency Units */}
-                        <span className=''>{crypto}</span>
+                        <span className=''>{crypto.code}</span>
                     </div>
                 </div>
 
@@ -131,11 +158,11 @@ export default function OfferToBuy({crypto,currency,fiatCryptoInfo,sellerUid}) {
                 <div className="flex items-center justify-center mt-4">
                     <button
                     type="button"
-                    onClick={goToTransactionPage}
+                    onClick={submitOrder}
                     className="px-4 py-2 font-bold text-white bg-green-500 rounded-md hover:bg-opacity-90 
                         focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 transition duration-100 transform ease-out"
                     >
-                        Buy {crypto}
+                      Confirm to Buy {crypto.code} order
                     </button>
                 </div>
               </div>

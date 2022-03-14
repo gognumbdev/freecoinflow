@@ -1,31 +1,63 @@
 import { Tab } from '@headlessui/react'
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectTransaction } from '../../redux/actions/tradeAction';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function TransactionFilter({setTransaction}) {
-    const handleTabChange = (index) => {
+export default function TransactionFilter() {
+  const dispatch = useDispatch(); 
+  const {transaction,crypto,currency,payment} = useSelector(state => state.trade)
+  const [selectedIndex, setSelectedIndex] = useState(0)
+
+  useEffect(() => {
+    switch(transaction){
+      case "buy" :
+        handleTabChange(0)
+        break;
+      case "sell" :
+        handleTabChange(1)
+        break;
+      case "offer" :
+        handleTabChange(2)
+        break;
+      default:
+        handleTabChange(0)
+        break;
+    }
+  
+  }, [transaction])
+  
+
+  const handleTabChange = (index) => {
         console.log(index)
         switch(index) {
             case 0:
-                setTransaction("buy");
+                dispatch(selectTransaction("buy"))
+                setSelectedIndex(0);
                 break;
             case 1:
-                setTransaction("sell");
+                dispatch(selectTransaction("sell"))
+                setSelectedIndex(1);
                 break;
             case 2:
-                setTransaction("offer");
+                dispatch(selectTransaction("offer"))
+                setSelectedIndex(2);
                 break;
             default:
-                setTransaction("buy");
+                dispatch(selectTransaction("buy"))
+                setSelectedIndex(0);
                 break;
         }
     }
+    
+    
 
   return (
     <div className="w-full max-w-md px-2 py-8 sm:px-0">
-      <Tab.Group onChange={handleTabChange}>
+      <Tab.Group onChange={handleTabChange} selectedIndex={selectedIndex}>
         <Tab.List className="flex p-1 space-x-1 bg-white border-2 rounded-xl">
             {/* Buy */}
             <Tab

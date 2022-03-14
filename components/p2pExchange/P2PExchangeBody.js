@@ -2,14 +2,12 @@ import LocalOffer from "./Local/LocalOffer"
 import GlobalOffer from "./Global/GlobalOffer"
 import OffersListLocal from "./Local/OffersListLocal"
 import OffersListGlobal from "./Global/OffersListGlobal"
+import { useSelector } from "react-redux"
 
-let merchantType =  {
-  "sell":"Buyer",
-  "buy":"Seller"
-}
 
-const P2PExchangeBody = ({transaction,scope,currency,setCurrency,crypto,setCrypto,payment,setPayment,currencyAmount,setCurrencyAmount,spendCrypto,setSpendCrypto,receiveCrypto,setReceiveCrypto}) => {
-
+const P2PExchangeBody = ({scope}) => {
+  const {transaction,crypto,currency,payment} = useSelector(state => state.trade)
+  const {publicAddress} = useSelector(state => state.user)
   return (
     <div className='mt-4 w-4/6'>
       {(transaction == "buy" || transaction == "sell") && (
@@ -35,17 +33,7 @@ const P2PExchangeBody = ({transaction,scope,currency,setCurrency,crypto,setCrypt
 
       {transaction === "offer" && (
         scope === "local" ? (
-          <LocalOffer 
-            transaction={transaction}
-            currency={currency}
-            setCurrency={setCurrency}
-            crypto={crypto}
-            setCrypto={setCrypto}
-            payment={payment}
-            setPayment={setPayment}
-            currencyAmount={currencyAmount}
-            setCurrencyAmount={setCurrencyAmount}
-          />
+          publicAddress ? <LocalOffer /> : <p className="text-4xl font-bold">Please connect your MetaMask wallet</p>
          ) : (
           <div className=" grid grid-cols-1 place-items-center text-4xl font-bold">
             Sorry, This feature is unavailable for now.

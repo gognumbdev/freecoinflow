@@ -6,12 +6,15 @@ module.exports = {
     marketplaceWalletAddress:"0x518707e145604eA17eA6fd319Fa65DCD2E96Eb34",
     // This is hardhat localhost network
     nftMarketAddress:"0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
-    nftAddress:"0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9"
-    
+    nftAddress:"0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
   },
   image:{
     domains: ['/public/image'],
-  }
-  
-  
+  },
+  domainName:"http://localhost:3000",
+  api: {
+    bodyParser: {
+        sizeLimit: '4mb' 
+    }
+  },
 }

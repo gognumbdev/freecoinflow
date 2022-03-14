@@ -2,5 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/p2pexchange": "pages/p2pexchange.js"
+  "/feedback": "pages/feedback.js",
+  "/api/offer/buyOffer/[...params]": "pages/api/offer/buyOffer/[...params].js",
+  "/api/offer/sellOffer/[...params]": "pages/api/offer/sellOffer/[...params].js"
 }

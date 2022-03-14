@@ -9,11 +9,7 @@ import BTC from "../../public/icons/crypto/BTC.png"
 import USDC from "../../public/icons/crypto/USDC.png"
 import USD from "../../public/icons/currency/jpgSeries/USD.jpg"
 
-const Filters = ({transaction,setTransaction,scope,setScope,currency,
-    setCurrency,crypto,setCrypto,currencyAmount,setCurrencyAmount,payment,setPayment,
-    spendCrypto,setSpendCrypto,receiveCrypto,setReceiveCrypto,spendAmount,setSpendAmount,receiveAmount,setReceiveAmount
-    }) => 
-    {
+const Filters = ({setTransaction,scope,setScope}) => {
     
     const handleTransaction = (transactionType) => {
         switch(transactionType) {
@@ -49,25 +45,14 @@ const Filters = ({transaction,setTransaction,scope,setScope,currency,
     return (
         <div className='grid grid-cols-1 md:w-4/6 py-4'>
             <div className='flex justify-between bg-white'>
-                <TransactionFilter setTransaction={setTransaction} />
+                <TransactionFilter />
                 <ScopeFilter setScope={setScope} />    
             </div>
             
             
             {/* Local filters */}
             {scope === "local" && (
-                <LocalFilters 
-                    transaction={transaction}  
-                    currency={currency}
-                    setCurrency={setCurrency}
-                    crypto={crypto}
-                    setCrypto={setCrypto}
-                    payment={payment}
-                    setPayment={setPayment}
-                    currencyAmount={currencyAmount}
-                    setCurrencyAmount={setCurrencyAmount}
-                    
-                />
+                <LocalFilters />
             )}
             
             {/* Global filters */}

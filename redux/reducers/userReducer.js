@@ -20,6 +20,8 @@ const userReducer = (state = InitailUserState,{type,payload}) => {
                 promptpayID: payload.promptpayID,
                 balance:payload.balance,
                 network:payload.network,
+                bankName:payload.bankName,
+                bankAccount:payload.bankAccount,
             }
         case LOGOUT : 
             return {...InitailUserState}

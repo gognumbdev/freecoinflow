@@ -1,11 +1,13 @@
 import { Dialog, RadioGroup, Switch, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
-import { CashIcon, CreditCardIcon, LibraryIcon, XCircleIcon } from '@heroicons/react/outline';
+import { CashIcon, CreditCardIcon, DeviceMobileIcon, LibraryIcon, UserCircleIcon, XCircleIcon } from '@heroicons/react/outline';
+import { useSelector } from 'react-redux';
 
             
-export default function TraderInfo({crypto,currency,traderInfo,fiatCryptoInfo}) {
+export default function TraderInfo({traderInfo}) {
   let [isOpen, setIsOpen] = useState(false)
 
+  const {transaction,crypto,currency,payment} = useSelector(state => state.trade)
   function closeModal() {
     setIsOpen(false)
   }
@@ -20,7 +22,7 @@ export default function TraderInfo({crypto,currency,traderInfo,fiatCryptoInfo}) 
         <button
           type="button"
           onClick={openModal}
-          className="mt-1 px-4 py-1 font-medium text-black bg-amber-400 rounded-md hover:bg-opacity-90 text-base
+          className="mt-1 px-4 py-1 font-medium text-black bg-amber-400 rounded-md hover:bg-opacity-80 text-sm 
             focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 transition duration-100 transform ease-out"
         >
           Info
@@ -67,54 +69,60 @@ export default function TraderInfo({crypto,currency,traderInfo,fiatCryptoInfo}) 
                   as="h3"
                   className="text-lg font-medium leading-6 text-gray-900 flex justify-between items-center"
                 >
-                    <p>Payment info</p>
+                    <p>{transaction === "buy" ? "Seller" : "Buyer"} info</p>
                   <XCircleIcon className='h-8 text-red-500 cursor-pointer' onClick={closeModal}/>
                 </Dialog.Title>
 
                 <div className="flex items-center justify-start mt-4">
                     <div className="flex-shrink-0 h-10 w-10">
-                        <img className="h-10 w-10 rounded-full object-cover" src={traderInfo?.image} alt={traderInfo?.name} />
+                      {traderInfo?.profileImage ? (
+                          <img className="h-10 w-10 rounded-full object-cover" src={traderInfo?.profileImage} alt={traderInfo?.username} />
+                      ) : (
+                          <UserCircleIcon className="h-8" />
+                      )}
+                      
                     </div>
                     <div className="ml-4">
-                        <div className="font-medium text-gray-900">{traderInfo?.name}</div>
-                        <div className="text-gray-500">{traderInfo?.transactionHistory?.complete + "% completion"}</div>
+                        <div className="font-medium text-gray-900">{traderInfo?.username}</div>
+                        {/* <div className="text-gray-500">{traderInfo?.transactionHistory?.complete + "% completion"}</div> */}
                     </div>
                 </div>
                 
                 <div className='w-5/6 mt-4 grid grid-cols-4 gap-6 place-items-start'>
-                    <p className='col-span-1 text-gray-500'>Payment</p>
+                    <p className='col-span-1 text-gray-500 font-medium'>Payment</p>
                     <div className='flex col-span-3 space-x-2'>
-                        {fiatCryptoInfo?.payment === "All Payments" && <CashIcon className='text-green-500 h-6' />}
-                        {fiatCryptoInfo?.payment === "Bank Transfer" && <LibraryIcon className='text-blue-600 h-6' />}
-                        {fiatCryptoInfo?.payment === "Credit/Debit Card" && <CreditCardIcon className='text-amber-500 h-6'/>}
-                        <p>{fiatCryptoInfo?.payment}</p>
+                        {/* {traderInfo?.payment === "All Payments" && <CashIcon className='text-green-500 h-6' />}
+                        {traderInfo?.payment === "Bank Transfer" && <LibraryIcon className='text-blue-600 h-6' />}
+                        {traderInfo?.payment === "Credit/Debit Card" && <CreditCardIcon className='text-amber-500 h-6'/>} */}
+                        <DeviceMobileIcon className='h-6 text-blue-500' />
+                        <p>{traderInfo?.payment}</p>
                     </div>
                 </div>
 
                 <div className='w-5/6 mt-4'>
                     <div className='grid grid-cols-4 gap-6 place-items-start'>
                         <div className='col-span-1'>
-                            <p className='text-gray-500'>Available </p>
-                            <p className='text-gray-500'>Limit </p>
+                            <p className='text-gray-500 font-medium'>Available </p>
+                            <p className='text-gray-500 font-medium'>Limit </p>
                         </div>
                         <div className='col-span-3'>
-                            <p className=''>{fiatCryptoInfo?.available} {crypto}</p>
-                            <p className=''>{fiatCryptoInfo?.min} {currency} ~ {fiatCryptoInfo?.max} {currency}</p>
+                            <p className=''>{traderInfo?.available} {crypto.code}</p>
+                            <p className=''>{traderInfo?.minimum} {currency.code} ~ {traderInfo?.maximum} {currency.code}</p>
                         </div>
                     </div>
                 </div>
 
                 <div className='w-5/6 mt-4 grid grid-cols-4 gap-6 place-items-start'>
-                    <p className='col-span-1 text-gray-500'>Payment</p>
+                    <p className='col-span-1 text-gray-500 font-medium'>Price</p>
                     <div className='flex col-span-3 space-x-2'>
-                        <p>{fiatCryptoInfo?.price} {currency}</p>
-                        <p>for 1 {crypto}</p>
+                        <p>{traderInfo?.price} {currency.code}</p>
+                        <p>for 1 {crypto.code}</p>
                     </div>
                 </div>
 
                 <div className='w-5/6 mt-4'>
-                    <p className='font-medium mb-2 text-lg'>Term and Conditions</p>
-                    <p>{traderInfo?.transactionDescription}</p>
+                    <p className='font-medium mb-2 text-lg text-gray-500'>Term and Conditions</p>
+                    <p className='px-4'>{traderInfo?.termAndCondition}</p>
                 </div>
                 
 

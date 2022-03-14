@@ -11,17 +11,21 @@ import DAI from "../../public/icons/crypto/DAI.png"
 import BNB from "../../public/icons/crypto/BNB.png"
 import BUSD from "../../public/icons/crypto/BUSD.png"
 import Image from "next/image"
+import { useDispatch } from 'react-redux'
+import { selectCrypto } from '../../redux/actions/tradeAction'
+import { useSelector } from 'react-redux'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function SelectCrypto({setCrypto,label,crypto}) {
-
-  const [selected, setSelected] = useState(crypto)
+export default function SelectCrypto({label}) {
+  const dispatch = useDispatch(); 
+  const trade = useSelector(state => state.trade)
+  const [selected, setSelected] = useState(trade.crypto)
 
   useEffect(() => {
-    setCrypto(selected)
+    dispatch(selectCrypto(selected))
   }, [selected])
   
 
@@ -97,52 +101,52 @@ export default function SelectCrypto({setCrypto,label,crypto}) {
 }
 
 const cryptos = [
-    // {
-    //     code:"BTC",
-    //     name:"Bitcoin",
-    //     blockchain:"Btitcoin blockchain",
-    //     image:BTC,
-    // },
-    // {
-    //     code:"ETH",
-    //     name:"Ether",
-    //     blockchain:"Ethereum blockchain",
-    //     image:ETH
-    // },
+    {
+        code:"BTC",
+        name:"Bitcoin",
+        blockchain:"Bitcoin blockchain",
+        image:BTC,
+    },
+    {
+        code:"ETH",
+        name:"Ether",
+        blockchain:"Ethereum blockchain",
+        image:ETH
+    },
     {
       code:"BNB",
       name:"Binance Coin",
-      blockchain:"Polygon blockchain",
+      blockchain:"BNB chain",
       image:BNB
     },
     {
       code:"BUSD",
       name:"Binance USD",
-      blockchain:"Polygon blockchain",
+      blockchain:"BNB chain",
       image:BUSD
     },
-    // {
-    //   code:"Matic",
-    //   name:"Polygon Matic",
-    //   blockchain:"Polygon blockchain",
-    //   image:Matic
-    // },
-    // {
-    //     code:"USDC",
-    //     name:"USD Coin",
-    //     blockchain:"Ethereum blockchain",
-    //     image:USDC
-    // },
-    // {
-    //     code:"USDT",
-    //     name:"USD Tether",
-    //     blockchain:"Ethereum blockchain",
-    //     image:USDT
-    // },
-    // {
-    //     code:"DAI",
-    //     name:"DAI",
-    //     blockchain:"Ethereum blockchain",
-    //     image:DAI
-    // },
+    {
+      code:"Matic",
+      name:"Polygon Matic",
+      blockchain:"Polygon blockchain",
+      image:Matic
+    },
+    {
+        code:"USDC",
+        name:"USD Coin",
+        blockchain:"Ethereum blockchain",
+        image:USDC
+    },
+    {
+        code:"USDT",
+        name:"USD Tether",
+        blockchain:"Ethereum blockchain",
+        image:USDT
+    },
+    {
+        code:"DAI",
+        name:"DAI",
+        blockchain:"Ethereum blockchain",
+        image:DAI
+    },
 ]

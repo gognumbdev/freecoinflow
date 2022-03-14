@@ -2,21 +2,26 @@ import PaymentFilter from "../PaymentFilter"
 import { SwitchHorizontalIcon } from '@heroicons/react/outline'
 import SelectCrypto from "../../p2pExchange/SelectCrypto.js"
 import SelectCurrency from "../../p2pExchange/SelectCurrency.js"
+import { useSelector } from "react-redux"
+import { useState } from "react"
 
-const LocalFilters = ({transaction,currency,setCurrency,crypto,setCrypto,payment,setPayment,currencyAmount,setCurrencyAmount}) => {
+const LocalFilters = () => {
+    const {transaction,currency} = useSelector(state => state.trade)
+    const [currencyAmount, setCurrencyAmount] = useState(0.0)
+
     return (
     <div>
         {/* Fiat Crypto Filter ,Amount, Payment */}
         {(transaction === "buy" || transaction === "sell") && (
                 <div className='grid grid-cols-1 px-4 py-2 space-x-10 space-y-4'>
                     <div className='flex items-center justify-center space-x-10'>
-                        <SelectCurrency  setCurrency={setCurrency} />
+                        <SelectCurrency />
                         <SwitchHorizontalIcon className='h-8' />
-                        <SelectCrypto crypto={crypto} setCrypto={setCrypto} label="Cryptocurrency" />
-                        
+                        <SelectCrypto label="Cryptocurrency" />
                     </div>
+                    
                     <div className='flex items-center justify-center space-x-28 '>
-                        <PaymentFilter payment={payment} setPayment={setPayment} />
+                        <PaymentFilter />
                         {/* Amount */}
                         <div className='w-fit'>
                             <label htmlFor="price" className="block text-lg font-medium text-gray-700">

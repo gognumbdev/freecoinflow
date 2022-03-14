@@ -2,39 +2,24 @@
 import { Fragment, useEffect, useState } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, SelectorIcon } from '@heroicons/react/solid'
-// import USD from "../../public/icons/currency/jpgSeries/USD.jpg"
-import THB from "../../public/icons/currency/jpgSeries/THB.jpg"
-// import EURO from "../../public/icons/currency/jpgSeries/EURO.jpg"
-// import CND from "../../public/icons/currency/jpgSeries/CND.jpg"
-// import INR from "../../public/icons/currency/jpgSeries/INR.jpg"
-// import RUB from "../../public/icons/currency/jpgSeries/RUB.jpg"
-// import NGN from "../../public/icons/currency/jpgSeries/NGN.jpg"
-// import VND from "../../public/icons/currency/jpgSeries/VND.jpg"
-// import GBP from "../../public/icons/currency/jpgSeries/GBP.jpg"
-// import AUD from "../../public/icons/currency/jpgSeries/AUD.jpg"
-// import CHF from "../../public/icons/currency/jpgSeries/CHF.jpg"
-// import CNY from "../../public/icons/currency/jpgSeries/CNY.jpg"
-// import JPY from "../../public/icons/currency/jpgSeries/JPY.jpg"
-// import LAK from "../../public/icons/currency/jpgSeries/LAK.jpg"
-// import TRY from "../../public/icons/currency/jpgSeries/TRY.jpg"
-// import HKD from "../../public/icons/currency/jpgSeries/HKD.jpg"
-// import BRL from "../../public/icons/currency/BRL.png"
-// import PKR from "../../public/icons/currency/PKR.png"
-// import IDR from "../../public/icons/currency/IDR.png"
-// import UAH from "../../public/icons/currency/UAH.png"
-// import PHP from "../../public/icons/currency/PHP.png"
+import USD from "../../public/icons/currency/USD.png"
+import THB from "../../public/icons/currency/THB.png"
 import Image from "next/image"
+import { useDispatch, useSelector } from 'react-redux'
+import { selectCurrency } from '../../redux/actions/tradeAction'
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
   }
   
 export default function SelectCurrency({setCurrency}) {
+  const dispatch = useDispatch(); 
+  const trade = useSelector(state => state.trade)
+  const [selected, setSelected] = useState(trade.currency)
 
-const [selected, setSelected] = useState(currencies[0])
-
-useEffect(() => {
-    setCurrency(selected)
-}, [selected])
+  useEffect(() => {
+    dispatch(selectCurrency(selected))
+  }, [selected])
+  
 
 
 return (
@@ -114,11 +99,11 @@ const currencies = [
         name:"Thai bath",
         image:THB
     },
-    // {
-    //     code:"USD",
-    //     name:"US dollar",
-    //     image:USD,
-    // },
+    {
+        code:"USD",
+        name:"US dollar",
+        image:USD,
+    },
     // {
     //     code:"EUR",
     //     name:"EURO",
