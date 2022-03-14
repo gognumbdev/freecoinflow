@@ -24,16 +24,3 @@ export default function Home() {
     </div>
   )
 }
-
-// This function gets called at build time on server-side.
-// It won't be called on client-side, so you can even do
-// direct database queries.
-// export async function getStaticProps() {
-//   // Fetch products data for the landing page by request to "http://localhost:3000/api/products" route.
-//   const products = await fetch("http://localhost:3000/api/products").then(res => res.json())
-//   return {
-//     props: {
-//       products
-//     },
-//   }
-// }

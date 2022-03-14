@@ -1,27 +1,6 @@
 {
   "/_app": "pages/_app.js",
-  "/about": "pages/about.html",
-  "/api/fiatCrypto/[order]": "pages/api/fiatCrypto/[order].js",
-  "/api/offer/buyOffer/[...params]": "pages/api/offer/buyOffer/[...params].js",
-  "/api/offer/buyOffer/[publicAddress]": "pages/api/offer/buyOffer/[publicAddress].js",
-  "/api/offer/buyOffer/getOffer/[offerNo]": "pages/api/offer/buyOffer/getOffer/[offerNo].js",
-  "/api/offer/buyOffer": "pages/api/offer/buyOffer.js",
-  "/api/offer/sellOffer/[...params]": "pages/api/offer/sellOffer/[...params].js",
-  "/api/offer/sellOffer/[publicAddress]": "pages/api/offer/sellOffer/[publicAddress].js",
-  "/api/offer/sellOffer/getOffer/[offerNo]": "pages/api/offer/sellOffer/getOffer/[offerNo].js",
-  "/api/offer/sellOffer": "pages/api/offer/sellOffer.js",
-  "/api/user/[publicAddress]": "pages/api/user/[publicAddress].js",
-  "/auth/signin-step-two": "pages/auth/signin-step-two.html",
-  "/auth/signin": "pages/auth/signin.html",
-  "/auth/signup": "pages/auth/signup.html",
-  "/feedback": "pages/feedback.html",
-  "/": "pages/index.html",
-  "/p2pexchange/fiatCrypto/[order]": "pages/p2pexchange/fiatCrypto/[order].js",
-  "/p2pexchange": "pages/p2pexchange.html",
-  "/p2pexchange/local/buy/[crypto]": "pages/p2pexchange/local/buy/[crypto].html",
-  "/profile/[publicAddress]": "pages/profile/[publicAddress].js",
-  "/transaction": "pages/transaction.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.html"
+  "/": "pages/index.js"
 }

@@ -6,7 +6,6 @@ export default async function handler(req,res) {
     dbConnect();
     //* Send back to client only the product data which match productId
     const {publicAddress} = req.query;
-    console.log("get in to api !")
     if(req.method === "POST"){
         let {username,publicAddress,image,termAndCondition,amount,price,minimum,maximum,crypto,currency,payment} = JSON.parse(req.body)        
         let cryptocurrency = {
