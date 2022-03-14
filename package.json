@@ -1,5 +1,5 @@
 {
-  "name": "nft-marketplace-mvp",
+  "name": "neoflow-mvp",
   "private": true,
   "scripts": {
     "dev": "next dev",

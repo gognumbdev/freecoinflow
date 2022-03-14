@@ -74,7 +74,7 @@ export default function ConnectWallet({logUserIn}) {
                 <div className="w-full shadow-xl bg-white mt-5 p-2 transform transition duration-150 ease-in rounded-xl
                   cursor-pointer active:scale-90 border-2 hover:-translate-y-1 hover:border-amber-500" >
                   <button className="flex space-x-5 rounded justify-start items-center"
-                      onClick={() => {close();logUserIn()}}>
+                      onClick={() => {logUserIn();close()}}>
                       <Image 
                           height={60}
                           width={60}
